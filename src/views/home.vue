@@ -13,12 +13,12 @@ const grid = ref(false);
 
 <template>
   <div class="h-screen bg-slate-700 text-base leading-none flex">
-    <div class="text-white p-8 flex flex-col space-y-4 select-none">
-      <div v-for="route in routes" :key="route.value">{{ route.label }}</div>
+    <div class="text-white w-40 p-4 space-y-1 flex flex-col select-none">
+      <div v-for="route in routes" :key="route.value" class="route">{{ route.label }}</div>
       <div class="flex-1"></div>
-      <div :class="{ 'text-blue-500': bg === 'mm' }" @click="bg = 'mm'" class="cursor-pointer">传统</div>
-      <div :class="{ 'text-blue-500': bg === 'mmr' }" @click="bg = 'mmr'" class="cursor-pointer">现代</div>
-      <div :class="{ 'text-blue-500': grid }" @click="grid = !grid" class="cursor-pointer">网格</div>
+      <div :class="{ active: bg === 'mm' }" @click="bg = 'mm'" class="route">传统</div>
+      <div :class="{ active: bg === 'mmr' }" @click="bg = 'mmr'" class="route">现代</div>
+      <div :class="{ active: grid }" @click="grid = !grid" class="route">网格</div>
     </div>
 
     <div class="flex-1 flex justify-center items-center">
@@ -32,3 +32,12 @@ const grid = ref(false);
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.route {
+  @apply cursor-pointer rounded p-2 duration-200 hover:bg-black/20 hover:text-blue-500;
+  &.active {
+    @apply bg-black/20 text-blue-500;
+  }
+}
+</style>
