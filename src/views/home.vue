@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
 defineOptions({ name: 'app-home' });
@@ -24,7 +24,9 @@ const grid = ref(false);
     <div class="flex-1 flex justify-center items-center">
       <div class="relative">
         <img :src="`/bg-${bg}.png`" />
-        <div class="absolute inset-0" style="font-family: mm"></div>
+        <div class="absolute inset-0" style="font-family: mm">
+          <router-view />
+        </div>
         <div v-if="grid" class="absolute inset-0 text-xs leading-none grid grid-cols-23">
           <div v-for="n in 299" :key="n" :class="[n % 2 ? 'bg-black/20' : 'bg-white/20']" class="w-12 h-12"></div>
         </div>

@@ -4,7 +4,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/home.vue')
+    component: () => import('@/views/home.vue'),
+    children: [
+      {
+        path: 'map/menu',
+        name: 'map-menu',
+        component: () => import('@/views/map/index.vue')
+      }
+    ]
   }
 ];
 
