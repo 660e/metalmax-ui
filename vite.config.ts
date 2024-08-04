@@ -13,6 +13,11 @@ export default defineConfig({
   },
   server: {
     port: 1991,
-    open: true
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:4523/m1/4937861-4595384-default'
+      }
+    }
   }
 });

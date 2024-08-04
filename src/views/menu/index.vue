@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import AppLayout from '@/components/layout.vue';
 
 defineOptions({ name: 'app-menu' });
@@ -12,6 +13,11 @@ const menus = [
   { label: '车库', value: 'garage' },
   { label: '选项', value: 'settings' }
 ];
+const team = ref();
+
+onMounted(async () => {
+  team.value = await (await fetch('/api/team')).json();
+});
 </script>
 
 <template>
@@ -19,7 +25,9 @@ const menus = [
     <div>main</div>
 
     <template #aside>
-      <div>aside</div>
+      <div>
+        <pre>{{ team }}</pre>
+      </div>
     </template>
   </app-layout>
 </template>
