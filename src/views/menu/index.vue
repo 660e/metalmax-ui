@@ -4,6 +4,20 @@ import AppLayout from '@/components/layout.vue';
 
 defineOptions({ name: 'app-menu' });
 
+interface Actor {
+  id: string;
+  human: {
+    name: string;
+    hp: number;
+    mhp: number;
+  };
+  vehicle: {
+    name: string;
+    sp: number;
+    msp: number;
+  };
+}
+
 const menus = [
   { label: '地图', value: 'map' },
   { label: '乘降', value: 'in-out' },
@@ -13,7 +27,7 @@ const menus = [
   { label: '车库', value: 'garage' },
   { label: '选项', value: 'settings' }
 ];
-const team = ref();
+const team = ref<Actor[]>();
 
 onMounted(async () => {
   team.value = await (await fetch('/api/team')).json();
@@ -25,8 +39,10 @@ onMounted(async () => {
     <div>main</div>
 
     <template #aside>
-      <div>
-        <pre>{{ team }}</pre>
+      <div class="h-full bg-black/50 backdrop-blur-sm">
+        <div v-for="actor in team" :key="actor.id">
+          <div>{{ actor.human?.name }}</div>
+        </div>
       </div>
     </template>
   </app-layout>

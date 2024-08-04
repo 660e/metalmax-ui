@@ -23,7 +23,7 @@ defineProps<{ menus: { label: string; value: string }[] }>();
       <slot />
     </div>
 
-    <div class="w-60 bg-blue-500/50 backdrop-blur-sm">
+    <div class="w-60">
       <slot name="aside" />
     </div>
   </div>
