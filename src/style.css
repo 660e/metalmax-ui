@@ -2,7 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@font-face {
-  font-family: mm;
-  src: url('./assets/fonts/mplus-1m-regular.woff');
+body {
+  font-family: consolas, 'microsoft yahei';
 }

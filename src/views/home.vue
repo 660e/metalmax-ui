@@ -16,7 +16,7 @@ const to = (name: string) => router.push({ name });
 </script>
 
 <template>
-  <div class="h-screen bg-slate-700 text-base leading-none flex">
+  <div class="h-screen bg-gray-800 text-base leading-none flex">
     <div class="text-white w-40 p-4 space-y-1 flex flex-col select-none">
       <div v-for="route in routes" :key="route.value" :class="{ active: $route.name === route.value }" @click="to(route.value)" class="route">
         {{ route.label }}
@@ -30,7 +30,7 @@ const to = (name: string) => router.push({ name });
     <div class="flex-1 flex justify-center items-center">
       <div class="relative">
         <img :src="`/bg-${bg}.png`" />
-        <div class="absolute inset-0 overflow-hidden" style="font-family: mm">
+        <div class="absolute inset-0 overflow-hidden">
           <router-view />
         </div>
         <div v-if="grid" class="absolute inset-0 text-xs leading-none grid grid-cols-23">

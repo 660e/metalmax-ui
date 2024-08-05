@@ -1,22 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import type { Actor } from '@/interface';
 import AppLayout from '@/components/layout.vue';
 
 defineOptions({ name: 'app-menu' });
-
-interface Actor {
-  id: string;
-  human: {
-    name: string;
-    hp: number;
-    mhp: number;
-  };
-  vehicle: {
-    name: string;
-    sp: number;
-    msp: number;
-  };
-}
 
 const menus = [
   { label: '地图', value: 'map' },
@@ -41,7 +28,10 @@ onMounted(async () => {
     <template #aside>
       <div class="h-full bg-black/50 backdrop-blur-sm">
         <div v-for="actor in team" :key="actor.id">
-          <div>{{ actor.human?.name }}</div>
+          <div class="flex justify-between">
+            <div>{{ actor.human.name }}</div>
+            <div>Lv.{{ actor.human.lv }}</div>
+          </div>
         </div>
       </div>
     </template>
