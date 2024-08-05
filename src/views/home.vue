@@ -16,7 +16,7 @@ const to = (name: string) => router.push({ name });
 </script>
 
 <template>
-  <div class="h-screen bg-gray-800 text-base leading-none flex">
+  <div class="h-screen bg-gray-800 font-mono text-sm leading-none flex">
     <div class="text-white w-40 p-4 space-y-1 flex flex-col select-none">
       <div v-for="route in routes" :key="route.value" :class="{ active: $route.name === route.value }" @click="to(route.value)" class="route">
         {{ route.label }}
@@ -33,8 +33,8 @@ const to = (name: string) => router.push({ name });
         <div class="absolute inset-0 overflow-hidden">
           <router-view />
         </div>
-        <div v-if="grid" class="absolute inset-0 text-xs leading-none grid grid-cols-23">
-          <div v-for="n in 299" :key="n" :class="[n % 2 ? 'bg-black/20' : 'bg-white/20']" class="w-12 h-12"></div>
+        <div v-if="grid" class="absolute inset-0 grid grid-cols-23">
+          <div v-for="n in 598" :key="n" :class="[n % 2 ? 'bg-black/20' : 'bg-white/20']" class="w-12 h-6"></div>
         </div>
       </div>
     </div>
