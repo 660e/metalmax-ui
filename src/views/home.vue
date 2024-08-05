@@ -8,7 +8,7 @@ const routes = [
   { label: '地图菜单', value: 'app-menu' },
   { label: '装备店', value: 'equipment' }
 ];
-const bg = ref('mm');
+const bg = ref('mmr');
 const grid = ref(false);
 
 const router = useRouter();
