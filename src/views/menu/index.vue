@@ -30,26 +30,32 @@ onMounted(async () => {
     <div>main</div>
 
     <template #aside>
-      <div class="h-full bg-black/50 backdrop-blur-sm">
-        <div v-for="(actor, index) in team" :key="index">
+      <div class="backdrop h-full">
+        <div v-for="(actor, index) in team" :key="index" class="active px-4">
           <div class="flex justify-between py-1">
             <div>{{ actor.human.name }}</div>
             <div>Lv.{{ actor.human.lv }}</div>
           </div>
-          <div class="h-0.5 bg-gradient-to-r from-white/30 relative">
-            <div :style="{ width: `${(actor.human.exp / actor.human.mexp) * 80}%` }" class="absolute top-0 left-0 h-0.5 bg-teal-300"></div>
+          <div class="h-0.5 bg-gradient-to-r from-white/30 to-white/0 flex">
+            <div :style="{ width: `${(actor.human.exp / actor.human.mexp) * 50 + 25}%` }" class="h-0.5 bg-teal-300"></div>
           </div>
           <div class="py-1 flex">
             <div class="bg-red-500/0">
               <img :src="imgSrc(`h${index + 1}.png`)" />
             </div>
             <div class="flex-1">
-              <div class="flex justify-between">
-                <span>HP</span>
-                <span>{{ actor.human.hp }}/{{ actor.human.mhp }}</span>
-              </div>
               <div>
-                <b></b>
+                <div class="flex justify-between">
+                  <span>HP</span>
+                  <span>{{ actor.human.hp }}/{{ actor.human.mhp }}</span>
+                </div>
+                <div class="flex items-center h-4">
+                  <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
+                  <div class="flex-1 h-2 border-y border-black/30 flex">
+                    <b :style="{ width: `${(actor.human.hp / actor.human.mhp) * 100}%` }" class="bg-green-500"></b>
+                  </div>
+                  <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
+                </div>
               </div>
             </div>
           </div>

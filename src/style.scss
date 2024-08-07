@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.backdrop {
+  @apply bg-black/50 backdrop-blur-sm;
+}
+
+.active {
+  @apply bg-gradient-to-r hover:from-white/0 hover:to-white/30;
+}
