@@ -52,9 +52,25 @@ onMounted(async () => {
                 <div class="flex items-center h-4">
                   <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
                   <div class="flex-1 h-2 border-y border-black/30 flex">
-                    <b :style="{ width: `${(actor.human.hp / actor.human.mhp) * 100}%` }" class="bg-green-500"></b>
+                    <b :style="{ width: `${(actor.human.hp / actor.human.mhp) * 100}%` }" class="bg-green-700"></b>
                   </div>
                   <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="w-8 bg-red-500/50"></div>
+                <div class="flex-1">
+                  <div class="flex justify-between">
+                    <span>SP</span>
+                    <span>{{ actor.vehicle.sp }}/{{ actor.vehicle.msp }}</span>
+                  </div>
+                  <div class="flex items-center h-4">
+                    <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
+                    <div class="flex-1 h-2 border-y border-black/30 flex">
+                      <b :style="{ width: `${(actor.vehicle.sp / actor.vehicle.msp) * 100}%` }" class="bg-sky-700"></b>
+                    </div>
+                    <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
+                  </div>
                 </div>
               </div>
             </div>
