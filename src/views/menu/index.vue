@@ -5,6 +5,10 @@ import AppLayout from '@/components/layout.vue';
 
 defineOptions({ name: 'app-menu' });
 
+const imgSrc = (name: string) => {
+  return new URL(`../../assets/${name}`, import.meta.url).pathname;
+};
+
 const menus = [
   { label: '地图', value: 'map' },
   { label: '乘降', value: 'in-out' },
@@ -27,16 +31,18 @@ onMounted(async () => {
 
     <template #aside>
       <div class="h-full bg-black/50 backdrop-blur-sm">
-        <div v-for="actor in team" :key="actor.id">
+        <div v-for="(actor, index) in team" :key="index">
           <div class="flex justify-between py-1">
             <div>{{ actor.human.name }}</div>
             <div>Lv.{{ actor.human.lv }}</div>
           </div>
           <div class="h-0.5 bg-gradient-to-r from-white/30 relative">
-            <div :style="{ width: `${(actor.human.exp / actor.human.mexp) * 100}%` }" class="absolute top-0 left-0 h-0.5 bg-teal-300"></div>
+            <div :style="{ width: `${(actor.human.exp / actor.human.mexp) * 80}%` }" class="absolute top-0 left-0 h-0.5 bg-teal-300"></div>
           </div>
-          <div class="flex">
-            <div class="bg-red-500/50 w-8 h-8"></div>
+          <div class="py-1 flex">
+            <div class="bg-red-500/0">
+              <img :src="imgSrc(`h${index + 1}.png`)" />
+            </div>
             <div class="flex-1">
               <div class="flex justify-between">
                 <span>HP</span>
