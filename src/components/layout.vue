@@ -4,7 +4,7 @@ defineProps<{ menus: { label: string; value: string }[] }>();
 </script>
 
 <template>
-  <div class="h-full text-white flex">
+  <div class="h-full text-gray-200 flex">
     <div class="w-60 flex flex-col">
       <div class="h-12 pl-4 flex items-center bg-gradient-to-r from-black/70 to-black/0">
         <div class="text-lg leading-none">场景信息</div>

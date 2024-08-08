@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import type { Actor } from '@/interface';
 import AppLayout from '@/components/layout.vue';
+import BarComponent from '@/components/bar.vue';
 
 defineOptions({ name: 'app-menu' });
 
@@ -44,34 +45,10 @@ onMounted(async () => {
               <img :src="imgSrc(`h${index + 1}.png`)" />
             </div>
             <div class="flex-1">
-              <div>
-                <div class="flex justify-between">
-                  <span>HP</span>
-                  <span>{{ actor.human.hp }}/{{ actor.human.mhp }}</span>
-                </div>
-                <div class="flex items-center h-4">
-                  <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
-                  <div class="flex-1 h-2 border-y border-black/30 flex">
-                    <b :style="{ width: `${(actor.human.hp / actor.human.mhp) * 100}%` }" class="bg-green-700"></b>
-                  </div>
-                  <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
-                </div>
-              </div>
+              <bar-component :current="actor.human.hp" :max="actor.human.mhp" label="HP" color="bg-green-700" />
               <div class="flex">
-                <div class="w-8 bg-red-500/50"></div>
-                <div class="flex-1">
-                  <div class="flex justify-between">
-                    <span>SP</span>
-                    <span>{{ actor.vehicle.sp }}/{{ actor.vehicle.msp }}</span>
-                  </div>
-                  <div class="flex items-center h-4">
-                    <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
-                    <div class="flex-1 h-2 border-y border-black/30 flex">
-                      <b :style="{ width: `${(actor.vehicle.sp / actor.vehicle.msp) * 100}%` }" class="bg-sky-700"></b>
-                    </div>
-                    <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
-                  </div>
-                </div>
+                <div class="w-8 bg-red-500/50 mr-2"></div>
+                <bar-component :current="actor.vehicle.sp" :max="actor.vehicle.msp" label="SP" color="bg-sky-700" class="flex-1" />
               </div>
             </div>
           </div>
