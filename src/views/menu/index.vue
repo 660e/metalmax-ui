@@ -20,9 +20,11 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 const team = ref<Actor[]>();
+const gold = ref<number>();
 
 onMounted(async () => {
   team.value = await (await fetch('/api/team')).json();
+  gold.value = (await (await fetch('/api/gold')).json()).gold;
 });
 </script>
 
@@ -31,7 +33,7 @@ onMounted(async () => {
     <div>main</div>
 
     <template #aside>
-      <div class="backdrop h-full">
+      <div class="backdrop h-full flex-1 ml-20 flex flex-col border-l border-white/30">
         <div v-for="(actor, index) in team" :key="index" class="active px-4">
           <div class="flex justify-between py-1">
             <div>{{ actor.human.name }}</div>
@@ -47,11 +49,18 @@ onMounted(async () => {
             <div class="flex-1">
               <bar-component :current="actor.human.hp" :max="actor.human.mhp" label="HP" color="bg-green-700" />
               <div class="flex">
-                <div class="w-8 bg-red-500/50 mr-2"></div>
+                <div class="w-8 bg-red-500 mr-2"></div>
                 <bar-component :current="actor.vehicle.sp" :max="actor.vehicle.msp" label="SP" color="bg-sky-700" class="flex-1" />
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="flex-1"></div>
+
+        <div class="h-12 px-4 flex justify-end items-center">
+          <span>{{ gold }}</span>
+          <span class="icon ml-2"></span>
         </div>
       </div>
     </template>

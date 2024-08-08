@@ -3,9 +3,13 @@
 @import 'tailwindcss/utilities';
 
 .backdrop {
-  @apply bg-black/50 backdrop-blur-sm;
+  @apply bg-black/30 backdrop-blur-sm;
 }
 
 .active {
   @apply bg-gradient-to-r hover:from-white/0 hover:to-white/20;
+}
+
+.icon {
+  @apply bg-red-500 w-4 h-4;
 }
