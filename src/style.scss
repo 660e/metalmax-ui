@@ -6,8 +6,11 @@
   @apply bg-black/30 backdrop-blur-sm;
 }
 
-.active {
-  @apply bg-gradient-to-r hover:from-white/0 hover:to-white/20;
+.handle {
+  @apply cursor-pointer bg-gradient-to-r hover:from-white/0 hover:to-white/20;
+  &.active {
+    @apply from-white/0 to-white/20;
+  }
 }
 
 .icon {

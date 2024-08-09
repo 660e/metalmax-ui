@@ -20,7 +20,7 @@ const imgSrc = (name: string) => new URL(`../assets/${name}`, import.meta.url).p
   <div class="backdrop h-full flex-1 ml-20 flex flex-col border-l border-white/30">
     <div class="h-12"></div>
 
-    <div v-for="(actor, index) in team" :key="index" class="active px-4 py-2">
+    <div v-for="(actor, index) in team" :key="index" class="handle px-4 py-2">
       <div class="flex justify-between py-1">
         <div>{{ actor.human.name }}</div>
         <div>Lv.{{ actor.human.lv }}</div>

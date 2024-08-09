@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 defineOptions({ name: 'q-layout' });
 defineProps<{ menus: { label: string; value: string }[] }>();
+defineEmits<{ handle: [value: string] }>();
+
+const active = ref();
 </script>
 
 <template>
@@ -17,7 +22,12 @@ defineProps<{ menus: { label: string; value: string }[] }>();
         <div
           v-for="menu in menus"
           :key="menu.value"
-          class="backdrop active px-4 py-2 w-28 border border-l-0 border-white/30 duration-200 hover:w-32 hover:pl-8"
+          :class="{ 'active w-32 pl-8': active === menu.value }"
+          @click="
+            $emit('handle', menu.value);
+            active = menu.value;
+          "
+          class="backdrop handle px-4 py-2 w-28 border border-l-0 border-white/30 duration-200 hover:w-32 hover:pl-8"
         >
           {{ menu.label }}
         </div>
