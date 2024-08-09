@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import type { Actor } from '@/interface';
-import AppLayout from '@/components/layout.vue';
-import BarComponent from '@/components/bar.vue';
+import QLayout from '@/components/layout.vue';
+import QBar from '@/components/bar.vue';
 
 defineOptions({ name: 'app-menu' });
 
@@ -29,7 +29,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <app-layout :menus="menus">
+  <q-layout :menus="menus">
     <div>main</div>
 
     <template #aside>
@@ -47,10 +47,10 @@ onMounted(async () => {
               <img :src="imgSrc(`h${index + 1}.png`)" />
             </div>
             <div class="flex-1">
-              <bar-component :current="actor.human.hp" :max="actor.human.mhp" label="HP" color="bg-green-700" />
+              <q-bar :current="actor.human.hp" :max="actor.human.mhp" label="HP" color="bg-green-700" />
               <div class="flex">
                 <div class="w-8 bg-red-500 mr-2"></div>
-                <bar-component :current="actor.vehicle.sp" :max="actor.vehicle.msp" label="SP" color="bg-sky-700" class="flex-1" />
+                <q-bar :current="actor.vehicle.sp" :max="actor.vehicle.msp" label="SP" color="bg-sky-700" class="flex-1" />
               </div>
             </div>
           </div>
@@ -64,5 +64,5 @@ onMounted(async () => {
         </div>
       </div>
     </template>
-  </app-layout>
+  </q-layout>
 </template>

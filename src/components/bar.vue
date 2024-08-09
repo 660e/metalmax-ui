@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineOptions({ name: 'bar-component' });
+defineOptions({ name: 'q-bar' });
 defineProps<{ label: string; current: number; max: number; color: string }>();
 </script>
 

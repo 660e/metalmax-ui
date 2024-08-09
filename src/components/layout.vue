@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineOptions({ name: 'app-layout' });
+defineOptions({ name: 'q-layout' });
 defineProps<{ menus: { label: string; value: string }[] }>();
 </script>
 
