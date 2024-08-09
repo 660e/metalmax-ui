@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import QLayout from '@/components/layout.vue';
 import QTeam from '@/components/team.vue';
 
 defineOptions({ name: 'app-menu' });
 
+const active = ref();
 const menus = [
   { label: '地图', value: 'map' },
   { label: '乘降', value: 'in-out' },
@@ -16,11 +19,11 @@ const menus = [
 </script>
 
 <template>
-  <q-layout :menus="menus">
-    <div>main</div>
+  <q-layout :menus="menus" @handle="value => (active = value)">
+    <div v-if="active === 'items'" class="h-full"></div>
 
     <template #aside>
-      <q-team />
+      <q-team v-if="[undefined, 'items'].includes(active)" />
     </template>
   </q-layout>
 </template>
