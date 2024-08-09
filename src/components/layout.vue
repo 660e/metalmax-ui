@@ -14,7 +14,11 @@ defineProps<{ menus: { label: string; value: string }[] }>();
 
     <div class="w-40 pt-24 flex flex-col">
       <div class="flex-1 space-y-2">
-        <div v-for="menu in menus" :key="menu.value" class="backdrop active px-4 py-2 w-28 duration-200 hover:w-32 hover:pl-8">
+        <div
+          v-for="menu in menus"
+          :key="menu.value"
+          class="backdrop active px-4 py-2 w-28 border border-l-0 border-white/30 duration-200 hover:w-32 hover:pl-8"
+        >
           {{ menu.label }}
         </div>
       </div>
