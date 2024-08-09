@@ -49,7 +49,7 @@ const imgSrc = (name: string) => new URL(`../../assets/${name}`, import.meta.url
             <div class="flex-1">
               <q-bar :current="actor.human.hp" :max="actor.human.mhp" label="HP" color="bg-green-700" />
               <div class="flex">
-                <div class="w-8 bg-red-500 mr-2"></div>
+                <img :src="imgSrc(`v${index + 1}.png`)" class="mr-2" />
                 <q-bar :current="actor.vehicle.sp" :max="actor.vehicle.msp" label="SP" color="bg-sky-700" class="flex-1" />
               </div>
             </div>
