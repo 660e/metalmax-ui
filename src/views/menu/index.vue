@@ -6,10 +6,6 @@ import QBar from '@/components/bar.vue';
 
 defineOptions({ name: 'app-menu' });
 
-const imgSrc = (name: string) => {
-  return new URL(`../../assets/${name}`, import.meta.url).pathname;
-};
-
 const menus = [
   { label: '地图', value: 'map' },
   { label: '乘降', value: 'in-out' },
@@ -26,6 +22,8 @@ onMounted(async () => {
   team.value = await (await fetch('/api/team')).json();
   gold.value = (await (await fetch('/api/gold')).json()).gold;
 });
+
+const imgSrc = (name: string) => new URL(`../../assets/${name}`, import.meta.url).pathname;
 </script>
 
 <template>
@@ -34,7 +32,9 @@ onMounted(async () => {
 
     <template #aside>
       <div class="backdrop h-full flex-1 ml-20 flex flex-col border-l border-white/30">
-        <div v-for="(actor, index) in team" :key="index" class="active px-4">
+        <div class="h-12"></div>
+
+        <div v-for="(actor, index) in team" :key="index" class="active px-4 py-2">
           <div class="flex justify-between py-1">
             <div>{{ actor.human.name }}</div>
             <div>Lv.{{ actor.human.lv }}</div>
