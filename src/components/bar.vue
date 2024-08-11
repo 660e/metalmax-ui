@@ -14,7 +14,7 @@ defineProps<{ label: string; current: number; max: number; color: string }>();
     </div>
     <div class="flex items-center h-4 -mt-0.5">
       <span class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></span>
-      <span class="flex-1 h-2 border-y border-black/30 flex">
+      <span class="flex-1 h-2 border-y border-neutral-900/30 flex">
         <b :style="{ width: `${(current / max) * 100}%` }" :class="[color]"></b>
       </span>
       <span class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></span>

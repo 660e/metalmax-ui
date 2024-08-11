@@ -34,7 +34,7 @@ const to = (name: string) => router.push({ name });
           <router-view />
         </div>
         <div v-if="grid" class="absolute inset-0 grid grid-cols-23">
-          <div v-for="n in 598" :key="n" :class="[n % 2 ? 'bg-black/20' : 'bg-white/20']" class="w-12 h-6"></div>
+          <div v-for="n in 598" :key="n" :class="[n % 2 ? 'bg-neutral-900/20' : 'bg-white/20']" class="w-12 h-6"></div>
         </div>
       </div>
     </div>
@@ -43,9 +43,9 @@ const to = (name: string) => router.push({ name });
 
 <style lang="scss" scoped>
 .route {
-  @apply cursor-pointer rounded p-2 duration-200 hover:bg-black/20 hover:text-blue-500;
+  @apply cursor-pointer rounded p-2 duration-200 hover:bg-neutral-900/20 hover:text-blue-500;
   &.active {
-    @apply bg-black/20 text-blue-500;
+    @apply bg-neutral-900/20 text-blue-500;
   }
 }
 </style>

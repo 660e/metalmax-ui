@@ -6,7 +6,7 @@ import QTeam from '@/components/team.vue';
 
 defineOptions({ name: 'app-menu' });
 
-const active = ref();
+const active = ref('items');
 const menus = [
   { label: '地图', value: 'map' },
   { label: '乘降', value: 'in-out' },
@@ -20,7 +20,7 @@ const menus = [
 
 <template>
   <q-layout :menus="menus" @handle="value => (active = value)">
-    <div v-if="active === 'items'" class="h-full"></div>
+    <div v-if="active === 'items'" class="backdrop h-full border-x border-white/30 flex"></div>
 
     <template #aside>
       <transition name="slide">

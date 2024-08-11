@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 .backdrop {
-  @apply bg-black/30 backdrop-blur-sm;
+  @apply bg-neutral-900/30 backdrop-blur-sm;
 }
 
 .handle {
