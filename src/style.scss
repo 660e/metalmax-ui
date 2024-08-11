@@ -17,16 +17,32 @@
   @apply bg-red-500 w-4 h-4;
 }
 
-.slide-enter-active {
+.slide-right-enter-active,
+.slide-left-enter-active,
+.slide-top-enter-active {
   transition: all theme('transitionDuration.200') ease-out;
 }
 
-.slide-leave-active {
+.slide-right-leave-active,
+.slide-left-leave-active,
+.slide-top-leave-active {
   transition: all theme('transitionDuration.200') ease-in;
 }
 
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateX(theme('space.10'));
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.slide-top-enter-from,
+.slide-top-leave-to {
+  transform: translateY(-40px);
   opacity: 0;
 }
