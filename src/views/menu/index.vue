@@ -23,7 +23,9 @@ const menus = [
     <div v-if="active === 'items'" class="h-full"></div>
 
     <template #aside>
-      <q-team v-if="[undefined, 'items'].includes(active)" />
+      <transition name="slide">
+        <q-team v-if="[undefined, 'items'].includes(active)" />
+      </transition>
     </template>
   </q-layout>
 </template>

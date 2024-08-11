@@ -16,3 +16,17 @@
 .icon {
   @apply bg-red-500 w-4 h-4;
 }
+
+.slide-enter-active {
+  transition: all theme('transitionDuration.200') ease-out;
+}
+
+.slide-leave-active {
+  transition: all theme('transitionDuration.200') ease-in;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(theme('space.10'));
+  opacity: 0;
+}
