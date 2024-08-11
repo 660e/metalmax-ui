@@ -33,8 +33,8 @@ const to = (name: string) => router.push({ name });
         <div class="absolute inset-0 overflow-hidden">
           <router-view />
         </div>
-        <div v-if="grid" class="absolute inset-0 grid grid-cols-23">
-          <div v-for="n in 598" :key="n" :class="[n % 2 ? 'bg-neutral-900/20' : 'bg-white/20']" class="w-12 h-6"></div>
+        <div v-if="grid" class="absolute z-30 inset-0 grid">
+          <div v-for="n in 26" :key="n" :class="{ 'bg-white/20': n % 2 }" class="h-6"></div>
         </div>
       </div>
     </div>

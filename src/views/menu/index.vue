@@ -17,15 +17,28 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'menu'));
+onMounted(() => (active.value = 'items'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
       <div v-if="active === 'items'" class="backdrop h-full border-r border-white/30 flex">
-        <div class="backdrop w-10 border-x border-white/30"></div>
-        <div class="flex-1"></div>
+        <div class="backdrop border-x border-white/30 pt-24 px-2 space-y-2">
+          <div class="w-6 h-6 bg-red-500"></div>
+          <div class="w-6 h-6 bg-red-500"></div>
+          <div class="w-6 h-6 bg-red-500"></div>
+          <div class="w-6 h-6 bg-red-500"></div>
+        </div>
+        <div class="flex-1 pt-12">
+          <div class="h-6 pl-4 flex items-center">道具</div>
+
+          <div class="h-6 pl-4 flex items-center">Lorem ipsum dolor sit amet.</div>
+          <div class="h-6 pl-4 flex items-center">Quas molestiae dolor obcaecati eligendi?</div>
+          <div class="h-6 pl-4 flex items-center">Non ipsa itaque illum veniam.</div>
+          <div class="h-6 pl-4 flex items-center">Fugiat aperiam vitae beatae? Consectetur.</div>
+          <div class="h-6 pl-4 flex items-center">Libero quo at laboriosam fuga.</div>
+        </div>
       </div>
     </transition>
 
