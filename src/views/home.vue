@@ -40,12 +40,3 @@ const to = (name: string) => router.push({ name });
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.route {
-  @apply cursor-pointer rounded p-2 duration-200 hover:bg-neutral-900/20 hover:text-blue-500;
-  &.active {
-    @apply bg-neutral-900/20 text-blue-500;
-  }
-}
-</style>

@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
-import QLayout from '@/components/layout.vue';
-import QTeam from '@/components/team.vue';
-
 defineOptions({ name: 'app-menu' });
 
 const active = ref();

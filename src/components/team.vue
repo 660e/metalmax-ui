@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import type { Actor } from '@/interface';
-import QBar from '@/components/bar.vue';
 
 defineOptions({ name: 'q-team' });
 
