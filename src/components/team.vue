@@ -18,7 +18,10 @@ const imgSrc = (name: string) => new URL(`../assets/${name}`, import.meta.url).p
 
 <template>
   <div class="backdrop h-full flex-1 ml-20 flex flex-col border-l border-white/30">
-    <div class="h-12"></div>
+    <div class="h-12 px-4 flex justify-end items-center">
+      <span>{{ gold }}</span>
+      <span class="icon ml-2"></span>
+    </div>
 
     <div v-for="(actor, index) in team" :key="index" class="handle px-4 py-2">
       <div class="flex justify-between py-1">
@@ -40,13 +43,6 @@ const imgSrc = (name: string) => new URL(`../assets/${name}`, import.meta.url).p
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="flex-1"></div>
-
-    <div class="h-12 px-4 flex justify-end items-center">
-      <span>{{ gold }}</span>
-      <span class="icon ml-2"></span>
     </div>
   </div>
 </template>

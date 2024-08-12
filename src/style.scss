@@ -17,16 +17,30 @@
   @apply bg-red-500 w-4 h-4;
 }
 
-.slide-right-enter-active,
-.slide-left-enter-active,
+.slide-bottom-enter-active,
 .slide-top-enter-active {
-  transition: all theme('transitionDuration.200') ease-out;
+  transition: all theme('transitionDuration.150') ease-out;
+}
+
+.slide-right-enter-active,
+.slide-left-enter-active {
+  transition: all theme('transitionDuration.150') theme('transitionDelay.150') ease-out;
+}
+
+.slide-bottom-leave-active,
+.slide-top-leave-active {
+  transition: all theme('transitionDuration.150') theme('transitionDelay.150') ease-in;
 }
 
 .slide-right-leave-active,
-.slide-left-leave-active,
-.slide-top-leave-active {
-  transition: all theme('transitionDuration.200') ease-in;
+.slide-left-leave-active {
+  transition: all theme('transitionDuration.150') ease-in;
+}
+
+.slide-bottom-enter-from,
+.slide-bottom-leave-to {
+  transform: translateY(40px);
+  opacity: 0;
 }
 
 .slide-right-enter-from,
