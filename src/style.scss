@@ -9,8 +9,12 @@
   }
 }
 
-.backdrop {
+.backdrop-shallow {
   @apply bg-neutral-900/30 backdrop-blur-sm;
+}
+
+.backdrop-deep {
+  @apply bg-neutral-900/80 backdrop-blur-sm;
 }
 
 .handle {

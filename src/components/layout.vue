@@ -25,7 +25,7 @@ const active = defineModel<string>();
               :key="menu.value"
               :class="{ 'active w-32 pl-8': active === menu.value }"
               @click="active = menu.value"
-              class="backdrop handle px-4 py-2 w-28 border border-l-0 border-white/30 duration-200 hover:w-32 hover:pl-8"
+              class="backdrop-shallow handle px-4 py-2 w-28 border border-l-0 border-white/30 duration-200 hover:w-32 hover:pl-8"
             >
               {{ menu.label }}
             </div>
@@ -43,8 +43,8 @@ const active = defineModel<string>();
     </div>
 
     <transition name="slide-bottom">
-      <div v-if="active" class="backdrop">
-        <div class="backdrop h-12 border-t border-white/30 flex items-center px-40">Lorem ipsum dolor sit amet.</div>
+      <div v-if="active">
+        <div class="backdrop-deep h-12 border-t border-white/30 flex items-center px-40">Lorem ipsum dolor sit amet.</div>
       </div>
     </transition>
   </div>

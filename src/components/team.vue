@@ -16,7 +16,7 @@ const imgSrc = (name: string) => new URL(`../assets/${name}`, import.meta.url).p
 </script>
 
 <template>
-  <div class="backdrop h-full flex-1 ml-20 flex flex-col border-l border-white/30">
+  <div class="backdrop-shallow h-full flex-1 ml-20 flex flex-col border-l border-white/30">
     <div class="h-12 px-4 flex justify-end items-center">
       <span>{{ gold }}</span>
       <span class="icon ml-2"></span>
