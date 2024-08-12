@@ -29,12 +29,12 @@ onMounted(() => (active.value = 'items'));
         </div>
         <div class="backdrop-shallow flex-1 pt-12">
           <div class="h-6 pl-4 flex items-center">道具</div>
-          <q-thead />
-          <div class="h-6 pl-4 flex items-center">Lorem ipsum dolor sit amet.</div>
-          <div class="h-6 pl-4 flex items-center">Quas molestiae dolor obcaecati eligendi?</div>
-          <div class="h-6 pl-4 flex items-center">Non ipsa itaque illum veniam.</div>
-          <div class="h-6 pl-4 flex items-center">Fugiat aperiam vitae beatae? Consectetur.</div>
-          <div class="h-6 pl-4 flex items-center">Libero quo at laboriosam fuga.</div>
+          <q-thead :labels="['名称', '持有数']" :widths="[0, 100]" />
+          <div class="handle h-6 pl-4 flex items-center">Lorem ipsum dolor sit amet.</div>
+          <div class="handle h-6 pl-4 flex items-center">Quas molestiae dolor obcaecati eligendi?</div>
+          <div class="handle h-6 pl-4 flex items-center">Non ipsa itaque illum veniam.</div>
+          <div class="handle h-6 pl-4 flex items-center">Fugiat aperiam vitae beatae? Consectetur.</div>
+          <div class="handle h-6 pl-4 flex items-center">Libero quo at laboriosam fuga.</div>
         </div>
       </div>
     </transition>
