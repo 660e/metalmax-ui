@@ -46,5 +46,29 @@
     "type": 2,
     "description": "朗读笔记",
     "price": 0
+  },
+  {
+    "name": "等离子暴雨枪",
+    "type": 11,
+    "description": "",
+    "price": 27000
+  },
+  {
+    "name": "光束暴雪枪",
+    "type": 11,
+    "description": "",
+    "price": 20000
+  },
+  {
+    "name": "激光炮",
+    "type": 11,
+    "description": "",
+    "price": 30000
+  },
+  {
+    "name": "波奇地狱业火",
+    "type": 11,
+    "description": "",
+    "price": 25000
   }
 ]

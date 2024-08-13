@@ -6,7 +6,7 @@ defineProps<{ labels: string[]; widths: number[] }>();
 <template>
   <div class="h-6 py-1">
     <div class="h-full space-x-px flex">
-      <div
+      <span
         v-for="(label, index) in labels"
         :key="index"
         :style="{ width: widths[index] ? `${widths[index]}px` : 'auto' }"
@@ -14,7 +14,7 @@ defineProps<{ labels: string[]; widths: number[] }>();
         class="bg-neutral-900/40 text-gray-400 text-xs leading-none flex items-center px-4"
       >
         {{ label }}
-      </div>
+      </span>
     </div>
   </div>
 </template>
