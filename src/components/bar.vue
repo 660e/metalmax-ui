@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({ name: 'q-bar' });
-defineProps<{ label: string; current: number; max: number; color: string }>();
+withDefaults(defineProps<{ label: string; current: number; max: number; color: string }>(), { current: 1, max: 1 });
 </script>
 
 <template>

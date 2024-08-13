@@ -1,6 +1,4 @@
 export interface Actor {
-  id: string;
-  type: 'default' | 'pet' | 'pull';
   human: {
     name: string;
     lv: number;
