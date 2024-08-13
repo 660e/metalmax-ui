@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
+import items from '@/assets/data/items.json';
 
 defineOptions({ name: 'app-menu' });
 
@@ -13,6 +14,7 @@ const menus = [
   { label: '车库', value: 'garage' },
   { label: '选项', value: 'settings' }
 ];
+const group = ref(1);
 
 onMounted(() => (active.value = 'items'));
 </script>
@@ -22,7 +24,7 @@ onMounted(() => (active.value = 'items'));
     <transition name="slide-right">
       <div v-if="active === 'items'" class="h-full border-r border-white/30 flex">
         <div class="backdrop-deep border-x border-white/30 pt-24 px-2 space-y-2">
-          <div class="w-6 h-6 bg-red-500"></div>
+          <div @click="group = 1" class="w-6 h-6 bg-red-500"></div>
           <div class="w-6 h-6 bg-red-500"></div>
           <div class="w-6 h-6 bg-red-500"></div>
           <div class="w-6 h-6 bg-red-500"></div>
@@ -31,11 +33,10 @@ onMounted(() => (active.value = 'items'));
           <div class="h-6"></div>
           <div class="h-6 pl-4 flex items-center">道具</div>
           <q-thead :labels="['名称', '持有数']" :widths="[0, 100]" />
-          <div class="handle h-6 pl-4 flex items-center">Lorem ipsum dolor sit amet.</div>
-          <div class="handle h-6 pl-4 flex items-center">Quas molestiae dolor obcaecati eligendi?</div>
-          <div class="handle h-6 pl-4 flex items-center">Non ipsa itaque illum veniam.</div>
-          <div class="handle h-6 pl-4 flex items-center">Fugiat aperiam vitae beatae? Consectetur.</div>
-          <div class="handle h-6 pl-4 flex items-center">Libero quo at laboriosam fuga.</div>
+          <div v-for="item in items.filter(item => item.type === group)" :key="item.name">
+            <span>{{ item.name }}</span>
+            <span>1</span>
+          </div>
         </div>
       </div>
     </transition>

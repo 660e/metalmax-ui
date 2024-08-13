@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, reactive } from 'vue';
 import type { Actor } from '@/interface';
-import humansJson from '@/assets/data/humans.json';
-import vehiclesJson from '@/assets/data/vehicles.json';
+import humans from '@/assets/data/humans.json';
+import vehicles from '@/assets/data/vehicles.json';
 
 defineOptions({ name: 'q-team' });
 
@@ -13,8 +13,8 @@ const team = reactive<{ gold: number; actors: Actor[] }>({
 
 onMounted(() => {
   team.actors.forEach((actor, index) => {
-    actor.human = humansJson[index];
-    actor.vehicle = vehiclesJson[index];
+    actor.human = humans[index];
+    actor.vehicle = vehicles[index];
   });
 });
 

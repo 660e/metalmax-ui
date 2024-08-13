@@ -1,0 +1,50 @@
+[
+  {
+    "name": "回复胶囊",
+    "type": 1,
+    "description": "HP50回复",
+    "price": 10
+  },
+  {
+    "name": "能量胶囊",
+    "type": 1,
+    "description": "HP500回复",
+    "price": 50
+  },
+  {
+    "name": "碱性车蜡",
+    "type": 1,
+    "description": "酸中和",
+    "price": 60
+  },
+  {
+    "name": "修理工具箱",
+    "type": 1,
+    "description": "破损部件修理",
+    "price": 80
+  },
+  {
+    "name": "ID卡",
+    "type": 2,
+    "description": "连接终端",
+    "price": 0
+  },
+  {
+    "name": "万能钥匙",
+    "type": 2,
+    "description": "万能钥匙",
+    "price": 0
+  },
+  {
+    "name": "研究工作笔记",
+    "type": 2,
+    "description": "朗读笔记",
+    "price": 0
+  },
+  {
+    "name": "沾血的记事本",
+    "type": 2,
+    "description": "朗读笔记",
+    "price": 0
+  }
+]
