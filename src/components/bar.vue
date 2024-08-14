@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({ name: 'q-bar' });
-withDefaults(defineProps<{ label: string; current: number; max: number; color: string }>(), { current: 1, max: 1 });
+defineProps<{ label: string; current: number; color: string }>();
 </script>
 
 <template>
@@ -10,12 +10,12 @@ withDefaults(defineProps<{ label: string; current: number; max: number; color: s
       <span class="flex-1"></span>
       <span class="text-lg leading-none">{{ current }}</span>
       <span class="text-gray-300">/</span>
-      <span class="text-gray-300">{{ max }}</span>
+      <span class="text-gray-300">9999</span>
     </div>
     <div class="flex items-center h-4 -mt-0.5">
       <span class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></span>
       <span class="flex-1 h-2 border-y border-neutral-900/30 flex">
-        <b :style="{ width: `${(current / max) * 100}%` }" :class="[color]"></b>
+        <b :style="{ width: `${(current / 9999) * 100}%` }" :class="[color]"></b>
       </span>
       <span class="w-px h-full bg-gradient-to-b from-white/0 via-white/30 to-white/0"></span>
     </div>
