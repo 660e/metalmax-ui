@@ -53,7 +53,7 @@ const extra = ref(1);
           </div>
           <div class="w-px bg-gradient-to-b from-white/0 via-white/30 to-white/0"></div>
           <div class="flex-1">
-            <q-tr :cells="['重量', '99.99t']" icon />
+            <q-tr :cells="['重量', '99.99t-100.00t']" icon />
             <q-tr :cells="['范围', '单体']" icon />
             <q-tr :cells="['属性', '普通']" icon />
             <q-tr :cells="['状态', '正常']" icon />

@@ -9,7 +9,7 @@ defineProps<{ cells: string[]; widths?: number[]; handle?: boolean; icon?: boole
       v-for="(cell, index) in cells"
       :key="index"
       :style="{ width: widths && widths[index] ? `${widths[index]}px` : 'auto' }"
-      :class="{ 'flex-1': !widths || !widths[index], 'justify-end': index }"
+      :class="{ 'flex-1': (!widths || !widths[index]) && !index, 'justify-end': index }"
       class="flex items-center px-4"
     >
       <i v-if="!index && icon" class="icon mr-2"></i>

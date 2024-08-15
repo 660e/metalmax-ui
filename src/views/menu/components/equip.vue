@@ -18,6 +18,13 @@ const actor = ref(1);
       <img @click="actor = 2" src="@/assets/t4.png" />
     </div>
 
-    <div class="backdrop-shallow flex-1 pt-12 flex flex-col"></div>
+    <div class="backdrop-shallow flex-1 pt-12 flex flex-col">
+      <div class="h-6"></div>
+      <div class="h-6 pl-4 flex items-center">角色名称</div>
+
+      <q-thead :labels="['装备部位']" :widths="[0]" />
+
+      <q-tr :cells="['碱性车蜡', 99]" :widths="[0, 100]" handle icon />
+    </div>
   </div>
 </template>
