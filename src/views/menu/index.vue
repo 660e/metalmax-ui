@@ -21,7 +21,7 @@ onMounted(() => (active.value = 'equip'));
 
 <template>
   <q-layout v-model="active" :menus="menus">
-    <transition name="slide-right">
+    <transition name="slide-right" mode="out-in">
       <div v-if="active === 'menu'"></div>
       <menu-items v-else-if="active === 'items'" />
       <menu-equip v-else-if="active === 'equip'" />

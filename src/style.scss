@@ -30,22 +30,22 @@
 
 .slide-bottom-enter-active,
 .slide-top-enter-active {
-  transition: all theme('transitionDuration.150') ease-out;
+  transition: all theme('transitionDuration.100') ease-out;
 }
 
 .slide-right-enter-active,
 .slide-left-enter-active {
-  transition: all theme('transitionDuration.150') theme('transitionDelay.150') ease-out;
+  transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-out;
 }
 
 .slide-bottom-leave-active,
 .slide-top-leave-active {
-  transition: all theme('transitionDuration.150') theme('transitionDelay.150') ease-in;
+  transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-in;
 }
 
 .slide-right-leave-active,
 .slide-left-leave-active {
-  transition: all theme('transitionDuration.150') ease-in;
+  transition: all theme('transitionDuration.100') ease-in;
 }
 
 .slide-bottom-enter-from,
