@@ -2,24 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-// .backdrop-shallow {
-//   @apply bg-neutral-900/30 backdrop-blur-sm;
-// }
+.panel-1 {
+  @apply bg-neutral-900/30 backdrop-blur-sm;
+}
 
-// .backdrop-deep {
-//   @apply bg-neutral-900/80 backdrop-blur-sm;
-// }
-
-// .handle {
-//   @apply cursor-pointer bg-gradient-to-r hover:from-white/0 hover:to-white/20;
-//   &.active {
-//     @apply from-white/0 to-white/20;
-//   }
-// }
-
-// .icon {
-//   @apply bg-red-500 w-5 h-5;
-// }
+.panel-2 {
+  @apply bg-neutral-900/80 backdrop-blur-sm;
+}
 
 .slide-bottom-enter-active,
 .slide-top-enter-active {

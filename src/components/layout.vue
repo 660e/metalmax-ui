@@ -15,5 +15,11 @@ const active = defineModel<string>();
         <b class="h-px bg-gradient-to-r from-white/30"></b>
       </div>
     </transition>
+
+    <div class="flex-1"></div>
+
+    <transition name="slide-bottom">
+      <div v-if="active" class="panel-2 h-12 border-t border-white/30"></div>
+    </transition>
   </div>
 </template>
