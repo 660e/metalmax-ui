@@ -35,7 +35,7 @@ const to = (name: string) => router.push({ name });
     <div class="flex-1 flex justify-center items-center">
       <div class="relative">
         <img src="@/assets/bg.png" />
-        <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden text-gray-200">
           <router-view />
         </div>
         <div v-if="grid" class="absolute z-30 inset-0 grid">

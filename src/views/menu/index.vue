@@ -8,6 +8,7 @@ defineOptions({ name: 'app-menu' });
 const active = ref();
 const menus = [
   { label: '地图', value: 'map' },
+  { label: '任务', value: 'quests' },
   { label: '乘降', value: 'in-out' },
   { label: '道具', value: 'items' },
   { label: '装备', value: 'equip' },
@@ -16,11 +17,11 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
-  <div>menu</div>
+  <q-layout v-model="active" :menus="menus">menu</q-layout>
   <!-- <q-layout v-model="active" :menus="menus">
     <transition name="slide-right" mode="out-in">
       <div v-if="active === 'menu'"></div>

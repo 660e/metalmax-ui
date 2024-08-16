@@ -2,13 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-// .route {
-//   @apply cursor-pointer rounded p-2 duration-200 hover:bg-neutral-900/20 hover:text-blue-500;
-//   &.active {
-//     @apply bg-neutral-900/20 text-blue-500;
-//   }
-// }
-
 // .backdrop-shallow {
 //   @apply bg-neutral-900/30 backdrop-blur-sm;
 // }
@@ -28,46 +21,46 @@
 //   @apply bg-red-500 w-5 h-5;
 // }
 
-// .slide-bottom-enter-active,
-// .slide-top-enter-active {
-//   transition: all theme('transitionDuration.100') ease-out;
-// }
+.slide-bottom-enter-active,
+.slide-top-enter-active {
+  transition: all theme('transitionDuration.100') ease-out;
+}
 
-// .slide-right-enter-active,
-// .slide-left-enter-active {
-//   transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-out;
-// }
+.slide-right-enter-active,
+.slide-left-enter-active {
+  transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-out;
+}
 
-// .slide-bottom-leave-active,
-// .slide-top-leave-active {
-//   transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-in;
-// }
+.slide-bottom-leave-active,
+.slide-top-leave-active {
+  transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-in;
+}
 
-// .slide-right-leave-active,
-// .slide-left-leave-active {
-//   transition: all theme('transitionDuration.100') ease-in;
-// }
+.slide-right-leave-active,
+.slide-left-leave-active {
+  transition: all theme('transitionDuration.100') ease-in;
+}
 
-// .slide-bottom-enter-from,
-// .slide-bottom-leave-to {
-//   transform: translateY(40px);
-//   opacity: 0;
-// }
+.slide-bottom-enter-from,
+.slide-bottom-leave-to {
+  transform: translateY(40px);
+  opacity: 0;
+}
 
-// .slide-right-enter-from,
-// .slide-right-leave-to {
-//   transform: translateX(40px);
-//   opacity: 0;
-// }
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(40px);
+  opacity: 0;
+}
 
-// .slide-left-enter-from,
-// .slide-left-leave-to {
-//   transform: translateX(-40px);
-//   opacity: 0;
-// }
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateX(-40px);
+  opacity: 0;
+}
 
-// .slide-top-enter-from,
-// .slide-top-leave-to {
-//   transform: translateY(-40px);
-//   opacity: 0;
-// }
+.slide-top-enter-from,
+.slide-top-leave-to {
+  transform: translateY(-40px);
+  opacity: 0;
+}
