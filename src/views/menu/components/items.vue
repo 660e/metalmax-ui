@@ -9,19 +9,9 @@ defineOptions({ name: 'menu-items' });
     </div>
     <div class="panel-1 flex-1 border-r border-white/30 pt-12">
       <q-tr :icon="false" />
-      <q-tr :icon="false" :data="[['道具'], []]" />
-      <q-thead
-        :data="[
-          ['名称', '持有数'],
-          [0, 100]
-        ]"
-      />
-      <q-tr
-        :data="[
-          ['万能钥匙', '1'],
-          [0, 100]
-        ]"
-      />
+      <q-tr :icon="false" :data="['道具', '']" />
+      <q-thead :data="['名称,持有数', '0,100']" />
+      <q-tr :data="['万能钥匙,1', '0,100']" />
     </div>
   </div>
 </template>
