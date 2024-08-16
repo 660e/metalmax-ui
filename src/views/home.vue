@@ -4,32 +4,37 @@ import { useRouter } from 'vue-router';
 
 defineOptions({ name: 'app-home' });
 
-const routes = [
-  { label: '地图菜单', value: 'app-menu' },
-  { label: '装备店', value: 'equipment' }
-];
-const bg = ref('mmr');
+const routes = [{ label: '地图菜单', value: 'app-menu' }];
 const grid = ref(false);
-
 const router = useRouter();
 const to = (name: string) => router.push({ name });
 </script>
 
 <template>
-  <div class="h-screen bg-gray-800 font-mono text-sm leading-none flex">
-    <div class="text-white w-40 p-4 space-y-1 flex flex-col select-none">
-      <div v-for="route in routes" :key="route.value" :class="{ active: $route.name === route.value }" @click="to(route.value)" class="route">
+  <div class="h-screen bg-gray-800 font-mono select-none text-sm leading-none text-white flex">
+    <div class="w-40 p-4 space-y-1 flex flex-col">
+      <div
+        v-for="route in routes"
+        :key="route.value"
+        :class="{ 'bg-neutral-900/20 text-blue-500': $route.name === route.value }"
+        @click="to(route.value)"
+        class="cursor-pointer p-2 rounded duration-200 hover:bg-neutral-900/20 hover:text-blue-500"
+      >
         {{ route.label }}
       </div>
       <div class="flex-1"></div>
-      <div :class="{ active: bg === 'mm' }" @click="bg = 'mm'" class="route">传统</div>
-      <div :class="{ active: bg === 'mmr' }" @click="bg = 'mmr'" class="route">现代</div>
-      <div :class="{ active: grid }" @click="grid = !grid" class="route">网格</div>
+      <div
+        :class="{ 'bg-neutral-900/20 text-blue-500': grid }"
+        @click="grid = !grid"
+        class="cursor-pointer p-2 rounded duration-200 hover:bg-neutral-900/20 hover:text-blue-500"
+      >
+        网格
+      </div>
     </div>
 
     <div class="flex-1 flex justify-center items-center">
       <div class="relative">
-        <img :src="`/bg-${bg}.png`" />
+        <img src="@/assets/bg.png" />
         <div class="absolute inset-0 overflow-hidden">
           <router-view />
         </div>
