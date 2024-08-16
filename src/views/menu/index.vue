@@ -23,7 +23,9 @@ onMounted(() => (active.value = 'menu'));
 <template>
   <q-layout v-model="active" :menus="menus">
     <template #aside>
-      <q-team v-if="['menu'].includes(active)" />
+      <transition name="slide-right">
+        <q-team v-if="['menu'].includes(active)" />
+      </transition>
     </template>
   </q-layout>
   <!--
