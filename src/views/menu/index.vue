@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-// import MenuItems from './components/items.vue';
+import MenuItems from './components/items.vue';
 // import MenuEquip from './components/equip.vue';
 
 defineOptions({ name: 'app-menu' });
@@ -17,22 +17,20 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'menu'));
+onMounted(() => (active.value = 'items'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
-    <template #aside>
-      <transition name="slide-right">
-        <q-team v-if="['menu'].includes(active)" />
-      </transition>
-    </template>
-  </q-layout>
-  <!--
     <transition name="slide-right" mode="out-in">
       <div v-if="active === 'menu'"></div>
       <menu-items v-else-if="active === 'items'" />
-      <menu-equip v-else-if="active === 'equip'" />
     </transition>
-  -->
+
+    <template #aside>
+      <transition name="slide-right">
+        <q-team v-if="['menu', 'items'].includes(active)" />
+      </transition>
+    </template>
+  </q-layout>
 </template>
