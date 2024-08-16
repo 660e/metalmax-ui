@@ -13,6 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@types/mockjs": "^1.0.10",
+    "mockjs": "^1.1.0",
     "vue": "^3.4.35",
     "vue-router": "^4.4.0"
   },

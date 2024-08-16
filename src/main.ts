@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
-// import QBar from '@/components/bar.vue';
+import QIcon from '@/components/icon.vue';
 import QLayout from '@/components/layout.vue';
 import QTeam from '@/components/team.vue';
 // import QThead from '@/components/thead.vue';
@@ -12,7 +12,7 @@ import './style.scss';
 
 const app = createApp(App);
 
-[QLayout, QTeam].forEach(component => {
+[QIcon, QLayout, QTeam].forEach(component => {
   app.component(component.name!, component);
 });
 

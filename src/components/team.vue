@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import Mock from 'mockjs';
+
 defineOptions({ name: 'q-team' });
 </script>
 
 <template>
   <div class="panel-1 flex-1 ml-20 border-l border-white/30">
     <div class="h-12 pr-4 flex justify-end items-center">
-      <span>{{ Math.random().toFixed(5) }}</span>
+      <span>{{ Mock.Random.integer(0) }}</span>
+      <q-icon class="ml-2" />
     </div>
   </div>
 </template>
