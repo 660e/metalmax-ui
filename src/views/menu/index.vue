@@ -4,6 +4,7 @@ import { onMounted, ref } from 'vue';
 import MenuItems from './views/items.vue';
 import MenuEquip from './views/equip.vue';
 import MenuStatus from './views/status.vue';
+import MenuGarage from './views/garage.vue';
 
 import TrunkComponent from './components/trunk.vue';
 
@@ -21,7 +22,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'status'));
+onMounted(() => (active.value = 'garage'));
 </script>
 
 <template>
@@ -31,12 +32,15 @@ onMounted(() => (active.value = 'status'));
       <menu-items v-else-if="active === 'items'" />
       <menu-equip v-else-if="active === 'equip'" />
       <menu-status v-else-if="active === 'status'" />
+      <menu-garage v-else-if="active === 'garage'" />
+      <div v-else></div>
     </transition>
 
     <template #aside>
       <transition name="slide-right" mode="out-in">
         <q-team v-if="['menu', 'items'].includes(active)" />
         <trunk-component v-else-if="['equip'].includes(active)" />
+        <div v-else></div>
       </transition>
     </template>
   </q-layout>
