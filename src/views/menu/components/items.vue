@@ -11,7 +11,7 @@ defineOptions({ name: 'menu-items' });
     </div>
     <div class="panel-1 flex-1 flex flex-col border-r border-white/30 pt-12">
       <q-tr :icon="false" />
-      <q-tr :icon="false" :data="['道具', '']" />
+      <q-tr :icon="false" :data="['道具', '0']" />
       <q-thead :data="['名称,持有数', '0,100']" />
       <q-tr v-for="n in 10" :key="n" :data="[`${Mock.Random.cword(2, 10)},${Mock.Random.integer(1, 99)}`, '0,100']" hover />
       <div class="flex-1"></div>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import MenuItems from './components/items.vue';
-// import MenuEquip from './components/equip.vue';
+import MenuEquip from './components/equip.vue';
 
 defineOptions({ name: 'app-menu' });
 
@@ -25,6 +25,7 @@ onMounted(() => (active.value = 'equip'));
     <transition name="slide-right" mode="out-in">
       <div v-if="active === 'menu'"></div>
       <menu-items v-else-if="active === 'items'" />
+      <menu-equip v-else-if="active === 'equip'" />
     </transition>
 
     <template #aside>
