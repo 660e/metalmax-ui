@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
-import MenuItems from './components/items.vue';
-import MenuEquip from './components/equip.vue';
+
+import MenuItems from './views/items.vue';
+import MenuEquip from './views/equip.vue';
+
+import TrunkComponent from './components/trunk.vue';
 
 defineOptions({ name: 'app-menu' });
 
@@ -29,8 +32,9 @@ onMounted(() => (active.value = 'equip'));
     </transition>
 
     <template #aside>
-      <transition name="slide-right">
-        <q-team v-if="['menu', 'items', 'equip'].includes(active)" />
+      <transition name="slide-right" mode="out-in">
+        <q-team v-if="['menu', 'items'].includes(active)" />
+        <trunk-component v-else-if="['equip'].includes(active)" />
       </transition>
     </template>
   </q-layout>
