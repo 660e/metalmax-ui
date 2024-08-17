@@ -1,0 +1,45 @@
+<script setup lang="ts">
+import Mock from 'mockjs';
+
+defineOptions({ name: 'menu-status' });
+</script>
+
+<template>
+  <div class="flex-1 flex">
+    <div class="panel-2 border-x border-white/30 pt-24 px-1 space-y-1">
+      <div v-for="item in 3" :key="item" class="w-8 h-8 bg-red-500"></div>
+    </div>
+    <div class="panel-1 flex-1 flex flex-col border-r border-white/30 pt-12">
+      <q-tr />
+      <q-tr :icon="false" :data="['名称', '0']" />
+      <q-tr :icon="false" :data="['职业', '0']" />
+      <div class="flex">
+        <div class="flex-1"></div>
+        <b class="w-px bg-gradient-to-b from-white/0 via-white/30"></b>
+        <div class="flex-1">
+          <q-tr :data="[`当前等级,${Mock.Random.integer(1, 255)}`, '0,0']" />
+          <q-tr :data="[`总经验值,${Mock.Random.integer(1, 100000000)}`, '0,0']" />
+          <q-tr :data="[`升级还需,${Mock.Random.integer(1, 10000)}`, '0,0']" />
+        </div>
+      </div>
+      <q-thead :data="['能力', '0']" />
+      <div class="flex">
+        <div class="flex-1">
+          <q-tr :data="[`驾驶等级,${Mock.Random.integer(0, 255)}`, '0,0']" />
+          <q-tr :data="[`修理等级,${Mock.Random.integer(0, 255)}`, '0,0']" />
+          <q-tr :data="[`战斗等级,${Mock.Random.integer(0, 255)}`, '0,0']" />
+          <q-tr :data="[`命中率,${Mock.Random.integer(0, 100)}%`, '0,0']" />
+          <q-tr :data="[`闪避率,${Mock.Random.integer(0, 100)}%`, '0,0']" />
+        </div>
+        <b class="w-px bg-gradient-to-b from-white/0 via-white/30"></b>
+        <div class="flex-1">
+          <q-tr :data="[`腕力,${Mock.Random.integer(0, 255)}`, '0,0']" />
+          <q-tr :data="[`体力,${Mock.Random.integer(0, 255)}`, '0,0']" />
+          <q-tr :data="[`速度,${Mock.Random.integer(0, 255)}`, '0,0']" />
+        </div>
+      </div>
+      <q-thead :data="['技能', '0']" />
+      <q-tr v-for="n in 5" :key="n" :data="[Mock.Random.cword(2, 10), '0']" hover />
+    </div>
+  </div>
+</template>

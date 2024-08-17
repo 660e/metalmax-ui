@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue';
 
 import MenuItems from './views/items.vue';
 import MenuEquip from './views/equip.vue';
+import MenuStatus from './views/status.vue';
 
 import TrunkComponent from './components/trunk.vue';
 
@@ -20,7 +21,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'status'));
 </script>
 
 <template>
@@ -29,6 +30,7 @@ onMounted(() => (active.value = 'equip'));
       <div v-if="active === 'menu'"></div>
       <menu-items v-else-if="active === 'items'" />
       <menu-equip v-else-if="active === 'equip'" />
+      <menu-status v-else-if="active === 'status'" />
     </transition>
 
     <template #aside>
