@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineOptions({ name: 'q-layout' });
-defineProps<{ menus: { label: string; value: string }[] }>();
+defineProps<{ menus: { label: string; value: string }[]; full: boolean }>();
 
 const active = defineModel<string>();
 </script>
@@ -35,7 +35,7 @@ const active = defineModel<string>();
         <slot />
       </div>
 
-      <div class="w-80 flex">
+      <div :class="[full ? 'w-0' : 'w-80']" class="flex delay-100">
         <slot name="aside" />
       </div>
     </div>

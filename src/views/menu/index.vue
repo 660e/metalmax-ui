@@ -26,7 +26,7 @@ onMounted(() => (active.value = 'garage'));
 </script>
 
 <template>
-  <q-layout v-model="active" :menus="menus">
+  <q-layout v-model="active" :menus="menus" :full="['garage'].includes(active)">
     <transition name="slide-right" mode="out-in">
       <div v-if="active === 'menu'"></div>
       <menu-items v-else-if="active === 'items'" />
