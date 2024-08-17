@@ -10,7 +10,7 @@ defineOptions({ name: 'menu-equip' });
       <div v-for="item in 8" :key="item" class="w-8 h-8 bg-red-500"></div>
     </div>
     <div class="panel-1 flex-1 flex flex-col border-r border-white/30 pt-12">
-      <q-tr :icon="false" />
+      <q-tr />
       <q-tr :icon="false" :data="['角色名称', '0']" />
       <q-thead :data="['装备部位', '0']" />
       <q-tr hover>
