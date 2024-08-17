@@ -17,7 +17,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'items'));
+onMounted(() => (active.value = 'equip'));
 </script>
 
 <template>
@@ -29,7 +29,7 @@ onMounted(() => (active.value = 'items'));
 
     <template #aside>
       <transition name="slide-right">
-        <q-team v-if="['menu', 'items'].includes(active)" />
+        <q-team v-if="['menu', 'items', 'equip'].includes(active)" />
       </transition>
     </template>
   </q-layout>
