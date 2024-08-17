@@ -1,12 +1,13 @@
 <script setup lang="ts">
 defineOptions({ name: 'q-tr' });
-const props = withDefaults(defineProps<{ icon?: boolean; data?: [string, string] }>(), { icon: true });
+
+const props = withDefaults(defineProps<{ icon?: boolean; hover?: boolean; data?: [string, string] }>(), { icon: true });
 const texts = props.data ? props.data[0].split(',') : [];
 const widths = props.data ? props.data[1].split(',') : [];
 </script>
 
 <template>
-  <div class="h-6 flex items-center">
+  <div :class="{ 'bg-gradient-to-r': hover }" class="h-6 flex items-center hover:from-white/0 hover:to-white/30">
     <template v-if="data?.length">
       <span
         v-for="(text, index) in texts"
@@ -19,5 +20,6 @@ const widths = props.data ? props.data[1].split(',') : [];
         <span>{{ text }}</span>
       </span>
     </template>
+    <slot />
   </div>
 </template>

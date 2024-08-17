@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineOptions({ name: 'q-thead' });
+
 const props = defineProps<{ data?: [string, string] }>();
 const texts = props.data ? props.data[0].split(',') : [];
 const widths = props.data ? props.data[1].split(',') : [];
