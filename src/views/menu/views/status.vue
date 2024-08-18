@@ -11,8 +11,8 @@ defineOptions({ name: 'menu-status' });
     </div>
     <div class="panel-1 flex-1 flex flex-col border-r border-white/30 pt-12">
       <q-tr />
-      <q-tr :icon="false" :data="['名称', '0']" />
-      <q-tr :icon="false" :data="['职业', '0']" />
+      <q-tr :icon="false" :data="[Mock.Random.cword(2, 5), '0']" />
+      <q-tr :icon="false" :data="[Mock.Random.cword(2, 5), '0']" />
       <div class="flex">
         <div class="flex-1"></div>
         <b class="w-px bg-gradient-to-b from-white/0 via-white/30"></b>
