@@ -17,7 +17,7 @@ const active = defineModel<string>();
     </transition>
 
     <transition name="slide-left">
-      <div v-if="active" class="absolute top-24 left-0 w-36 space-y-1">
+      <div v-if="active" class="absolute z-10 top-24 left-0 w-36 space-y-1">
         <div
           v-for="menu in menus"
           :key="menu.value"

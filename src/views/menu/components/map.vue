@@ -3,7 +3,7 @@ defineOptions({ name: 'menu-map' });
 </script>
 
 <template>
-  <div class="absolute top-0 left-40 w-[944px] h-full pb-12 flex">
+  <div class="absolute inset-0 pl-40 pb-12 flex">
     <div class="panel-2 border-x border-white/30 pt-24 px-px space-y-px">
       <div v-for="item in 2" :key="item" class="w-9 h-9 bg-red-500"></div>
     </div>
