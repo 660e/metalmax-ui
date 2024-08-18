@@ -22,7 +22,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'garage'));
+onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>

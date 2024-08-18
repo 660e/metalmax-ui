@@ -12,7 +12,7 @@ const widths = props.data ? props.data[1].split(',') : [];
       <span
         v-for="(text, index) in texts"
         :key="index"
-        :style="{ width: widths[index] ? `${widths[index]}px` : 'auto' }"
+        :style="{ width: `${widths[index]}px` }"
         :class="{ 'flex-1': widths[index] === '0', 'justify-end': index }"
         class="bg-neutral-900/40 text-gray-400 text-xs leading-none flex items-center px-4"
       >

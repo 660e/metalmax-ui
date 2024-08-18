@@ -7,12 +7,12 @@ const widths = props.data ? props.data[1].split(',') : [];
 </script>
 
 <template>
-  <div :class="{ 'bg-gradient-to-r': hover }" class="h-6 flex items-center hover:from-white/0 hover:to-white/30">
+  <div :class="{ 'bg-gradient-to-r': hover }" class="h-6 flex items-center space-x-px hover:from-white/0 hover:to-white/30">
     <template v-if="data?.length">
       <span
         v-for="(text, index) in texts"
         :key="index"
-        :style="{ width: widths[index] ? `${widths[index]}px` : 'auto' }"
+        :style="{ width: `${widths[index]}px` }"
         :class="{ 'flex-1': widths[index] === '0', 'justify-end': index }"
         class="flex items-center px-4"
       >
