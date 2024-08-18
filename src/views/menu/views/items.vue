@@ -5,7 +5,7 @@ defineOptions({ name: 'menu-items' });
 </script>
 
 <template>
-  <div class="flex-1 flex">
+  <div class="absolute top-0 left-40 w-[640px] h-full pb-12 flex">
     <div class="panel-2 border-x border-white/30 pt-24 px-1 space-y-1">
       <div v-for="item in 7" :key="item" class="w-8 h-8 bg-red-500"></div>
     </div>

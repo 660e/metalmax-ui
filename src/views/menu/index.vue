@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
-// import MenuItems from './views/items.vue';
+import MenuItems from './views/items.vue';
 // import MenuEquip from './views/equip.vue';
 // import MenuStatus from './views/status.vue';
 // import MenuGarage from './views/garage.vue';
@@ -22,17 +22,21 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'menu'));
+onMounted(() => (active.value = 'items'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
+      <menu-items v-if="active === 'items'" />
+    </transition>
+
+    <transition name="slide-right">
       <q-team v-if="['menu', 'items'].includes(active)" />
     </transition>
     <!-- <transition name="slide-right" mode="out-in">
       <div v-if="active === 'menu'"></div>
-      <menu-items v-else-if="active === 'items'" />
+      
       <menu-equip v-else-if="active === 'equip'" />
       <menu-status v-else-if="active === 'status'" />
       <menu-garage v-else-if="active === 'garage'" />
