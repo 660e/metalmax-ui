@@ -20,7 +20,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'map'));
+onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
@@ -31,6 +31,11 @@ onMounted(() => (active.value = 'map'));
       <menu-equip v-else-if="active === 'equip'" />
       <menu-status v-else-if="active === 'status'" />
       <menu-garage v-else-if="active === 'garage'" />
+    </transition>
+    <transition name="slide-right">
+      <div v-if="active === 'menu'" class="absolute top-0 right-0 h-full pb-12">
+        <q-team class="h-full" />
+      </div>
     </transition>
   </q-layout>
 </template>
