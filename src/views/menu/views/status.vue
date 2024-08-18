@@ -15,7 +15,7 @@ defineOptions({ name: 'menu-status' });
       <q-tr :icon="false" :data="[Mock.Random.cword(2, 5), '0']" />
       <div class="flex">
         <div class="flex-1"></div>
-        <b class="w-px bg-gradient-to-b from-white/0 via-white/30"></b>
+        <b class="vr"></b>
         <div class="flex-1">
           <q-tr :data="[`当前等级,${Mock.Random.integer(1, 255)}`, '0,0']" />
           <q-tr :data="[`总经验值,${Mock.Random.integer(1, 100000000)}`, '0,0']" />
@@ -31,7 +31,7 @@ defineOptions({ name: 'menu-status' });
           <q-tr :data="[`命中率,${Mock.Random.integer(0, 100)}%`, '0,0']" />
           <q-tr :data="[`闪避率,${Mock.Random.integer(0, 100)}%`, '0,0']" />
         </div>
-        <b class="w-px bg-gradient-to-b from-white/0 via-white/30"></b>
+        <b class="vr"></b>
         <div class="flex-1">
           <q-tr :data="[`腕力,${Mock.Random.integer(0, 255)}`, '0,0']" />
           <q-tr :data="[`体力,${Mock.Random.integer(0, 255)}`, '0,0']" />

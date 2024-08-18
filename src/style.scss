@@ -10,6 +10,14 @@
   @apply bg-neutral-900/80 backdrop-blur-sm;
 }
 
+b.hr {
+  @apply h-px bg-gradient-to-r from-white/0 via-white/30;
+}
+
+b.vr {
+  @apply w-px bg-gradient-to-b from-white/0 via-white/30;
+}
+
 .slide-bottom-enter-active,
 .slide-top-enter-active {
   transition: all theme('transitionDuration.100') ease-out;

@@ -24,7 +24,7 @@ defineOptions({ name: 'menu-items' });
           <q-tr :data="[`会心率,${Mock.Random.integer(0, 30)}%`, '0,0']" />
           <q-tr :data="[`重量,${Mock.Random.integer(1, 99)}.00t`, '0,0']" />
         </div>
-        <b class="w-px bg-gradient-to-b from-white/0 via-white/30"></b>
+        <b class="vr"></b>
         <div class="flex-1">
           <q-tr :data="['类型,加农炮', '0,0']" />
           <q-tr :data="['范围,4连射', '0,0']" />
