@@ -5,11 +5,11 @@ defineOptions({ name: 'menu-equip' });
 </script>
 
 <template>
-  <div class="absolute top-0 left-40 w-[640px] h-full pb-12 flex">
-    <div class="panel-2 border-x border-white/30 pt-24 px-1 space-y-1">
-      <div v-for="item in 8" :key="item" class="w-8 h-8 bg-red-500"></div>
+  <div class="absolute top-0 left-40 w-[944px] h-full pb-12 flex">
+    <div class="panel-2 border-x border-white/30 pt-24 px-px space-y-px">
+      <div v-for="item in 8" :key="item" class="w-9 h-9 bg-red-500"></div>
     </div>
-    <div class="panel-1 flex-1 flex flex-col border-r border-white/30 pt-12">
+    <div class="panel-1 w-[600px] border-r border-white/30 pt-12 flex flex-col">
       <q-tr />
       <q-tr :icon="false" :data="['角色名称', '0']" />
       <q-thead :data="['装备部位', '0']" />
@@ -54,6 +54,23 @@ defineOptions({ name: 'menu-equip' });
           <q-tr :data="[`弹仓,(${Mock.Random.integer(0, 99)}/99)${Mock.Random.integer(0, 99)}/99`, '0,0']" />
         </div>
       </div>
+    </div>
+    <div class="flex-1"></div>
+    <div class="panel-1 w-[300px] border-l border-white/30 flex flex-col">
+      <q-tr />
+      <q-tr />
+      <q-tr />
+      <q-tr :icon="false" :data="['后备箱', '0']" />
+      <q-thead :data="['名称,重量', '0,100']" />
+      <q-tr :data="['卸下', '0']" hover />
+      <q-tr v-for="n in 5" :key="n" :data="[`${Mock.Random.cword(4, 9)},${Mock.Random.integer(1, 99)}.00t`, '0,100']" hover />
+      <div class="flex-1"></div>
+      <q-thead :data="['预览', '0']" />
+      <q-tr />
+      <q-tr />
+      <q-tr />
+      <q-tr />
+      <q-tr />
     </div>
   </div>
 </template>

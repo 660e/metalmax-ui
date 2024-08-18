@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 
-import MenuMap from './views/map.vue';
-import MenuItems from './views/items.vue';
-import MenuEquip from './views/equip.vue';
-import MenuStatus from './views/status.vue';
-import MenuGarage from './views/garage.vue';
-
-import TrunkComponent from './components/trunk.vue';
+import MenuMap from './components/map.vue';
+import MenuItems from './components/items.vue';
+import MenuEquip from './components/equip.vue';
+import MenuStatus from './components/status.vue';
+import MenuGarage from './components/garage.vue';
 
 defineOptions({ name: 'app-menu' });
 
@@ -33,11 +31,6 @@ onMounted(() => (active.value = 'map'));
       <menu-equip v-else-if="active === 'equip'" />
       <menu-status v-else-if="active === 'status'" />
       <menu-garage v-else-if="active === 'garage'" />
-    </transition>
-
-    <transition name="slide-right">
-      <q-team v-if="['menu', 'items'].includes(active)" />
-      <trunk-component v-else-if="active === 'equip'" />
     </transition>
   </q-layout>
 </template>
