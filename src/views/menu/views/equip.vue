@@ -15,25 +15,25 @@ defineOptions({ name: 'menu-equip' });
       <q-thead :data="['装备部位', '0']" />
       <q-tr hover>
         <q-tr :data="['加农炮', '0']" class="w-40" />
-        <q-tr :data="[Mock.Random.cword(5, 10), '0']" class="flex-1" />
+        <q-tr :data="[Mock.Random.cword(4, 9), '0']" class="flex-1" />
       </q-tr>
       <q-tr hover>
         <q-tr :data="['机枪', '0']" class="w-40" />
-        <q-tr :data="[Mock.Random.cword(5, 10), '0']" class="flex-1" />
+        <q-tr :data="[Mock.Random.cword(4, 9), '0']" class="flex-1" />
       </q-tr>
       <q-tr hover>
         <q-tr :data="['特殊装备', '0']" class="w-40" />
-        <q-tr :data="[Mock.Random.cword(5, 10), '0']" class="flex-1" />
+        <q-tr :data="[Mock.Random.cword(4, 9), '0']" class="flex-1" />
       </q-tr>
       <q-tr />
       <q-tr />
       <q-tr hover>
         <q-tr :data="['控制装置', '0']" class="w-40" />
-        <q-tr :data="[Mock.Random.cword(5, 10), '0']" class="flex-1" />
+        <q-tr :data="[Mock.Random.cword(4, 9), '0']" class="flex-1" />
       </q-tr>
       <q-tr hover>
         <q-tr :data="['引擎', '0']" class="w-40" />
-        <q-tr :data="[Mock.Random.cword(5, 10), '0']" class="flex-1" />
+        <q-tr :data="[Mock.Random.cword(4, 9), '0']" class="flex-1" />
       </q-tr>
       <div class="flex-1"></div>
       <q-thead :data="['说明', '0']" />

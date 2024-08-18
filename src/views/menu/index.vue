@@ -3,8 +3,8 @@ import { onMounted, ref } from 'vue';
 
 import MenuItems from './views/items.vue';
 import MenuEquip from './views/equip.vue';
-// import MenuStatus from './views/status.vue';
-// import MenuGarage from './views/garage.vue';
+import MenuStatus from './views/status.vue';
+import MenuGarage from './views/garage.vue';
 
 import TrunkComponent from './components/trunk.vue';
 
@@ -22,7 +22,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'garage'));
 </script>
 
 <template>
@@ -30,27 +30,13 @@ onMounted(() => (active.value = 'equip'));
     <transition name="slide-right">
       <menu-items v-if="active === 'items'" />
       <menu-equip v-else-if="active === 'equip'" />
+      <menu-status v-else-if="active === 'status'" />
+      <menu-garage v-else-if="active === 'garage'" />
     </transition>
 
     <transition name="slide-right">
       <q-team v-if="['menu', 'items'].includes(active)" />
       <trunk-component v-else-if="active === 'equip'" />
     </transition>
-    <!-- <transition name="slide-right" mode="out-in">
-      <div v-if="active === 'menu'"></div>
-      
-      
-      <menu-status v-else-if="active === 'status'" />
-      <menu-garage v-else-if="active === 'garage'" />
-      <div v-else></div>
-    </transition>
-
-    <template #aside>
-      <transition name="slide-right" mode="out-in">
-        
-        
-        <div v-else></div>
-      </transition>
-    </template> -->
   </q-layout>
 </template>
