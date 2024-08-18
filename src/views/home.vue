@@ -4,7 +4,10 @@ import { useRouter } from 'vue-router';
 
 defineOptions({ name: 'app-home' });
 
-const routes = [{ label: '地图菜单', value: 'app-menu' }];
+const routes = [
+  { label: '地图菜单', value: 'app-menu' },
+  { label: '装备店/道具店', value: 'app-shop' }
+];
 const grid = ref(false);
 const router = useRouter();
 const to = (name: string) => router.push({ name });

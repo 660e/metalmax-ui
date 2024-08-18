@@ -32,7 +32,7 @@ const widths = props.data ? props.data[1].split(',') : [];
   width: 23px;
   position: absolute;
   top: 3px;
-  left: -8px;
+  left: -5px;
   z-index: 10;
 }
 </style>
