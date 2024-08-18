@@ -47,6 +47,7 @@ const active = ref('map');
         <q-thead :data="['任务,地点', '0,150']" />
         <q-tr v-for="n in 10" :key="n" :data="[`${Mock.Random.cword(4, 10)},${Mock.Random.cword(2, 7)}`, '0,150']" hover />
         <q-thead :data="['详情', '0']" />
+        <q-tr v-for="n in 5" :key="n" :data="[Mock.Random.csentence(), '0']" :icon="false" />
       </div>
     </template>
   </div>

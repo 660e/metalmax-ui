@@ -7,7 +7,7 @@ const widths = props.data ? props.data[1].split(',') : [];
 </script>
 
 <template>
-  <div :class="{ 'bg-gradient-to-r': hover }" class="h-6 flex items-center space-x-px hover:from-white/0 hover:to-white/30">
+  <div :class="{ 'bg-gradient-to-r cursor': hover }" class="h-6 flex items-center space-x-px hover:from-white/0 hover:to-white/30 relative">
     <template v-if="data?.length">
       <span
         v-for="(text, index) in texts"
@@ -23,3 +23,16 @@ const widths = props.data ? props.data[1].split(',') : [];
     <slot />
   </div>
 </template>
+
+<style lang="scss" scoped>
+.cursor:hover::before {
+  content: '';
+  background-image: url('@/assets/cursor.png');
+  height: 18px;
+  width: 23px;
+  position: absolute;
+  top: 3px;
+  left: -8px;
+  z-index: 10;
+}
+</style>

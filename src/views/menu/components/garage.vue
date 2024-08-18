@@ -18,11 +18,11 @@ defineOptions({ name: 'menu-garage' });
           <q-tr />
           <q-tr />
           <q-tr />
+          <q-tr />
           <q-tr :data="['底盘特性,会心一击', '0,0']" />
           <q-tr :data="['底盘抗性,火焰', '0,0']" />
           <q-tr :data="[`最大载重,${Mock.Random.integer(100, 200)}.00t`, '0,0']" />
           <q-tr :data="[`特殊弹仓,${Mock.Random.integer(10, 99)}/99`, '0,0']" />
-          <q-tr />
         </div>
         <b class="vr"></b>
         <div class="w-60">
