@@ -1,3 +1,3 @@
 <template>
-  <div>Lorem ipsum dolor sit amet.</div>
+  <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </template>
