@@ -40,7 +40,7 @@ const routes = [
     </div>
     <div class="relative">
       <img src="@/assets/bg.png" />
-      <div class="absolute inset-0">
+      <div class="absolute inset-0 overflow-hidden">
         <router-view />
       </div>
     </div>
