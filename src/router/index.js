@@ -5,7 +5,14 @@ export default createRouter({
   routes: [
     {
       path: '/',
-      component: () => import('@/views/index.vue')
+      component: () => import('@/views/index.vue'),
+      children: [
+        {
+          path: 'menu',
+          name: 'app-menu',
+          component: () => import('@/views/menu/index.vue')
+        }
+      ]
     }
   ]
 });
