@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
+import MenuItems from './components/items.vue';
+
 const active = ref();
 const menus = [
   { label: '地图', value: 'map' },
@@ -12,9 +14,13 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'menu'));
+onMounted(() => (active.value = 'items'));
 </script>
 
 <template>
-  <q-layout v-model="active" :menus="menus"></q-layout>
+  <q-layout v-model="active" :menus="menus">
+    <transition name="slide-right">
+      <menu-items v-if="active === 'items'" />
+    </transition>
+  </q-layout>
 </template>

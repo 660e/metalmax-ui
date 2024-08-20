@@ -8,11 +8,7 @@ const active = defineModel();
 <template>
   <div class="h-full relative">
     <transition name="slide-top">
-      <div
-        v-if="active"
-        @click="active = 'menu'"
-        class="absolute z-20 top-0 left-0 w-[500px] h-12 flex flex-col"
-      >
+      <div v-if="active" @click="active = 'menu'" class="absolute z-20 top-0 left-0 w-[500px] h-12 flex flex-col">
         <div class="flex-1 flex items-center pl-4 bg-gradient-to-r from-neutral-900 from-40%">
           <span class="text-xl leading-none">
             {{ menus.find(menu => menu.value === active)?.label || '场景信息' }}
@@ -23,7 +19,7 @@ const active = defineModel();
     </transition>
 
     <transition name="slide-left">
-      <div v-if="active" class="absolute z-10 top-24 left-0 w-36 space-y-1">
+      <div v-if="active" class="absolute z-10 top-24 left-0 w-32 space-y-1">
         <div
           v-for="menu in menus"
           :key="menu.value"
@@ -39,10 +35,7 @@ const active = defineModel();
     <slot />
 
     <transition name="slide-bottom">
-      <div
-        v-if="active"
-        class="absolute bottom-0 left-0 panel-2 w-full h-12 border-t border-white/30"
-      ></div>
+      <div v-if="active" class="absolute bottom-0 left-0 panel-2 w-full h-12 border-t border-white/30"></div>
     </transition>
   </div>
 </template>
