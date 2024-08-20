@@ -38,8 +38,11 @@ const routes = [
         {{ route.label }}
       </div>
     </div>
-    <div>
+    <div class="relative">
       <img src="@/assets/bg.png" />
+      <div class="absolute inset-0">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>

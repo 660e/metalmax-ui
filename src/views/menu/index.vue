@@ -1,3 +1,3 @@
 <template>
-  <div>menu</div>
+  <q-layout></q-layout>
 </template>
