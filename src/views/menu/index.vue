@@ -16,5 +16,5 @@ onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
-  <q-layout :menus="menus"></q-layout>
+  <q-layout v-model="active" :menus="menus"></q-layout>
 </template>

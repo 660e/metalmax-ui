@@ -1,8 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
   overflow: hidden;
   touch-action: manipulation;
+}
+
+.panel-1 {
+  @apply bg-neutral-900/30 backdrop-blur-sm;
+}
+
+.panel-2 {
+  @apply bg-neutral-900/80 backdrop-blur-sm;
+}
+
+b.hr {
+  @apply h-px bg-gradient-to-r from-white/0 via-white/30;
+}
+
+b.vr {
+  @apply w-px bg-gradient-to-b from-white/0 via-white/30;
+}
+
+.slide-bottom-enter-active,
+.slide-top-enter-active {
+  transition: all theme('transitionDuration.100') ease-out;
+}
+
+.slide-right-enter-active,
+.slide-left-enter-active {
+  transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-out;
+}
+
+.slide-bottom-leave-active,
+.slide-top-leave-active {
+  transition: all theme('transitionDuration.100') theme('transitionDelay.100') ease-in;
+}
+
+.slide-right-leave-active,
+.slide-left-leave-active {
+  transition: all theme('transitionDuration.100') ease-in;
+}
+
+.slide-bottom-enter-from,
+.slide-bottom-leave-to {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.slide-left-enter-from,
+.slide-left-leave-to {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.slide-top-enter-from,
+.slide-top-leave-to {
+  transform: translateY(-40px);
+  opacity: 0;
 }

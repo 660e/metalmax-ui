@@ -10,7 +10,7 @@ const routes = [
 
 <template>
   <div
-    class="h-screen text-sm leading-none select-none relative flex justify-center items-center bg-neutral-900 text-neutral-100"
+    class="h-screen text-sm leading-none select-none relative flex justify-center items-center bg-gray-800 text-neutral-100"
   >
     <div
       v-if="!visible"
