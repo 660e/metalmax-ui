@@ -1,8 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
-import MenuItems from './components/items.vue';
-
 const active = ref();
 const menus = [
   { label: '地图', value: 'map' },
@@ -20,7 +18,33 @@ onMounted(() => (active.value = 'items'));
 <template>
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
-      <menu-items v-if="active === 'items'" />
+      <div v-if="active === 'items'" class="h-full">
+        <q-panel-40 :icons="[1, 2, 3, 4, 5, 6, 7]" />
+        <q-panel-600>
+          <q-row />
+          <q-row>道具</q-row>
+          <q-head :cells="['名称', '持有数']" />
+          <q-row :cells="['碱性车蜡', 99]" hover />
+          <q-row :cells="['修理工具箱', 99]" hover />
+          <q-row :cells="['回复胶囊', 99]" hover />
+          <q-row :cells="['能量胶囊', 99]" hover />
+          <q-row v-for="n in 9" :key="n" />
+          <q-head :cells="['说明']" />
+          <div class="grid grid-rows-5 grid-flow-col">
+            <q-row :cells="['攻击', 2000]" />
+            <q-row :cells="['防御', 255]" />
+            <q-row :cells="['命中', '30%']" />
+            <q-row :cells="['会心', '30%']" />
+            <q-row :cells="['重量', '99.99t']" />
+            <q-row :cells="['弹仓', '99/99']" />
+            <q-row :cells="['射击', '4次']" />
+            <q-row :cells="['范围', '1体']" />
+            <q-row :cells="['属性', '通常']" />
+            <q-row :cells="['状态', '正常']" />
+          </div>
+        </q-panel-600>
+        <q-panel-300></q-panel-300>
+      </div>
     </transition>
   </q-layout>
 </template>
