@@ -7,12 +7,16 @@ body {
   touch-action: manipulation;
 }
 
-.panel-1 {
-  @apply bg-neutral-900/30 backdrop-blur-sm;
+.backdrop-30 {
+  @apply backdrop-blur-sm bg-neutral-900/30;
 }
 
-.panel-2 {
-  @apply bg-neutral-900/80 backdrop-blur-sm;
+.backdrop-60 {
+  @apply backdrop-blur-sm bg-neutral-900/60;
+}
+
+.backdrop-90 {
+  @apply backdrop-blur-sm bg-neutral-900/90;
 }
 
 b.hr {
