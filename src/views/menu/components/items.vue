@@ -10,5 +10,6 @@
       <q-row :cells="['回复胶囊', 1]" hover />
       <q-row :cells="['能量胶囊', 1]" hover />
     </q-panel-600>
+    <q-panel-300></q-panel-300>
   </div>
 </template>
