@@ -21,7 +21,7 @@ onMounted(() => (active.value = 'items'));
       <div v-if="active === 'items'" class="h-full">
         <q-panel-40 :icons="[1, 2, 3, 4, 5, 6, 7]" />
         <q-panel-600>
-          <q-row />
+          <q-row v-for="n in 3" :key="n" />
           <q-row>道具</q-row>
           <q-head :cells="['名称', '持有数']" />
           <q-row :cells="['碱性车蜡', 99]" hover />
@@ -43,7 +43,12 @@ onMounted(() => (active.value = 'items'));
             <q-row :cells="['状态', '正常']" />
           </div>
         </q-panel-600>
-        <q-panel-300></q-panel-300>
+        <q-panel-240>
+          <div class="h-12 flex justify-end items-center pr-4">
+            <span>999999999</span>
+            <q-icon class="ml-2" />
+          </div>
+        </q-panel-240>
       </div>
     </transition>
   </q-layout>
