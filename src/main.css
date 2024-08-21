@@ -7,15 +7,15 @@ body {
   touch-action: manipulation;
 }
 
-.backdrop-30 {
-  @apply backdrop-blur-sm bg-neutral-900/30;
+.backdrop-1 {
+  @apply backdrop-blur-sm bg-neutral-900/40;
 }
 
-.backdrop-60 {
-  @apply backdrop-blur-sm bg-neutral-900/60;
+.backdrop-2 {
+  @apply backdrop-blur-sm bg-neutral-900/70;
 }
 
-.backdrop-90 {
+.backdrop-3 {
   @apply backdrop-blur-sm bg-neutral-900/90;
 }
 

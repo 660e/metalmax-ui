@@ -26,7 +26,7 @@ const active = defineModel();
           :key="menu.value"
           :class="[active === menu.value ? 'w-32 pl-8' : 'w-28 pl-4']"
           @click="active = menu.value"
-          class="backdrop-30 py-2 duration-200 hover:w-32 hover:pl-8"
+          class="backdrop-1 py-2 duration-200 hover:w-32 hover:pl-8"
         >
           {{ menu.label }}
         </div>
@@ -36,7 +36,7 @@ const active = defineModel();
     <slot />
 
     <transition name="slide-bottom">
-      <div v-if="active" class="absolute bottom-0 left-0 backdrop-90 w-full h-12"></div>
+      <div v-if="active" class="absolute bottom-0 left-0 backdrop-3 w-full h-12"></div>
     </transition>
   </div>
 </template>

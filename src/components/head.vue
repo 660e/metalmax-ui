@@ -4,7 +4,7 @@ defineProps({ cells: Array });
 </script>
 
 <template>
-  <div class="h-6 py-1 flex">
+  <div class="h-6 py-1 flex relative">
     <div
       v-for="(cell, index) in cells"
       :key="index"
@@ -13,5 +13,6 @@ defineProps({ cells: Array });
     >
       {{ cell }}
     </div>
+    <b class="absolute top-1 left-0 w-1 h-4 bg-white/30"></b>
   </div>
 </template>
