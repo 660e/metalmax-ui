@@ -4,8 +4,8 @@
     <q-panel-600>
       <q-row />
       <q-row>道具</q-row>
-      <div>Lorem ipsum dolor sit amet.</div>
-      <q-row :cells="['碱性车蜡', 1]" />
+      <q-head :cells="['名称', '持有数']" />
+      <q-row :cells="['碱性车蜡', 1]" hover />
     </q-panel-600>
   </div>
 </template>
