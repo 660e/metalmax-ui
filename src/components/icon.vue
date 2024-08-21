@@ -1,8 +1,8 @@
 <script setup>
 defineOptions({ name: 'q-icon' });
-defineProps({ size: Number });
+defineProps({ size: String });
 </script>
 
 <template>
-  <div :class="{ 'w-5 h-5': size === 20, 'w-[30px] h-[30px]': size === 30 }" class="bg-red-500"></div>
+  <div :class="[size === 'large' ? 'w-8 h-8' : 'w-5 h-5']" class="bg-red-500"></div>
 </template>
