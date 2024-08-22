@@ -12,7 +12,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'items'));
+onMounted(() => (active.value = 'equip'));
 </script>
 
 <template>
@@ -43,13 +43,18 @@ onMounted(() => (active.value = 'items'));
             <q-row :cells="['状态', '正常']" />
           </div>
         </q-panel-600>
-        <q-panel-240>
-          <div class="h-12 flex justify-end items-center pr-4">
-            <span>999999999</span>
-            <q-icon class="ml-2" />
-          </div>
-        </q-panel-240>
       </div>
+
+      <div v-else-if="active === 'equip'"></div>
+    </transition>
+
+    <transition name="slide-right">
+      <q-panel-240 v-if="['menu', 'items'].includes(active)">
+        <div class="h-12 flex justify-end items-center pr-4">
+          <span>999999999</span>
+          <q-icon class="ml-2" />
+        </div>
+      </q-panel-240>
     </transition>
   </q-layout>
 </template>
