@@ -86,6 +86,17 @@ onMounted(() => (active.value = 'equip'));
             </div>
           </div>
         </q-panel-600>
+        <q-panel-300>
+          <q-row v-for="n in 3" :key="n" />
+          <q-row class="pl-4">后备箱</q-row>
+          <q-head :cells="['名称', '重量']" />
+          <q-row :cells="['卸下']" hover />
+          <q-row :cells="['雷电加农炮', '100.00t']" hover />
+          <q-row :cells="['205mm红牡丹炮', '89.00t']" hover />
+          <q-row :cells="['诺伊曼', '5.00t']" hover />
+          <q-row v-for="n in 9" :key="n" />
+          <q-head :cells="['预览']" />
+        </q-panel-300>
       </div>
     </transition>
 
