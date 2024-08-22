@@ -22,7 +22,7 @@ onMounted(() => (active.value = 'equip'));
         <q-panel-40 :icons="[1, 2, 3, 4, 5, 6, 7]" />
         <q-panel-600>
           <q-row v-for="n in 3" :key="n" />
-          <q-row>道具</q-row>
+          <q-row class="pl-4">道具</q-row>
           <q-head :cells="['名称', '持有数']" />
           <q-row :cells="['碱性车蜡', 99]" hover />
           <q-row :cells="['修理工具箱', 99]" hover />
@@ -30,22 +30,63 @@ onMounted(() => (active.value = 'equip'));
           <q-row :cells="['能量胶囊', 99]" hover />
           <q-row v-for="n in 9" :key="n" />
           <q-head :cells="['说明']" />
-          <div class="grid grid-rows-5 grid-flow-col">
-            <q-row :cells="['攻击', 2000]" />
-            <q-row :cells="['防御', 255]" />
-            <q-row :cells="['命中', '30%']" />
-            <q-row :cells="['会心', '30%']" />
-            <q-row :cells="['重量', '99.99t']" />
-            <q-row :cells="['弹仓', '99/99']" />
-            <q-row :cells="['射击', '4次']" />
-            <q-row :cells="['范围', '1体']" />
-            <q-row :cells="['属性', '通常']" />
-            <q-row :cells="['状态', '正常']" />
+          <div class="flex">
+            <div class="flex-1">
+              <q-row :cells="['攻击', 2000]" />
+              <q-row :cells="['防御', 255]" />
+              <q-row :cells="['命中', '30%']" />
+              <q-row :cells="['会心', '30%']" />
+              <q-row :cells="['重量', '99.99t']" />
+            </div>
+            <div class="flex-1">
+              <q-row :cells="['弹仓', '99/99']" />
+              <q-row :cells="['射击', '4次']" />
+              <q-row :cells="['范围', '1体']" />
+              <q-row :cells="['属性', '通常']" />
+              <q-row :cells="['状态', '正常']" />
+            </div>
           </div>
         </q-panel-600>
       </div>
 
-      <div v-else-if="active === 'equip'"></div>
+      <div v-else-if="active === 'equip'" class="h-full">
+        <q-panel-40 :icons="[1, 2, 3, 4, 5, 6, 7]" />
+        <q-panel-600>
+          <q-row v-for="n in 3" :key="n" />
+          <q-row class="pl-4">角色名称</q-row>
+          <q-head :cells="['装备部位']" />
+          <q-row hover><q-row :cells="['加农炮']" class="w-48" /><q-row :cells="['220mm大地女神炮']" /></q-row>
+          <q-row hover><q-row :cells="['机枪']" class="w-48" /><q-row :cells="['雷暴机关枪']" /></q-row>
+          <q-row hover><q-row :cells="['特殊装备']" class="w-48" /><q-row :cells="['烈日中子炮']" /></q-row>
+          <q-row hover><q-row :cells="['特殊装备']" class="w-48" /><q-row :cells="['']" /></q-row>
+          <q-row hover><q-row :cells="['特殊装备']" class="w-48" /><q-row :cells="['']" /></q-row>
+          <q-row />
+          <q-row hover><q-row :cells="['控制装置']" class="w-48" /><q-row :cells="['所罗门2']" /></q-row>
+          <q-row hover><q-row :cells="['芯片']" class="w-48" /><q-row :cells="['主炮连射']" /></q-row>
+          <q-row hover><q-row :cells="['芯片']" class="w-48" /><q-row :cells="['迎击能力']" /></q-row>
+          <q-row hover><q-row :cells="['芯片']" class="w-48" /><q-row :cells="['']" /></q-row>
+          <q-row />
+          <q-row hover><q-row :cells="['引擎']" class="w-48" /><q-row :cells="['V100金刚']" /></q-row>
+          <q-row hover><q-row :cells="['引擎']" class="w-48" /><q-row :cells="['']" /></q-row>
+          <q-head :cells="['说明']" />
+          <div class="flex">
+            <div class="flex-1">
+              <q-row :cells="['攻击', '(-200)2000']" />
+              <q-row :cells="['防御', 255]" />
+              <q-row :cells="['命中', '(-15%)30%']" />
+              <q-row :cells="['会心', '30%']" />
+              <q-row :cells="['重量', '(-100.00t)199.00t']" />
+            </div>
+            <div class="flex-1">
+              <q-row :cells="['弹仓', '(12/64)99/99']" />
+              <q-row :cells="['射击', '(1次)4次']" />
+              <q-row :cells="['范围', '(圆范围)1体']" />
+              <q-row :cells="['属性', '通常']" />
+              <q-row :cells="['状态', '正常']" />
+            </div>
+          </div>
+        </q-panel-600>
+      </div>
     </transition>
 
     <transition name="slide-right">
