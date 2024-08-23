@@ -4,7 +4,6 @@
 
 body {
   overflow: hidden;
-  touch-action: manipulation;
 }
 
 .backdrop-1 {

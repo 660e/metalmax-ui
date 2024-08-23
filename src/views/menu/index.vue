@@ -12,7 +12,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'status'));
 </script>
 
 <template>
@@ -97,6 +97,40 @@ onMounted(() => (active.value = 'equip'));
           <q-row v-for="n in 9" :key="n" />
           <q-head :cells="['预览']" />
         </q-panel-300>
+      </div>
+
+      <div v-else-if="active === 'status'" class="h-full">
+        <q-panel-40 :icons="[1, 2, 3, 4]" />
+        <q-panel-600>
+          <q-row v-for="n in 3" :key="n" />
+          <q-row class="pl-4">角色名称</q-row>
+          <q-row class="pl-4">角色职业</q-row>
+          <div class="flex">
+            <div class="flex-1"></div>
+            <div class="flex-1">
+              <q-row :cells="['当前等级', 255]" />
+              <q-row :cells="['总经验值', 999999999]" />
+              <q-row :cells="['升级还需', 10000]" />
+            </div>
+          </div>
+          <q-head :cells="['能力']" />
+          <div class="flex">
+            <div class="flex-1">
+              <q-row :cells="['驾驶等级', 255]" />
+              <q-row :cells="['修理等级', 255]" />
+              <q-row :cells="['战斗等级', 255]" />
+              <q-row :cells="['命中率', '50%']" />
+              <q-row :cells="['闪避率', '10%']" />
+            </div>
+            <div class="flex-1">
+              <q-row :cells="['腕力', 255]" />
+              <q-row :cells="['体力', 255]" />
+              <q-row :cells="['速度', 255]" />
+            </div>
+          </div>
+          <q-head :cells="['技能']" />
+          <q-row :cells="['猎人之眼']" />
+        </q-panel-600>
       </div>
     </transition>
 
