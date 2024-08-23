@@ -12,15 +12,15 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'status'));
+onMounted(() => (active.value = 'garage'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
       <div v-if="active === 'items'" class="h-full">
-        <q-panel-40 :icons="[1, 2, 3, 4, 5, 6, 7]" />
-        <q-panel-600>
+        <q-panel :size="40" :icons="Array(7)" />
+        <q-panel :size="600">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">道具</q-row>
           <q-head :cells="['名称', '持有数']" />
@@ -46,12 +46,12 @@ onMounted(() => (active.value = 'status'));
               <q-row :cells="['状态', '正常']" />
             </div>
           </div>
-        </q-panel-600>
+        </q-panel>
       </div>
 
       <div v-else-if="active === 'equip'" class="h-full">
-        <q-panel-40 :icons="[1, 2, 3, 4, 5, 6, 7]" />
-        <q-panel-600>
+        <q-panel :size="40" :icons="Array(7)" />
+        <q-panel :size="600">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">角色名称</q-row>
           <q-head :cells="['装备部位']" />
@@ -85,8 +85,8 @@ onMounted(() => (active.value = 'status'));
               <q-row :cells="['状态', '正常']" />
             </div>
           </div>
-        </q-panel-600>
-        <q-panel-300>
+        </q-panel>
+        <q-panel :size="300">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">后备箱</q-row>
           <q-head :cells="['名称', '重量']" />
@@ -96,12 +96,12 @@ onMounted(() => (active.value = 'status'));
           <q-row :cells="['诺伊曼', '5.00t']" hover />
           <q-row v-for="n in 9" :key="n" />
           <q-head :cells="['预览']" />
-        </q-panel-300>
+        </q-panel>
       </div>
 
       <div v-else-if="active === 'status'" class="h-full">
-        <q-panel-40 :icons="[1, 2, 3, 4]" />
-        <q-panel-600>
+        <q-panel :size="40" :icons="Array(4)" />
+        <q-panel :size="600">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">角色名称</q-row>
           <q-row class="pl-4">角色职业</q-row>
@@ -130,17 +130,21 @@ onMounted(() => (active.value = 'status'));
           </div>
           <q-head :cells="['技能']" />
           <q-row :cells="['猎人之眼']" />
-        </q-panel-600>
+        </q-panel>
+      </div>
+
+      <div v-else-if="active === 'garage'" class="h-full">
+        <q-panel :size="40" :icons="Array(12)" />
       </div>
     </transition>
 
     <transition name="slide-right">
-      <q-panel-240 v-if="['menu', 'items'].includes(active)">
+      <q-panel v-if="['menu', 'items'].includes(active)" :size="240">
         <div class="h-12 flex justify-end items-center pr-4">
           <span>999999999</span>
           <q-icon class="ml-2" />
         </div>
-      </q-panel-240>
+      </q-panel>
     </transition>
   </q-layout>
 </template>

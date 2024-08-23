@@ -7,15 +7,12 @@ import router from './router';
 import QHead from '@/components/head.vue';
 import QIcon from '@/components/icon.vue';
 import QLayout from '@/components/layout.vue';
-import QPanel40 from '@/components/panel-40.vue';
-import QPanel240 from '@/components/panel-240.vue';
-import QPanel300 from '@/components/panel-300.vue';
-import QPanel600 from '@/components/panel-600.vue';
+import QPanel from '@/components/panel.vue';
 import QRow from '@/components/row.vue';
 
 const app = createApp(App);
 
-[QHead, QIcon, QLayout, QPanel40, QPanel240, QPanel300, QPanel600, QRow].forEach(component => {
+[QHead, QIcon, QLayout, QPanel, QRow].forEach(component => {
   app.component(component.name, component);
 });
 
