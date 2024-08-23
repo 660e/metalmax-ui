@@ -6,7 +6,7 @@ const cellClass = index => {
   if (cells?.length === 2 && index) {
     return 'flex-1 justify-end';
   } else if (cells?.length > 2) {
-    return 'w-[100px] ml-px justify-end';
+    return index ? 'w-[100px] ml-px justify-end' : 'flex-1';
   } else {
     return '';
   }

@@ -135,7 +135,31 @@ onMounted(() => (active.value = 'garage'));
 
       <div v-else-if="active === 'garage'" class="h-full">
         <q-panel :size="40" :icons="Array(12)" />
-        <q-panel :size="904"></q-panel>
+        <q-panel :size="904">
+          <q-row v-for="n in 3" :key="n" />
+          <div class="flex">
+            <div class="w-60">
+              <q-row class="pl-4">战车名称</q-row>
+              <q-row class="pl-4">战车类型</q-row>
+              <q-row v-for="n in 4" :key="n" />
+              <q-row :cells="['底盘特性', '会心一击']" />
+              <q-row :cells="['底盘抗性', '火焰']" />
+              <q-row :cells="['最大载重', '255.00t']" />
+              <q-row :cells="['特殊弹仓', '99/99']" />
+            </div>
+            <div class="flex-1"></div>
+          </div>
+          <q-head :cells="['名称', '攻击', '范围', '属性', '命中', '会心', '防御', '重量']" />
+          <q-row :cells="['220mm大地女神炮', 2000, '1体', '通常', '30%', '30%', 255, '99.99t']" />
+          <q-row :cells="['雷暴机关枪', 1000, '1体', '通常', '30%', '30%', 255, '50.50t']" />
+          <q-row :cells="['烈日中子炮', 2000, '全体', '通常', '30%', '30%', 255, '99.99t']" />
+          <q-row v-for="n in 2" :key="n" />
+          <q-head :cells="['名称', '芯片1', '芯片2', '芯片3', '命中', '会心', '防御', '重量']" />
+          <q-row :cells="['所罗门2', '主炮连射', '迎击能力', '空', '30%', '30%', 255, '10.00t']" />
+          <q-head :cells="['名称', '载重', '防御', '重量']" />
+          <q-row :cells="['V100金刚', '99.99t', 255, '10.00t']" />
+          <q-row />
+        </q-panel>
       </div>
     </transition>
 
