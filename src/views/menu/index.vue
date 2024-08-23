@@ -135,6 +135,7 @@ onMounted(() => (active.value = 'garage'));
 
       <div v-else-if="active === 'garage'" class="h-full">
         <q-panel :size="40" :icons="Array(12)" />
+        <q-panel :size="904"></q-panel>
       </div>
     </transition>
 

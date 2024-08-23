@@ -7,13 +7,15 @@ const { size } = defineProps({ size: Number, icons: Array });
 const panelClass = computed(() => {
   switch (size) {
     case 40:
-      return 'left-40 w-10';
+      return 'left-[160px] w-[40px]';
     case 240:
       return 'left-[864px] w-[240px]';
     case 300:
       return 'left-[804px] w-[300px]';
     case 600:
       return 'left-[200px] w-[600px]';
+    case 904:
+      return 'left-[200px] w-[904px]';
     default:
       return '';
   }
