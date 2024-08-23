@@ -138,7 +138,7 @@ onMounted(() => (active.value = 'garage'));
         <q-panel :size="904">
           <q-row v-for="n in 3" :key="n" />
           <div class="flex">
-            <div class="w-60">
+            <div class="flex-1">
               <q-row class="pl-4">战车名称</q-row>
               <q-row class="pl-4">战车类型</q-row>
               <q-row v-for="n in 4" :key="n" />
@@ -147,7 +147,23 @@ onMounted(() => (active.value = 'garage'));
               <q-row :cells="['最大载重', '255.00t']" />
               <q-row :cells="['特殊弹仓', '99/99']" />
             </div>
-            <div class="flex-1"></div>
+            <div class="w-[440px]">
+              <q-head :cells="['货仓']" />
+              <div class="grid grid-cols-2">
+                <q-row :cells="['220mm大地女神炮']" />
+                <q-row :cells="['雷暴机关枪']" />
+                <q-row :cells="['烈日中子炮']" />
+                <q-row :cells="['迷彩伪装']" />
+                <q-row :cells="['电磁护屏']" />
+                <q-row :cells="['换气装置']" />
+              </div>
+            </div>
+            <div class="w-[220px]">
+              <q-head :cells="['名称', '持有数']" />
+              <q-row :cells="['火箭弹', 10]" />
+              <q-row :cells="['穿甲弹', 10]" />
+              <q-row :cells="['汽油弹', 10]" />
+            </div>
           </div>
           <q-head :cells="['名称', '攻击', '范围', '属性', '命中', '会心', '防御', '重量']" />
           <q-row :cells="['220mm大地女神炮', 2000, '1体', '通常', '30%', '30%', 255, '99.99t']" />
