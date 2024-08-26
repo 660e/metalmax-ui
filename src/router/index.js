@@ -11,6 +11,11 @@ export default createRouter({
           path: 'menu',
           name: 'app-menu',
           component: () => import('@/views/menu.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
         }
       ]
     }
