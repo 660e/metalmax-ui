@@ -10,7 +10,7 @@ export default createRouter({
         {
           path: 'menu',
           name: 'app-menu',
-          component: () => import('@/views/menu/index.vue')
+          component: () => import('@/views/menu.vue')
         }
       ]
     }
