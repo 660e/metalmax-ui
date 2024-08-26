@@ -42,7 +42,11 @@ onMounted(() => (active.value = 'menu'));
       </div>
 
       <div v-else-if="active === 'map'" class="h-full">
-        <div class="absolute top-16 bottom-16 left-[200px] right-[256px] bg-neutral-900"></div>
+        <q-panel :size="600">
+          <div class="flex-1 pt-14 px-2 pb-2 flex">
+            <div class="flex-1 bg-neutral-900"></div>
+          </div>
+        </q-panel>
         <q-panel :size="240">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">犬系统</q-row>
