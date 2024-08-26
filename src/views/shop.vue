@@ -15,7 +15,7 @@ onMounted(() => (active.value = 'buy'));
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
       <div v-if="['buy', 'sell'].includes(active)" class="h-full">
-        <q-panel :size="40" :icons="Array(4)" />
+        <q-panel v-if="active === 'sell'" :size="40" :icons="Array(4)" />
         <q-panel :size="600">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">道具</q-row>
@@ -48,10 +48,7 @@ onMounted(() => (active.value = 'buy'));
 
     <transition name="slide-right">
       <q-panel v-if="active" :size="240">
-        <div class="h-12 flex justify-end items-center pr-4">
-          <span>999999999</span>
-          <q-icon class="ml-2" />
-        </div>
+        <q-team />
       </q-panel>
     </transition>
   </q-layout>

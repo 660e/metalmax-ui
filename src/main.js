@@ -9,10 +9,11 @@ import QIcon from '@/components/icon.vue';
 import QLayout from '@/components/layout.vue';
 import QPanel from '@/components/panel.vue';
 import QRow from '@/components/row.vue';
+import QTeam from '@/components/team.vue';
 
 const app = createApp(App);
 
-[QHead, QIcon, QLayout, QPanel, QRow].forEach(component => {
+[QHead, QIcon, QLayout, QPanel, QRow, QTeam].forEach(component => {
   app.component(component.name, component);
 });
 

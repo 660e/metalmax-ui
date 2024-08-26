@@ -222,10 +222,7 @@ onMounted(() => (active.value = 'menu'));
 
     <transition name="slide-right">
       <q-panel v-if="['menu', 'items'].includes(active)" :size="240">
-        <div class="h-12 flex justify-end items-center pr-4">
-          <span>999999999</span>
-          <q-icon class="ml-2" />
-        </div>
+        <q-team />
       </q-panel>
     </transition>
   </q-layout>
