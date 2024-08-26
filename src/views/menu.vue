@@ -2,8 +2,9 @@
 import { onMounted, ref } from 'vue';
 
 const active = ref();
+const quests = ref(false);
+
 const menus = [
-  { label: '任务', value: 'quests' },
   { label: '地图', value: 'map' },
   { label: '乘降', value: 'in-out' },
   { label: '道具', value: 'items' },
@@ -13,13 +14,30 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'menu'));
+onMounted(() => (active.value = 'map'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
-      <div v-if="active === 'quests'" class="h-full">
+      <div v-if="active === 'map' && !quests" class="h-full">
+        <q-panel :size="40" :icons="Array(2)" @click="quests = true" />
+        <q-panel :size="600">
+          <div class="flex-1 pt-14 px-2 pb-2 flex">
+            <div class="flex-1 bg-neutral-900"></div>
+          </div>
+        </q-panel>
+        <q-panel :size="240">
+          <q-row v-for="n in 3" :key="n" />
+          <q-row class="pl-4">犬系统</q-row>
+          <q-head :cells="['地点']" />
+          <q-row :cells="['明奇博士研究所']" hover />
+          <q-row :cells="['地球救济中心']" hover />
+        </q-panel>
+      </div>
+
+      <div v-else-if="active === 'map' && quests" class="h-full">
+        <q-panel :size="40" :icons="Array(2)" @click="quests = false" />
         <q-panel :size="300" style="left: 200px">
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">冒险指南</q-row>
@@ -38,21 +56,6 @@ onMounted(() => (active.value = 'menu'));
           <q-row :cells="['任务步骤04']" hover />
           <q-row v-for="n in 7" :key="n" />
           <q-head :cells="['详情']" />
-        </q-panel>
-      </div>
-
-      <div v-else-if="active === 'map'" class="h-full">
-        <q-panel :size="600">
-          <div class="flex-1 pt-14 px-2 pb-2 flex">
-            <div class="flex-1 bg-neutral-900"></div>
-          </div>
-        </q-panel>
-        <q-panel :size="240">
-          <q-row v-for="n in 3" :key="n" />
-          <q-row class="pl-4">犬系统</q-row>
-          <q-head :cells="['地点']" />
-          <q-row :cells="['明奇博士研究所']" hover />
-          <q-row :cells="['地球救济中心']" hover />
         </q-panel>
       </div>
 
