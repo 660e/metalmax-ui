@@ -14,7 +14,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'map'));
+onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
