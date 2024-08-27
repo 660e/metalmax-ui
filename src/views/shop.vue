@@ -3,8 +3,8 @@ import { onMounted, ref } from 'vue';
 
 const active = ref();
 const menus = [
-  { label: '买', value: 'buy' },
-  { label: '卖', value: 'sell' },
+  { label: '买', value: 1 },
+  { label: '卖', value: 2 },
   { label: '离开商店', value: 'exit' }
 ];
 
@@ -14,7 +14,7 @@ onMounted(() => (active.value = 'menu'));
 <template>
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
-      <div v-if="['buy', 'sell'].includes(active)" class="h-full">
+      <div v-if="[1, 2].includes(active)" class="h-full">
         <q-panel :size="40" :icons="Array(4)" left right />
         <q-panel :size="600" right>
           <q-row v-for="n in 3" :key="n" />
