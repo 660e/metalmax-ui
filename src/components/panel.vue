@@ -3,7 +3,7 @@ import { computed } from 'vue';
 
 defineOptions({ name: 'q-panel' });
 
-const { size } = defineProps({ size: Number, icons: Array });
+const { size } = defineProps({ size: Number, icons: Array, left: Boolean, right: Boolean });
 const panelClass = computed(() => {
   switch (size) {
     case 40:
@@ -23,7 +23,7 @@ const panelClass = computed(() => {
 </script>
 
 <template>
-  <div :class="panelClass" class="absolute top-0 bottom-12">
+  <div :class="[panelClass, left ? 'border-l' : '', right ? 'border-r' : '']" class="absolute top-0 bottom-12 border-white/30">
     <div v-if="size === 40" class="backdrop-2 h-full pt-24 flex flex-col items-center space-y-1">
       <q-icon v-for="icon in icons" :key="icon" size="large" />
     </div>
