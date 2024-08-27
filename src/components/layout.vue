@@ -8,14 +8,13 @@ const active = defineModel();
 <template>
   <div class="h-full relative">
     <transition name="slide-top">
-      <div
-        v-if="active"
-        @click="active = 'menu'"
-        class="absolute z-20 top-0 left-0 w-[500px] h-12 flex items-center bg-gradient-to-r from-40% from-neutral-900"
-      >
-        <div class="pl-4 text-xl leading-none">
-          {{ menus.find(menu => menu.value === active)?.label || '场景信息' }}
+      <div v-if="active" @click="active = 'menu'" class="absolute z-20 top-0 left-0 w-[500px] h-12 flex flex-col">
+        <div class="flex-1 flex items-center bg-gradient-to-r from-40% from-neutral-900">
+          <div class="pl-4 text-xl leading-none">
+            {{ menus.find(menu => menu.value === active)?.label || '场景信息' }}
+          </div>
         </div>
+        <b class="h-px bg-gradient-to-r from-40% from-white/30"></b>
       </div>
     </transition>
 
@@ -26,7 +25,7 @@ const active = defineModel();
           :key="menu.value"
           :class="[active === menu.value ? 'w-32 pl-8' : 'w-28 pl-4']"
           @click="active = menu.value"
-          class="backdrop-1 py-2 duration-200 hover:w-32 hover:pl-8"
+          class="backdrop-1 py-2 duration-200 hover:w-32 hover:pl-8 border border-l-0 border-white/30"
         >
           {{ menu.label }}
         </div>
@@ -36,7 +35,7 @@ const active = defineModel();
     <slot />
 
     <transition name="slide-bottom">
-      <div v-if="active" class="absolute bottom-0 left-0 backdrop-3 w-full h-12"></div>
+      <div v-if="active" class="absolute bottom-0 left-0 backdrop-3 w-full h-12 border-t border-white/30"></div>
     </transition>
   </div>
 </template>
