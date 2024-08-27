@@ -16,6 +16,41 @@ export default createRouter({
           path: 'shop',
           name: 'app-shop',
           component: () => import('@/views/shop.vue')
+        },
+        {
+          path: 'inn',
+          name: 'app-inn',
+          component: () => import('@/views/inn.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
+        },
+        {
+          path: 'shop',
+          name: 'app-shop',
+          component: () => import('@/views/shop.vue')
         }
       ]
     }
