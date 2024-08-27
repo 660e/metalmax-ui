@@ -21,13 +21,13 @@ onMounted(() => (active.value = 'menu'));
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
       <div v-if="active === 'map' && !quests" class="h-full">
-        <q-panel :size="40" :icons="Array(2)" @click="quests = true" />
-        <q-panel :size="600">
+        <q-panel :size="40" :icons="Array(2)" @click="quests = true" left right />
+        <q-panel :size="600" right>
           <div class="flex-1 pt-14 px-2 pb-2 flex">
             <div class="flex-1 bg-neutral-900"></div>
           </div>
         </q-panel>
-        <q-panel :size="240">
+        <q-panel :size="240" left>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">犬系统</q-row>
           <q-head :cells="['地点']" />
@@ -37,8 +37,8 @@ onMounted(() => (active.value = 'menu'));
       </div>
 
       <div v-else-if="active === 'map' && quests" class="h-full">
-        <q-panel :size="40" :icons="Array(2)" @click="quests = false" />
-        <q-panel :size="300" style="left: 200px">
+        <q-panel :size="40" :icons="Array(2)" @click="quests = false" left right />
+        <q-panel :size="300" style="left: 200px" right>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">冒险指南</q-row>
           <q-head :cells="['名称', '进度']" />
@@ -47,7 +47,7 @@ onMounted(() => (active.value = 'menu'));
           <q-row :cells="['任务名称003', '完成']" hover />
           <q-row :cells="['任务名称004', '完成']" hover />
         </q-panel>
-        <q-panel :size="600" style="left: auto; right: 0">
+        <q-panel :size="600" style="left: auto; right: 0" left>
           <q-row v-for="n in 4" :key="n" />
           <q-head :cells="['任务']" />
           <q-row :cells="['任务步骤01']" hover />
@@ -60,8 +60,8 @@ onMounted(() => (active.value = 'menu'));
       </div>
 
       <div v-else-if="active === 'items'" class="h-full">
-        <q-panel :size="40" :icons="Array(7)" />
-        <q-panel :size="600">
+        <q-panel :size="40" :icons="Array(7)" left right />
+        <q-panel :size="600" right>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">道具</q-row>
           <q-head :cells="['名称', '持有数']" />
@@ -79,6 +79,7 @@ onMounted(() => (active.value = 'menu'));
               <q-row :cells="['会心', '30%']" />
               <q-row :cells="['重量', '99.99t']" />
             </div>
+            <b class="vr"></b>
             <div class="flex-1">
               <q-row :cells="['弹仓', '99/99']" />
               <q-row :cells="['射击', '4次']" />
@@ -91,8 +92,8 @@ onMounted(() => (active.value = 'menu'));
       </div>
 
       <div v-else-if="active === 'equip'" class="h-full">
-        <q-panel :size="40" :icons="Array(7)" />
-        <q-panel :size="600">
+        <q-panel :size="40" :icons="Array(7)" left right />
+        <q-panel :size="600" right>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">角色名称</q-row>
           <q-head :cells="['装备部位']" />
@@ -118,6 +119,7 @@ onMounted(() => (active.value = 'menu'));
               <q-row :cells="['会心', '30%']" />
               <q-row :cells="['重量', '(-100.00t)199.00t']" />
             </div>
+            <b class="vr"></b>
             <div class="flex-1">
               <q-row :cells="['弹仓', '(12/64)99/99']" />
               <q-row :cells="['射击', '(1次)4次']" />
@@ -127,7 +129,7 @@ onMounted(() => (active.value = 'menu'));
             </div>
           </div>
         </q-panel>
-        <q-panel :size="300">
+        <q-panel :size="300" left>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">后备箱</q-row>
           <q-head :cells="['名称', '重量']" />
@@ -141,13 +143,14 @@ onMounted(() => (active.value = 'menu'));
       </div>
 
       <div v-else-if="active === 'status'" class="h-full">
-        <q-panel :size="40" :icons="Array(4)" />
-        <q-panel :size="600">
+        <q-panel :size="40" :icons="Array(4)" left right />
+        <q-panel :size="600" right>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">角色名称</q-row>
           <q-row class="pl-4">角色职业</q-row>
           <div class="flex">
             <div class="flex-1"></div>
+            <b class="vr"></b>
             <div class="flex-1">
               <q-row :cells="['当前等级', 255]" />
               <q-row :cells="['总经验值', 999999999]" />
@@ -163,6 +166,7 @@ onMounted(() => (active.value = 'menu'));
               <q-row :cells="['命中率', '50%']" />
               <q-row :cells="['闪避率', '10%']" />
             </div>
+            <b class="vr"></b>
             <div class="flex-1">
               <q-row :cells="['腕力', 255]" />
               <q-row :cells="['体力', 255]" />
@@ -175,7 +179,7 @@ onMounted(() => (active.value = 'menu'));
       </div>
 
       <div v-else-if="active === 'garage'" class="h-full">
-        <q-panel :size="40" :icons="Array(12)" />
+        <q-panel :size="40" :icons="Array(12)" left right />
         <q-panel :size="904">
           <q-row v-for="n in 3" :key="n" />
           <div class="flex">
