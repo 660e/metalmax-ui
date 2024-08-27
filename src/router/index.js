@@ -23,9 +23,9 @@ export default createRouter({
           component: () => import('@/views/inn.vue')
         },
         {
-          path: 'shop',
-          name: 'app-shop',
-          component: () => import('@/views/shop.vue')
+          path: 'office',
+          name: 'app-office',
+          component: () => import('@/views/office.vue')
         },
         {
           path: 'shop',
