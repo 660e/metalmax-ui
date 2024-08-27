@@ -7,23 +7,23 @@ body {
 }
 
 .backdrop-1 {
-  @apply backdrop-blur-[10px] bg-neutral-900/40;
+  @apply backdrop-blur-sm bg-neutral-900/30;
 }
 
 .backdrop-2 {
-  @apply backdrop-blur-[10px] bg-neutral-900/70;
+  @apply backdrop-blur-sm bg-neutral-900/70;
 }
 
 .backdrop-3 {
-  @apply backdrop-blur-[10px] bg-neutral-900/90;
+  @apply backdrop-blur-sm bg-neutral-900/90;
 }
 
 b.hr {
-  @apply h-px bg-gradient-to-r from-white/0 via-white/20;
+  @apply h-px bg-gradient-to-r from-white/0 via-neutral-500;
 }
 
 b.vr {
-  @apply w-px bg-gradient-to-b from-white/0 via-white/20;
+  @apply w-px bg-gradient-to-b from-white/0 via-neutral-500;
 }
 
 .slide-bottom-enter-active,

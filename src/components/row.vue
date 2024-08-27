@@ -14,7 +14,7 @@ const cellClass = index => {
 </script>
 
 <template>
-  <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="h-6 flex items-center hover:to-white/20">
+  <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="h-6 flex items-center hover:to-neutral-500">
     <template v-if="cells?.length">
       <div v-for="(cell, index) in cells" :key="index" :class="cellClass(index)" class="px-4 flex items-center">
         <q-icon v-if="!index" class="mr-2" />

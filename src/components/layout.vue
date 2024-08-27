@@ -14,7 +14,7 @@ const active = defineModel();
             {{ menus.find(menu => menu.value === active)?.label || '场景信息' }}
           </div>
         </div>
-        <b class="h-px bg-gradient-to-r from-40% from-white/20"></b>
+        <b class="h-px bg-gradient-to-r from-40% from-neutral-500"></b>
       </div>
     </transition>
 
@@ -25,7 +25,7 @@ const active = defineModel();
           :key="menu.value"
           :class="[active === menu.value ? 'w-32 pl-8' : 'w-28 pl-4']"
           @click="active = menu.value"
-          class="backdrop-1 py-2 duration-200 hover:w-32 hover:pl-8 border border-l-0 border-white/20"
+          class="backdrop-1 py-2 duration-200 hover:w-32 hover:pl-8 border border-l-0 border-neutral-500"
         >
           {{ menu.label }}
         </div>
@@ -35,7 +35,7 @@ const active = defineModel();
     <slot />
 
     <transition name="slide-bottom">
-      <div v-if="active" class="absolute bottom-0 left-0 backdrop-3 w-full h-12 border-t border-white/20"></div>
+      <div v-if="active" class="absolute bottom-0 left-0 backdrop-3 w-full h-12 border-t border-neutral-500"></div>
     </transition>
   </div>
 </template>
