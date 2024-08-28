@@ -9,9 +9,8 @@ const routes = [
   { label: '猎人办事处', value: 'app-office' },
   { label: '补给店', value: 'app-supply' },
   { label: '修理店', value: 'app-repair' },
-  { label: '旅馆', value: 'app-shop' },
-  { label: '旅馆', value: 'app-shop' },
-  { label: '旅馆', value: 'app-shop' }
+  { label: '改造店', value: 'app-upgrade' },
+  { label: '记录中心', value: 'app-save' }
 ];
 </script>
 

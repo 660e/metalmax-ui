@@ -21,7 +21,7 @@ const cellClass = index => {
         <span>{{ cell }}</span>
       </div>
     </template>
-    <div v-else class="flex items-center">
+    <div v-else class="flex-1 flex items-center">
       <slot />
     </div>
   </div>

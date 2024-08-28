@@ -38,19 +38,14 @@ export default createRouter({
           component: () => import('@/views/repair.vue')
         },
         {
-          path: 'shop',
-          name: 'app-shop',
-          component: () => import('@/views/shop.vue')
+          path: 'upgrade',
+          name: 'app-upgrade',
+          component: () => import('@/views/upgrade.vue')
         },
         {
-          path: 'shop',
-          name: 'app-shop',
-          component: () => import('@/views/shop.vue')
-        },
-        {
-          path: 'shop',
-          name: 'app-shop',
-          component: () => import('@/views/shop.vue')
+          path: 'save',
+          name: 'app-save',
+          component: () => import('@/views/save.vue')
         }
       ]
     }
