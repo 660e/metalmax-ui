@@ -33,9 +33,9 @@ export default createRouter({
           component: () => import('@/views/supply.vue')
         },
         {
-          path: 'shop',
-          name: 'app-shop',
-          component: () => import('@/views/shop.vue')
+          path: 'repair',
+          name: 'app-repair',
+          component: () => import('@/views/repair.vue')
         },
         {
           path: 'shop',

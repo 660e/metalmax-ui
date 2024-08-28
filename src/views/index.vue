@@ -8,7 +8,7 @@ const routes = [
   { label: '旅馆', value: 'app-inn' },
   { label: '猎人办事处', value: 'app-office' },
   { label: '补给店', value: 'app-supply' },
-  { label: '旅馆', value: 'app-shop' },
+  { label: '修理店', value: 'app-repair' },
   { label: '旅馆', value: 'app-shop' },
   { label: '旅馆', value: 'app-shop' },
   { label: '旅馆', value: 'app-shop' }

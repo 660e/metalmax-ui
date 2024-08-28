@@ -7,7 +7,7 @@ const menus = [
   { label: '离开商店', value: 'exit' }
 ];
 
-onMounted(() => (active.value = 1));
+onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
