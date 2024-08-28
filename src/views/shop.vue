@@ -15,8 +15,8 @@ onMounted(() => (active.value = 'menu'));
   <q-layout v-model="active" :menus="menus">
     <transition name="slide-right">
       <div v-if="[1, 2].includes(active)" class="h-full">
-        <q-panel :size="40" :icons="Array(4)" left right />
-        <q-panel :size="600" right>
+        <q-panel v-if="active === 2" :size="40" :icons="Array(4)" left />
+        <q-panel :size="600" left right>
           <q-row v-for="n in 3" :key="n" />
           <q-row class="pl-4">道具</q-row>
           <q-head :cells="['名称', '持有数']" />
@@ -34,7 +34,6 @@ onMounted(() => (active.value = 'menu'));
               <q-row :cells="['会心', '(-10)30%']" />
               <q-row :cells="['重量', '(+99.99)99.99t']" />
             </div>
-            <b class="vr"></b>
             <div class="flex-1">
               <q-row :cells="['弹仓', '(-12)99/99']" />
               <q-row :cells="['射击', '(-2)4次']" />

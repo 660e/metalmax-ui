@@ -7,7 +7,7 @@ const { size } = defineProps({ size: Number, icons: Array, left: Boolean, right:
 const panelClass = computed(() => {
   switch (size) {
     case 40:
-      return 'left-[160px] w-[40px]';
+      return 'left-[159px] w-[41px]';
     case 240:
       return 'left-[864px] w-[240px]';
     case 300:
