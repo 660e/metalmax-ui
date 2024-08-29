@@ -94,6 +94,44 @@ onMounted(() => (active.value = 2));
           <q-row :cells="['费用', 10000000]" />
         </q-panel>
       </div>
+
+      <div v-else-if="active === 2" class="h-full">
+        <q-panel :size="40" :icons="Array(4)" left />
+        <q-panel :size="600" left right>
+          <q-row v-for="n in 3" :key="n" />
+          <q-row class="pl-4">选项</q-row>
+          <q-head :cells="['名称', '改造度']" />
+          <q-row :cells="['220mm大地女神炮', '90%']" />
+          <q-row :cells="['220mm大地女神炮', '90%']" />
+          <q-row :cells="['220mm大地女神炮', '90%']" />
+          <q-row :cells="['220mm大地女神炮', '90%']" />
+          <q-row v-for="n in 8" :key="n" />
+          <q-head :cells="['改造']" />
+          <q-row :cells="['攻击', '(+1000)1000']" hover />
+          <q-row :cells="['守备', '(+1000)1000']" hover />
+          <q-row :cells="['弹仓', '(+1000)1000']" hover />
+          <q-head :cells="['总结']" />
+          <q-row :cells="['重量', '(-99.00t)190.00t']" />
+          <q-row :cells="['费用', 10000000]" />
+        </q-panel>
+      </div>
+
+      <div v-else-if="active === 4" class="h-full">
+        <q-panel :size="40" :icons="Array(4)" left />
+        <q-panel :size="600" left right>
+          <q-row v-for="n in 3" :key="n" />
+          <q-row class="pl-4">选项</q-row>
+          <q-head :cells="['名称', '改造度']" />
+          <q-row :cells="['V100金刚', '90%']" />
+          <q-row v-for="n in 12" :key="n" />
+          <q-head :cells="['改造']" />
+          <q-row :cells="['型号']" hover />
+          <q-row :cells="['守备', '(+1000)1000']" hover />
+          <q-head :cells="['总结']" />
+          <q-row :cells="['重量', '(-99.00t)190.00t']" />
+          <q-row :cells="['费用', 10000000]" />
+        </q-panel>
+      </div>
     </transition>
 
     <transition name="slide-right">
