@@ -62,7 +62,8 @@ onMounted(() => (active.value = 'menu'));
       <div v-else-if="active === 'items'" class="h-full">
         <q-panel :size="40" :icons="Array(7)" left />
         <q-panel :size="600" left right>
-          <q-row v-for="n in 3" :key="n" />
+          <q-row v-for="n in 2" :key="n" />
+          <div class="h-3"></div>
           <q-row class="pl-4">道具</q-row>
           <q-head :cells="['名称', '持有数']" />
           <q-row :cells="['碱性车蜡', 99]" hover />
@@ -93,7 +94,8 @@ onMounted(() => (active.value = 'menu'));
       <div v-else-if="active === 'equip'" class="h-full">
         <q-panel :size="40" :icons="Array(7)" left />
         <q-panel :size="600" left right>
-          <q-row v-for="n in 3" :key="n" />
+          <q-row v-for="n in 2" :key="n" />
+          <div class="h-3"></div>
           <q-row class="pl-4">角色名称</q-row>
           <q-head :cells="['装备部位']" />
           <q-row hover><q-row :cells="['加农炮']" class="w-48" /><q-row :cells="['220mm大地女神炮']" /></q-row>
