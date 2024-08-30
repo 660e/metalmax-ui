@@ -24,13 +24,30 @@ onMounted(() => (active.value = 'items'));
       <q-panel :size="600" lb rb>
         <q-tr>人类道具/战车道具</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
-        <q-tr :data="[1, 2]" hover />
-        <q-th :data="[1]" />
-        <q-th :data="[1, 2]" />
-        <q-th :data="[1, 2, 3]" />
-        <q-tr :data="[1]" hover />
-        <q-tr :data="[1, 2]" hover />
-        <q-tr :data="[1, 2, 3]" hover />
+        <q-tr :data="['回复胶囊', 99]" hover />
+        <q-tr :data="['能量胶囊', 99]" hover />
+        <q-tr :data="['碱性车蜡', 99]" hover />
+        <q-tr :data="['传送装置', '1.00t']" hover />
+        <q-tr :data="['医疗装置', '1.00t']" hover />
+        <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
+        <div class="flex-1"></div>
+        <q-th :data="['说明']" />
+        <div class="flex">
+          <div class="flex-1">
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+          </div>
+          <div class="flex-1">
+            <q-tr :data="['弹仓', '99/99']" />
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', 2000]" />
+          </div>
+        </div>
       </q-panel>
     </template>
 
