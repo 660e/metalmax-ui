@@ -14,7 +14,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'items'));
+onMounted(() => (active.value = 'equip'));
 </script>
 
 <template>
@@ -32,6 +32,32 @@ onMounted(() => (active.value = 'items'));
         <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
         <div class="flex-1"></div>
         <q-pagination />
+        <q-th :data="['说明']" />
+        <div class="flex">
+          <div class="flex-1">
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['防御', 255]" />
+            <q-tr :data="['命中', 255]" />
+            <q-tr :data="['会心', 255]" />
+            <q-tr :data="['重量', '255.00t']" />
+          </div>
+          <div class="flex-1">
+            <q-tr :data="['弹仓', '99/99']" />
+            <q-tr :data="['射击', '4次']" />
+            <q-tr :data="['范围', '1体']" />
+            <q-tr :data="['属性', '通常']" />
+            <q-tr :data="['状态', '正常']" />
+          </div>
+        </div>
+      </q-panel>
+    </template>
+
+    <template v-if="active === 'equip'">
+      <q-panel :size="41" :icons="Array(7)" lb />
+      <q-panel :size="600" lb rb>
+        <q-tr>角色名称</q-tr>
+        <q-th :data="['装备部位']" />
+        <div class="flex-1"></div>
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
@@ -90,38 +116,6 @@ onMounted(() => (active.value = 'items'));
           <q-row :cells="['任务步骤04']" hover />
           <q-row v-for="n in 7" :key="n" />
           <q-head :cells="['详情']" />
-        </q-panel>
-      </div>
-
-      <div v-else-if="active === 'items'" class="h-full">
-        <q-panel :size="40" :icons="Array(7)" left />
-        <q-panel :size="600" left right>
-          <q-row v-for="n in 2" :key="n" />
-          <div class="h-3"></div>
-          <q-row class="pl-4">道具</q-row>
-          <q-head :cells="['名称', '持有数']" />
-          <q-row :cells="['碱性车蜡', 99]" hover />
-          <q-row :cells="['修理工具箱', 99]" hover />
-          <q-row :cells="['回复胶囊', 99]" hover />
-          <q-row :cells="['能量胶囊', 99]" hover />
-          <q-row v-for="n in 9" :key="n" />
-          <q-head :cells="['说明']" />
-          <div class="flex">
-            <div class="flex-1">
-              <q-row :cells="['攻击', 2000]" />
-              <q-row :cells="['防御', 255]" />
-              <q-row :cells="['命中', '30%']" />
-              <q-row :cells="['会心', '30%']" />
-              <q-row :cells="['重量', '99.99t']" />
-            </div>
-            <div class="flex-1">
-              <q-row :cells="['弹仓', '99/99']" />
-              <q-row :cells="['射击', '4次']" />
-              <q-row :cells="['范围', '1体']" />
-              <q-row :cells="['属性', '通常']" />
-              <q-row :cells="['状态', '正常']" />
-            </div>
-          </div>
         </q-panel>
       </div>
 
