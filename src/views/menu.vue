@@ -31,21 +31,22 @@ onMounted(() => (active.value = 'items'));
         <q-tr :data="['医疗装置', '1.00t']" hover />
         <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
         <div class="flex-1"></div>
+        <q-pagination />
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
             <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['防御', 255]" />
+            <q-tr :data="['命中', 255]" />
+            <q-tr :data="['会心', 255]" />
+            <q-tr :data="['重量', '255.00t']" />
           </div>
           <div class="flex-1">
             <q-tr :data="['弹仓', '99/99']" />
-            <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
-            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['射击', '4次']" />
+            <q-tr :data="['范围', '1体']" />
+            <q-tr :data="['属性', '通常']" />
+            <q-tr :data="['状态', '正常']" />
           </div>
         </div>
       </q-panel>
