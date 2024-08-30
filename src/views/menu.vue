@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 
 const active = ref();
-const quests = ref(false);
+// const quests = ref(false);
 
 const menus = [
   { label: '地图', value: 'map' },
@@ -14,11 +14,17 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'menu'));
+onMounted(() => (active.value = 'items'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
+    <template v-if="active === 'items'">
+      <q-panel :size="41" :icons="Array(4)" lb />
+      <q-panel :size="600" lb rb></q-panel>
+    </template>
+
+    <!--
     <transition name="slide-right">
       <div v-if="active === 'map' && !quests" class="h-full">
         <q-panel :size="40" :icons="Array(2)" @click="quests = true" left />
@@ -227,5 +233,6 @@ onMounted(() => (active.value = 'menu'));
         <q-team />
       </q-panel>
     </transition>
+    -->
   </q-layout>
 </template>
