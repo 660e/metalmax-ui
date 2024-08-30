@@ -4,16 +4,19 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 
+import QPanel from '@/components/panel.vue';
+import QTh from '@/components/th.vue';
+import QTr from '@/components/tr.vue';
+
 import QHead from '@/components/head.vue';
 import QIcon from '@/components/icon.vue';
 import QLayout from '@/components/layout.vue';
-import QPanel from '@/components/panel.vue';
 import QRow from '@/components/row.vue';
 import QTeam from '@/components/team.vue';
 
 const app = createApp(App);
 
-[QHead, QIcon, QLayout, QPanel, QRow, QTeam].forEach(component => {
+[QHead, QIcon, QLayout, QRow, QTeam].concat([QPanel, QTh, QTr]).forEach(component => {
   app.component(component.name, component);
 });
 

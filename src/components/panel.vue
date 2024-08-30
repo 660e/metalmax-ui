@@ -27,7 +27,7 @@ const panelClass = computed(() => {
     <div v-if="size === 41" class="h-full pt-24 flex flex-col items-center space-y-1 backdrop-blur-sm bg-neutral-900/70">
       <q-icon v-for="icon in icons" :key="icon" size="large" />
     </div>
-    <div v-else class="h-full pt-14 pb-4 backdrop-blur-sm bg-neutral-900/40">
+    <div v-else class="h-full pt-16 pb-2 backdrop-blur-sm bg-neutral-900/40">
       <slot />
     </div>
   </div>

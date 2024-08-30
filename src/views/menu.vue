@@ -21,7 +21,15 @@ onMounted(() => (active.value = 'items'));
   <q-layout v-model="active" :menus="menus">
     <template v-if="active === 'items'">
       <q-panel :size="41" :icons="Array(4)" lb />
-      <q-panel :size="600" lb rb></q-panel>
+      <q-panel :size="600" lb rb>
+        <q-tr>道具</q-tr>
+        <q-th :data="[1]" />
+        <q-th :data="[1, 2]" />
+        <q-th :data="[1, 2, 3]" />
+        <q-tr :data="[1]" hover />
+        <q-tr :data="[1, 2]" hover />
+        <q-tr :data="[1, 2, 3]" hover />
+      </q-panel>
     </template>
 
     <!--
