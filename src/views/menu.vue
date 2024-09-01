@@ -14,7 +14,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'items'));
 </script>
 
 <template>
@@ -31,7 +31,6 @@ onMounted(() => (active.value = 'equip'));
         <q-tr :data="['医疗装置', '1.00t']" hover />
         <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
         <div class="flex-1"></div>
-        <q-pagination />
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">

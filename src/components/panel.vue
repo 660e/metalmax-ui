@@ -3,7 +3,7 @@ import { computed } from 'vue';
 
 defineOptions({ name: 'q-panel' });
 
-const { size } = defineProps({ size: Number, icons: Array, lb: Boolean, rb: Boolean });
+const { size } = defineProps({ size: Number, icons: Array, scroll: Array, lb: Boolean, rb: Boolean });
 const panelClass = computed(() => {
   switch (size) {
     case 41:
