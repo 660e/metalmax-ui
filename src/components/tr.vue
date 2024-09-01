@@ -8,9 +8,7 @@ defineProps({ data: Array, hover: Boolean });
     <slot v-if="$slots.default" />
     <template v-else>
       <q-icon class="mr-2" />
-      <span v-for="(e, i) in data" :key="i" :class="{ 'flex-1': !i, 'w-[100px] text-right ml-px pr-4': i }">
-        {{ e }}
-      </span>
+      <span v-for="(e, i) in data" :key="i" :class="{ 'flex-1': !i, 'w-[100px] text-right ml-px pr-4': i }">{{ e }}</span>
     </template>
   </div>
 </template>

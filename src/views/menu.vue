@@ -14,7 +14,7 @@ const menus = [
   { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'items'));
+onMounted(() => (active.value = 'equip'));
 </script>
 
 <template>
@@ -55,7 +55,12 @@ onMounted(() => (active.value = 'items'));
       <q-panel :size="41" :icons="Array(7)" lb />
       <q-panel :size="600" lb rb>
         <q-tr>角色名称</q-tr>
-        <q-th :data="['装备部位']" />
+        <q-th :data="['装备部位', '弹仓', '重量']" />
+        <q-tr class="pl-0" hover><q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
+        <q-tr class="pl-0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
+        <q-tr class="pl-0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
+        <q-tr class="pl-0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
+        <q-tr class="pl-0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
         <div class="flex-1"></div>
         <q-th :data="['说明']" />
         <div class="flex">
