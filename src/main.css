@@ -6,6 +6,11 @@ body {
   overflow: hidden;
 }
 
+br {
+  content: '';
+  height: theme('space.6');
+}
+
 .backdrop-1 {
   @apply backdrop-blur-sm bg-neutral-900/30;
 }

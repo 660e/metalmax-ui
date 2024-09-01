@@ -30,7 +30,7 @@ onMounted(() => (active.value = 'equip'));
         <q-tr :data="['传送装置', '1.00t']" hover />
         <q-tr :data="['医疗装置', '1.00t']" hover />
         <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
-        <div class="flex-1"></div>
+        <br class="flex-1" />
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
@@ -56,12 +56,19 @@ onMounted(() => (active.value = 'equip'));
       <q-panel :size="600" lb rb>
         <q-tr>角色名称</q-tr>
         <q-th :data="['装备部位', '弹仓', '重量']" />
-        <q-tr class="pl-0" hover><q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
-        <q-tr class="pl-0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
-        <q-tr class="pl-0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
-        <q-tr class="pl-0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
-        <q-tr class="pl-0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['220mm大地女神炮', '5/10', '10.00t']" class="flex-1" /></q-tr>
-        <div class="flex-1"></div>
+        <q-tr style="padding: 0" hover><q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '16/32', '10.00t']" class="flex-1" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['雷暴机关枪', '∞', '3.00t']" class="flex-1" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['S龙卷风炮', '8/16', '11.00t']" class="flex-1" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr /></q-tr>
+        <br />
+        <q-tr style="padding: 0" hover><q-tr :data="['主引擎']" class="w-40" /><q-tr :data="['V100金刚', '', '1.00t']" class="flex-1" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
+        <br />
+        <q-tr style="padding: 0" hover><q-tr :data="['控制装置']" class="w-40" /><q-tr :data="['所罗门2', '', '2.00t']" class="flex-1" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['芯片1']" class="w-40" /><q-tr :data="['主炮连射']" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['芯片2']" class="w-40" /><q-tr /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['芯片3']" class="w-40" /><q-tr /></q-tr>
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
