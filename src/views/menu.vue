@@ -21,7 +21,7 @@ onMounted(() => (active.value = 'items'));
   <q-layout v-model="active" :menus="menus">
     <template v-if="active === 'items'">
       <q-panel :size="41" :icons="Array(6)" lb />
-      <q-panel :size="600" lb rb>
+      <q-panel :size="600" :vs="[2, 15]" lb rb>
         <q-tr>人类道具/战车道具</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
         <q-tr :data="['回复胶囊', 99]" hover />
