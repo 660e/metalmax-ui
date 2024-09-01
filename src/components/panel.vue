@@ -34,8 +34,8 @@ const scrollStyle = computed(() => {
       <q-icon v-for="icon in icons" :key="icon" size="large" />
     </div>
     <div v-else :class="{ relative: vs?.length }" class="h-full flex flex-col pt-16 pb-2 backdrop-blur-sm bg-neutral-900/40">
-      <div v-if="vs?.length" :style="scrollStyle" class="absolute right-1 w-1 rounded-sm flex flex-col bg-neutral-900/20">
-        <b class="h-1/2 rounded-sm bg-neutral-500"></b>
+      <div v-if="vs?.length" :style="scrollStyle" class="absolute right-1 w-0.5 flex flex-col bg-neutral-900/20">
+        <b class="h-1/2 bg-neutral-500"></b>
       </div>
       <slot />
     </div>

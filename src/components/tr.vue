@@ -4,7 +4,7 @@ defineProps({ data: Array, hover: Boolean });
 </script>
 
 <template>
-  <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="h-6 pl-4 flex items-center hover:to-white/20">
+  <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="h-6 pl-4 flex items-center via-95% hover:via-white/20">
     <slot v-if="$slots.default" />
     <template v-else>
       <q-icon class="mr-2" />
