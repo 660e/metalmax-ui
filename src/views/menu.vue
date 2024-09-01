@@ -2,7 +2,6 @@
 import { onMounted, ref } from 'vue';
 
 const active = ref();
-// const quests = ref(false);
 
 const menus = [
   { label: '地图', value: 'map' },
@@ -87,6 +86,21 @@ onMounted(() => (active.value = 'equip'));
           </div>
         </div>
       </q-panel>
+      <q-panel :size="300" :vs="[2, 15]" lb>
+        <q-tr>加农炮</q-tr>
+        <q-th :data="['名称', '重量']" />
+        <q-tr :data="['卸下']" hover />
+        <q-tr :data="['雷电加农炮', '6.00t']" hover />
+        <q-tr :data="['225mm多头蛇炮', '7.50t']" hover />
+        <q-tr :data="['205mm红牡丹炮', '15.00t']" hover />
+        <br class="flex-1" />
+        <q-th :data="['预览']" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </q-panel>
     </template>
 
     <!--
@@ -127,57 +141,6 @@ onMounted(() => (active.value = 'equip'));
           <q-row :cells="['任务步骤04']" hover />
           <q-row v-for="n in 7" :key="n" />
           <q-head :cells="['详情']" />
-        </q-panel>
-      </div>
-
-      <div v-else-if="active === 'equip'" class="h-full">
-        <q-panel :size="40" :icons="Array(7)" left />
-        <q-panel :size="600" left right>
-          <q-row v-for="n in 2" :key="n" />
-          <div class="h-3"></div>
-          <q-row class="pl-4">角色名称</q-row>
-          <q-head :cells="['装备部位']" />
-          <q-row hover><q-row :cells="['加农炮']" class="w-48" /><q-row :cells="['220mm大地女神炮']" /></q-row>
-          <q-row hover><q-row :cells="['机枪']" class="w-48" /><q-row :cells="['雷暴机关枪']" /></q-row>
-          <q-row hover><q-row :cells="['特殊装备']" class="w-48" /><q-row :cells="['烈日中子炮']" /></q-row>
-          <q-row hover><q-row :cells="['特殊装备']" class="w-48" /><q-row :cells="['']" /></q-row>
-          <q-row hover><q-row :cells="['特殊装备']" class="w-48" /><q-row :cells="['']" /></q-row>
-          <q-row />
-          <q-row hover><q-row :cells="['控制装置']" class="w-48" /><q-row :cells="['所罗门2']" /></q-row>
-          <q-row hover><q-row :cells="['芯片']" class="w-48" /><q-row :cells="['主炮连射']" /></q-row>
-          <q-row hover><q-row :cells="['芯片']" class="w-48" /><q-row :cells="['迎击能力']" /></q-row>
-          <q-row hover><q-row :cells="['芯片']" class="w-48" /><q-row :cells="['']" /></q-row>
-          <q-row />
-          <q-row hover><q-row :cells="['引擎']" class="w-48" /><q-row :cells="['V100金刚']" /></q-row>
-          <q-row hover><q-row :cells="['引擎']" class="w-48" /><q-row :cells="['']" /></q-row>
-          <q-head :cells="['说明']" />
-          <div class="flex">
-            <div class="flex-1">
-              <q-row :cells="['攻击', '(-200)2000']" />
-              <q-row :cells="['防御', 255]" />
-              <q-row :cells="['命中', '(-15%)30%']" />
-              <q-row :cells="['会心', '30%']" />
-              <q-row :cells="['重量', '(-100.00t)199.00t']" />
-            </div>
-            <div class="flex-1">
-              <q-row :cells="['弹仓', '(12/64)99/99']" />
-              <q-row :cells="['射击', '(1次)4次']" />
-              <q-row :cells="['范围', '(圆范围)1体']" />
-              <q-row :cells="['属性', '通常']" />
-              <q-row :cells="['状态', '正常']" />
-            </div>
-          </div>
-        </q-panel>
-        <q-panel :size="300" left>
-          <q-row v-for="n in 3" :key="n" />
-          <q-row class="pl-4">后备箱</q-row>
-          <q-head :cells="['名称', '重量']" />
-          <q-row :cells="['卸下']" hover />
-          <q-row :cells="['雷电加农炮', '100.00t']" hover />
-          <q-row :cells="['205mm红牡丹炮', '89.00t']" hover />
-          <q-row :cells="['诺伊曼', '5.00t']" hover />
-          <q-row v-for="n in 9" :key="n" />
-          <q-head :cells="['预览']" />
         </q-panel>
       </div>
 
