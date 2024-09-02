@@ -30,7 +30,7 @@ const scrollStyle = computed(() => {
 
 <template>
   <div :class="[panelClass, lb ? 'border-l' : '', rb ? 'border-r' : '']" class="absolute top-0 bottom-12 border-neutral-500">
-    <div v-if="size === 41" class="h-full pt-24 flex flex-col items-center space-y-1 backdrop-blur-sm bg-neutral-900/70">
+    <div v-if="size === 41" class="h-full pt-[98px] flex flex-col items-center space-y-1 backdrop-blur-sm bg-neutral-900/70">
       <q-icon v-for="icon in icons" :key="icon" size="large" />
     </div>
     <div v-else :class="{ relative: vs?.length }" class="h-full flex flex-col pt-16 pb-2 backdrop-blur-sm bg-neutral-900/40">

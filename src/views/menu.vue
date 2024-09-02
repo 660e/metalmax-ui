@@ -8,12 +8,12 @@ const menus = [
   // { label: '乘降', value: 'in-out' },
   { label: '道具', value: 'items' },
   { label: '装备', value: 'equip' },
-  { label: '状态', value: 'status' }
-  // { label: '车库', value: 'garage' }
+  { label: '状态', value: 'status' },
+  { label: '车库', value: 'garage' }
   // { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'status'));
+onMounted(() => (active.value = 'garage'));
 </script>
 
 <template>
@@ -110,7 +110,7 @@ onMounted(() => (active.value = 'status'));
       <q-panel :size="41" :icons="Array(4)" lb />
       <q-panel :size="600" lb rb>
         <div class="flex">
-          <div class="w-52">
+          <div class="flex-1">
             <br />
             <br />
             <br />
@@ -141,6 +141,52 @@ onMounted(() => (active.value = 'status'));
         <q-tr :data="['猎人之眼', '战斗中可以看到敌人的弱点']" />
         <q-tr :data="['医护能力', '使用回复类物品时，效果提升50%']" />
         <q-tr :data="['迎击能力', '可以使用手中的武器拦截敌人的炮弹']" />
+      </q-panel>
+    </template>
+
+    <template v-if="active === 'garage'">
+      <q-panel :size="41" :icons="Array(12)" lb />
+      <q-panel :size="904" lb>
+        <div class="flex">
+          <div class="flex-1">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <q-tr>战车名称</q-tr>
+            <q-tr :data="['型号', '梅卡瓦']" />
+            <q-tr :data="['底盘特性', '会心一击']" />
+            <q-tr :data="['底盘抗性', '火焰']" />
+            <q-tr :data="['最大载重', '255.00t']" />
+          </div>
+          <div class="flex-1">
+            <q-tr :data="['特殊弹仓', '40/99']" />
+            <q-th :data="['名称', '持有数']" />
+            <q-tr :data="['火箭弹', 10]" hover />
+            <q-tr :data="['穿甲弹', 10]" hover />
+            <q-tr :data="['冲锋炸药弹', 10]" hover />
+            <q-tr :data="['固体汽油弹', 10]" hover />
+          </div>
+          <div class="flex-1">
+            <q-tr :data="['后备箱', '3/16']" />
+            <q-th :data="['名称', '重量']" />
+            <q-tr :data="['传送装置', '1.00t']" hover />
+            <q-tr :data="['医疗装置', '1.00t']" hover />
+            <q-tr :data="['猛犸象的象牙', '99.00t']" hover />
+          </div>
+        </div>
+        <q-th :data="['名称', '弹仓', '攻击/属性', '范围/射击', '命中/会心', '防御/状态', '重量']" />
+        <q-tr :data="['220mm大地女神炮', '99/99', '2000通常', '1体3次', '255/255', '255/正常', '10.00t']" />
+        <q-tr :data="['雷暴机关枪', '∞', '500电气', '范围1次', '255/255', '255/正常', '3.00t']" />
+        <q-tr :data="['S龙卷风炮', '8/16', '1000通常', '范围5次', '255/255', '255/正常', '11.00t']" />
+        <q-tr />
+        <q-tr />
+        <q-th :data="['名称', '载重', '奖励', '特性', '防御/状态', '重量']" />
+        <q-tr :data="['V100金刚', '100.00t', '0.00t', '双子奖励', '255/正常', '1.00t']" />
+        <q-tr />
+        <q-th :data="['名称', '芯片1', '芯片2', '芯片3', '命中/回避', '防御/状态', '重量']" />
+        <q-tr :data="['所罗门2', '主炮连射', '', '', '255/255', '255/正常', '2.00t']" />
       </q-panel>
     </template>
 
@@ -184,58 +230,6 @@ onMounted(() => (active.value = 'status'));
           <q-head :cells="['详情']" />
         </q-panel>
       </div>
-
-      <div v-else-if="active === 'garage'" class="h-full">
-        <q-panel :size="40" :icons="Array(12)" left />
-        <q-panel :size="904" left>
-          <q-row v-for="n in 3" :key="n" />
-          <div class="flex">
-            <div class="flex-1">
-              <q-row class="pl-4">战车名称</q-row>
-              <q-row class="pl-4">战车类型</q-row>
-              <q-row v-for="n in 4" :key="n" />
-              <q-row :cells="['底盘特性', '会心一击']" />
-              <q-row :cells="['底盘抗性', '火焰']" />
-              <q-row :cells="['最大载重', '255.00t']" />
-              <q-row :cells="['特殊弹仓', '99/99']" />
-            </div>
-            <div class="w-[440px]">
-              <q-head :cells="['货仓']" />
-              <div class="grid grid-cols-2">
-                <q-row :cells="['220mm大地女神炮']" />
-                <q-row :cells="['雷暴机关枪']" />
-                <q-row :cells="['烈日中子炮']" />
-                <q-row :cells="['迷彩伪装']" />
-                <q-row :cells="['电磁护屏']" />
-                <q-row :cells="['换气装置']" />
-              </div>
-            </div>
-            <div class="w-[220px]">
-              <q-head :cells="['名称', '持有数']" />
-              <q-row :cells="['火箭弹', 10]" />
-              <q-row :cells="['穿甲弹', 10]" />
-              <q-row :cells="['汽油弹', 10]" />
-            </div>
-          </div>
-          <q-head :cells="['名称', '攻击', '范围', '属性', '命中', '会心', '防御', '重量']" />
-          <q-row :cells="['220mm大地女神炮', 2000, '1体', '通常', '30%', '30%', 255, '99.99t']" />
-          <q-row :cells="['雷暴机关枪', 1000, '1体', '通常', '30%', '30%', 255, '50.50t']" />
-          <q-row :cells="['烈日中子炮', 2000, '全体', '通常', '30%', '30%', 255, '99.99t']" />
-          <q-row v-for="n in 2" :key="n" />
-          <q-head :cells="['名称', '芯片1', '芯片2', '芯片3', '命中', '会心', '防御', '重量']" />
-          <q-row :cells="['所罗门2', '主炮连射', '迎击能力', '空', '30%', '30%', 255, '10.00t']" />
-          <q-head :cells="['名称', '载重', '防御', '重量']" />
-          <q-row :cells="['V100金刚', '99.99t', 255, '10.00t']" />
-          <q-row />
-        </q-panel>
-      </div>
-    </transition>
-
-    <transition name="slide-right">
-      <q-panel v-if="['menu', 'items'].includes(active)" :size="240" left>
-        <q-team />
-      </q-panel>
-    </transition>
     -->
   </q-layout>
 </template>
