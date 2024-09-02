@@ -4,16 +4,16 @@ import { onMounted, ref } from 'vue';
 const active = ref();
 
 const menus = [
-  { label: '地图', value: 'map' },
-  { label: '乘降', value: 'in-out' },
+  // { label: '地图', value: 'map' },
+  // { label: '乘降', value: 'in-out' },
   { label: '道具', value: 'items' },
   { label: '装备', value: 'equip' },
-  { label: '状态', value: 'status' },
-  { label: '车库', value: 'garage' },
-  { label: '选项', value: 'settings' }
+  { label: '状态', value: 'status' }
+  // { label: '车库', value: 'garage' }
+  // { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'status'));
 </script>
 
 <template>
@@ -106,6 +106,44 @@ onMounted(() => (active.value = 'equip'));
       </q-panel>
     </template>
 
+    <template v-if="active === 'status'">
+      <q-panel :size="41" :icons="Array(4)" lb />
+      <q-panel :size="600" lb rb>
+        <div class="flex">
+          <div class="w-52">
+            <br />
+            <br />
+            <br />
+          </div>
+          <div class="flex-1">
+            <q-tr>角色名称</q-tr>
+            <q-tr :data="['职业', '赏金猎人']" />
+            <q-tr :data="['等级', 85]" />
+            <q-tr :data="['距下一次升级还有', '10000EXP']" />
+          </div>
+        </div>
+        <q-th :data="['能力']" />
+        <div class="flex">
+          <div class="flex-1">
+            <q-tr :data="['驾驶等级', 255]" />
+            <q-tr :data="['修理等级', 255]" />
+            <q-tr :data="['战斗等级', 255]" />
+            <q-tr :data="['命中', 255]" />
+            <q-tr :data="['闪避', 255]" />
+          </div>
+          <div class="flex-1">
+            <q-tr :data="['腕力', 255]" />
+            <q-tr :data="['体力', 255]" />
+            <q-tr :data="['速度', 255]" />
+          </div>
+        </div>
+        <q-th :data="['特性']" />
+        <q-tr :data="['猎人之眼', '战斗中可以看到敌人的弱点']" />
+        <q-tr :data="['医护能力', '使用回复类物品时，效果提升50%']" />
+        <q-tr :data="['迎击能力', '可以使用手中的武器拦截敌人的炮弹']" />
+      </q-panel>
+    </template>
+
     <!--
     <transition name="slide-right">
       <div v-if="active === 'map' && !quests" class="h-full">
@@ -144,40 +182,6 @@ onMounted(() => (active.value = 'equip'));
           <q-row :cells="['任务步骤04']" hover />
           <q-row v-for="n in 7" :key="n" />
           <q-head :cells="['详情']" />
-        </q-panel>
-      </div>
-
-      <div v-else-if="active === 'status'" class="h-full">
-        <q-panel :size="40" :icons="Array(4)" left />
-        <q-panel :size="600" left right>
-          <q-row v-for="n in 3" :key="n" />
-          <q-row class="pl-4">角色名称</q-row>
-          <q-row class="pl-4">角色职业</q-row>
-          <div class="flex">
-            <div class="flex-1"></div>
-            <div class="flex-1">
-              <q-row :cells="['当前等级', 255]" />
-              <q-row :cells="['总经验值', 999999999]" />
-              <q-row :cells="['升级还需', 10000]" />
-            </div>
-          </div>
-          <q-head :cells="['能力']" />
-          <div class="flex">
-            <div class="flex-1">
-              <q-row :cells="['驾驶等级', 255]" />
-              <q-row :cells="['修理等级', 255]" />
-              <q-row :cells="['战斗等级', 255]" />
-              <q-row :cells="['命中率', '50%']" />
-              <q-row :cells="['闪避率', '10%']" />
-            </div>
-            <div class="flex-1">
-              <q-row :cells="['腕力', 255]" />
-              <q-row :cells="['体力', 255]" />
-              <q-row :cells="['速度', 255]" />
-            </div>
-          </div>
-          <q-head :cells="['技能']" />
-          <q-row :cells="['猎人之眼']" />
         </q-panel>
       </div>
 

@@ -1,13 +1,13 @@
 <script setup>
 defineOptions({ name: 'q-tr' });
-defineProps({ data: Array, hover: Boolean, up: Boolean, down: Boolean });
+defineProps({ data: Array, hover: Boolean, icon: String, up: Boolean, down: Boolean });
 </script>
 
 <template>
   <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="h-6 pl-4 flex items-center via-95% hover:via-white/20">
     <slot v-if="$slots.default" />
     <template v-else>
-      <q-icon class="mr-2" />
+      <q-icon v-if="icon !== ''" class="mr-2" />
       <span
         v-for="(e, i) in data"
         :key="i"
