@@ -71,25 +71,28 @@ onMounted(() => (active.value = 'equip'));
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
-            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['攻击', '(-1000)2000']" down />
             <q-tr :data="['防御', 255]" />
-            <q-tr :data="['命中', 255]" />
+            <q-tr :data="['命中', '(+100)100']" up />
             <q-tr :data="['会心', 255]" />
-            <q-tr :data="['重量', '255.00t']" />
+            <q-tr :data="['重量', '(-100.00t)255.00t']" up />
           </div>
           <div class="flex-1">
-            <q-tr :data="['弹仓', '99/99']" />
-            <q-tr :data="['射击', '4次']" />
-            <q-tr :data="['范围', '1体']" />
-            <q-tr :data="['属性', '通常']" />
+            <q-tr :data="['弹仓', '(16/32)99/99']" down />
+            <q-tr :data="['射击', '(4次)3次']" up />
+            <q-tr :data="['范围', '(贯穿)1体']" />
+            <q-tr :data="['属性', '(电气)通常']" />
             <q-tr :data="['状态', '正常']" />
           </div>
         </div>
       </q-panel>
       <q-panel :size="300" :vs="[2, 15]" lb>
         <q-tr>加农炮</q-tr>
-        <q-th :data="['名称', '重量']" />
+        <q-th :data="['名称', '持有数/重量']" />
         <q-tr :data="['卸下']" hover />
+        <q-tr :data="['激光炮', 1]" hover />
+        <q-tr :data="['等离子暴雨枪', 1]" hover />
+        <q-tr :data="['最终风暴枪', 1]" hover />
         <q-tr :data="['雷电加农炮', '6.00t']" hover />
         <q-tr :data="['225mm多头蛇炮', '7.50t']" hover />
         <q-tr :data="['205mm红牡丹炮', '15.00t']" hover />
