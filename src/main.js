@@ -5,6 +5,7 @@ import App from './App.vue';
 import router from './router';
 
 import QPanel from '@/components/panel.vue';
+import QScroll from '@/components/scroll.vue';
 import QTh from '@/components/th.vue';
 import QTr from '@/components/tr.vue';
 
@@ -16,7 +17,7 @@ import QTeam from '@/components/team.vue';
 
 const app = createApp(App);
 
-[QHead, QIcon, QLayout, QRow, QTeam].concat([QPanel, QTh, QTr]).forEach(component => {
+[QHead, QIcon, QLayout, QRow, QTeam].concat([QPanel, QScroll, QTh, QTr]).forEach(component => {
   app.component(component.name, component);
 });
 

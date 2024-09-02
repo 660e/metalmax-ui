@@ -20,7 +20,8 @@ onMounted(() => (active.value = 'garage'));
   <q-layout v-model="active" :menus="menus">
     <template v-if="active === 'items'">
       <q-panel :size="41" :icons="Array(6)" lb />
-      <q-panel :size="600" :vs="[2, 15]" lb rb>
+      <q-panel :size="600" lb rb>
+        <q-scroll :range="[2, 15]" />
         <q-tr>人类道具/战车道具</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
         <q-tr :data="['回复胶囊', 99]" hover />
@@ -86,7 +87,8 @@ onMounted(() => (active.value = 'garage'));
           </div>
         </div>
       </q-panel>
-      <q-panel :size="300" :vs="[2, 15]" lb>
+      <q-panel :size="300" lb>
+        <q-scroll :range="[2, 15]" />
         <q-tr>加农炮</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
         <q-tr :data="['卸下']" hover />
@@ -160,7 +162,8 @@ onMounted(() => (active.value = 'garage'));
             <q-tr :data="['底盘抗性', '火焰']" />
             <q-tr :data="['最大载重', '255.00t']" />
           </div>
-          <div class="flex-1">
+          <div class="flex-1 relative">
+            <q-scroll :range="[0, 15]" />
             <q-tr :data="['特殊弹仓', '40/99']" />
             <q-th :data="['名称', '持有数']" />
             <q-tr :data="['火箭弹', 10]" hover />
@@ -168,7 +171,8 @@ onMounted(() => (active.value = 'garage'));
             <q-tr :data="['冲锋炸药弹', 10]" hover />
             <q-tr :data="['固体汽油弹', 10]" hover />
           </div>
-          <div class="flex-1">
+          <div class="flex-1 relative">
+            <q-scroll :range="[0, 15]" />
             <q-tr :data="['后备箱', '3/16']" />
             <q-th :data="['名称', '重量']" />
             <q-tr :data="['传送装置', '1.00t']" hover />
