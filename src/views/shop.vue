@@ -1,55 +1,49 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 const active = ref();
 const menus = [
   { label: '买', value: 1 },
   { label: '卖', value: 2 },
-  { label: '离开商店', value: 'exit' }
+  { label: '变更装备', value: 3 },
+  { label: '离开商店', value: 0 }
 ];
-
-onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
-  <q-layout v-model="active" :menus="menus">
-    <transition name="slide-right">
-      <div v-if="[1, 2].includes(active)" class="h-full">
-        <q-panel v-if="active === 2" :size="40" :icons="Array(4)" left />
-        <q-panel :size="600" left right>
-          <q-row v-for="n in 3" :key="n" />
-          <q-row class="pl-4">道具</q-row>
-          <q-head :cells="['名称', '持有数']" />
-          <q-row :cells="['碱性车蜡', 99]" hover />
-          <q-row :cells="['修理工具箱', 99]" hover />
-          <q-row :cells="['回复胶囊', 99]" hover />
-          <q-row :cells="['能量胶囊', 99]" hover />
-          <q-row v-for="n in 9" :key="n" />
-          <q-head :cells="['说明']" />
-          <div class="flex">
-            <div class="flex-1">
-              <q-row :cells="['攻击', '(-150)2000']" />
-              <q-row :cells="['防御', '(-10)255']" />
-              <q-row :cells="['命中', '(-10)30%']" />
-              <q-row :cells="['会心', '(-10)30%']" />
-              <q-row :cells="['重量', '(+99.99)99.99t']" />
-            </div>
-            <div class="flex-1">
-              <q-row :cells="['弹仓', '(-12)99/99']" />
-              <q-row :cells="['射击', '(-2)4次']" />
-              <q-row :cells="['范围', '(圆形)1体']" />
-              <q-row :cells="['属性', '(电气)通常']" />
-              <q-row :cells="['状态', '(破损)正常']" />
-            </div>
+  <q-layout v-model="active" :menus="menus" title="装备店/道具店">
+    <template v-if="[1, 2].includes(active)">
+      <q-panel :size="41" :icons="Array(5)" lb />
+      <q-panel :size="600" lb rb>
+        <q-tr>全部商品</q-tr>
+        <q-th :data="['名称', '持有数/重量', '价格']" />
+        <div class="flex-1 relative">
+          <q-scroll :range="[0, 13]" />
+          <q-tr :data="['激光炮', 1, 100000]" hover />
+          <q-tr :data="['等离子暴雨枪', 1, 100000]" hover />
+          <q-tr :data="['最终风暴枪', 1, 100000]" hover />
+          <q-tr :data="['雷电加农炮', '6.00t', 100000]" hover />
+          <q-tr :data="['225mm多头蛇炮', '7.50t', 100000]" hover />
+          <q-tr :data="['205mm红牡丹炮', '15.00t', 100000]" hover />
+        </div>
+        <q-th :data="['说明']" />
+        <div class="flex">
+          <div class="flex-1">
+            <q-tr :data="['攻击', 2000]" />
+            <q-tr :data="['防御', 255]" />
+            <q-tr :data="['命中', 255]" />
+            <q-tr :data="['会心', 255]" />
+            <q-tr :data="['重量', '255.00t']" />
           </div>
-        </q-panel>
-      </div>
-    </transition>
-
-    <transition name="slide-right">
-      <q-panel v-if="active" :size="240" left>
-        <q-team />
+          <div class="flex-1">
+            <q-tr :data="['弹仓', '99/99']" />
+            <q-tr :data="['射击', '4次']" />
+            <q-tr :data="['范围', '1体']" />
+            <q-tr :data="['属性', '通常']" />
+            <q-tr :data="['状态', '正常']" />
+          </div>
+        </div>
       </q-panel>
-    </transition>
+    </template>
   </q-layout>
 </template>
