@@ -28,6 +28,6 @@ const active = defineModel();
 
     <slot />
 
-    <div class="absolute bottom-0 left-0 backdrop-blur-sm w-full h-12 border-t border-neutral-500 bg-neutral-900/70"></div>
+    <div class="absolute bottom-0 left-0 backdrop-blur-sm w-full h-12 border-t border-neutral-500 bg-neutral-900/90"></div>
   </div>
 </template>

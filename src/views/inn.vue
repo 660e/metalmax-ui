@@ -1,21 +1,13 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 const active = ref();
 const menus = [
   { label: '住宿', value: 1 },
-  { label: '离开旅馆', value: 'exit' }
+  { label: '离开旅馆', value: 0 }
 ];
-
-onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
-  <q-layout v-model="active" :menus="menus">
-    <transition name="slide-right">
-      <q-panel v-if="active" :size="240" left>
-        <q-team />
-      </q-panel>
-    </transition>
-  </q-layout>
+  <q-layout v-model="active" :menus="menus" title="旅馆"></q-layout>
 </template>

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 
 const active = ref();
 const menus = [
@@ -11,8 +11,6 @@ const menus = [
   { label: '车库', value: 'garage' }
   // { label: '选项', value: 'settings' }
 ];
-
-onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
