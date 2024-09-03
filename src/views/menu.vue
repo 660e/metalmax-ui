@@ -2,9 +2,8 @@
 import { onMounted, ref } from 'vue';
 
 const active = ref();
-
 const menus = [
-  // { label: '地图', value: 'map' },
+  { label: '冒险指南', value: 'quests' },
   // { label: '乘降', value: 'in-out' },
   { label: '道具', value: 'items' },
   { label: '装备', value: 'equip' },
@@ -13,11 +12,43 @@ const menus = [
   // { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'equip'));
+onMounted(() => (active.value = 'menu'));
 </script>
 
 <template>
   <q-layout v-model="active" :menus="menus">
+    <template v-if="active === 'quests'">
+      <q-panel :size="300" style="left: 200px" lb rb>
+        <q-tr>冒险指南</q-tr>
+        <q-th :data="['名称']" />
+        <div class="flex-1 relative">
+          <q-scroll :range="[0, 19]" />
+          <q-tr :data="['任务名称-001']" hover />
+          <q-tr :data="['任务名称-002']" hover />
+          <q-tr :data="['任务名称-003']" hover />
+          <q-tr :data="['任务名称-004']" hover />
+        </div>
+      </q-panel>
+      <q-panel :size="600" style="left: 504px" lb>
+        <div class="flex-1 relative">
+          <q-tr>委托人：NPC姓名</q-tr>
+          <div class="absolute top-0 right-4 w-8 h-12 bg-red-500/50"></div>
+          <q-scroll :range="[2, 13]" />
+          <q-th :data="['任务']" />
+          <q-tr :data="['任务步骤-01']" hover />
+          <q-tr :data="['任务步骤-02']" hover />
+          <q-tr :data="['任务步骤-03']" hover />
+          <q-tr :data="['任务步骤-04']" hover />
+        </div>
+        <q-th :data="['说明']" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </q-panel>
+    </template>
+
     <template v-if="active === 'items'">
       <q-panel :size="41" :icons="Array(6)" lb />
       <q-panel :size="600" lb rb>
@@ -120,7 +151,7 @@ onMounted(() => (active.value = 'equip'));
             <br />
           </div>
           <div class="flex-1">
-            <q-tr>角色名称</q-tr>
+            <q-tr>角色姓名</q-tr>
             <q-tr :data="['职业', '赏金猎人']" />
             <q-tr :data="['等级', 85]" />
             <q-tr :data="['距下一次升级还有', '10000EXP']" />
@@ -199,47 +230,5 @@ onMounted(() => (active.value = 'equip'));
         <q-tr :data="['所罗门2', '主炮连射', '', '', '255/255', '255/正常', '2.00t']" />
       </q-panel>
     </template>
-
-    <!--
-    <transition name="slide-right">
-      <div v-if="active === 'map' && !quests" class="h-full">
-        <q-panel :size="40" :icons="Array(2)" @click="quests = true" left />
-        <q-panel :size="600" left right>
-          <div class="flex-1 pt-14 px-2 pb-2 flex">
-            <div class="flex-1 bg-neutral-900"></div>
-          </div>
-        </q-panel>
-        <q-panel :size="240" left>
-          <q-row v-for="n in 3" :key="n" />
-          <q-row class="pl-4">犬系统</q-row>
-          <q-head :cells="['地点']" />
-          <q-row :cells="['明奇博士研究所']" hover />
-          <q-row :cells="['地球救济中心']" hover />
-        </q-panel>
-      </div>
-
-      <div v-else-if="active === 'map' && quests" class="h-full">
-        <q-panel :size="40" :icons="Array(2)" @click="quests = false" left />
-        <q-panel :size="300" style="left: 200px" left right>
-          <q-row v-for="n in 3" :key="n" />
-          <q-row class="pl-4">冒险指南</q-row>
-          <q-head :cells="['名称', '进度']" />
-          <q-row :cells="['任务名称001', '完成']" hover />
-          <q-row :cells="['任务名称002', '完成']" hover />
-          <q-row :cells="['任务名称003', '完成']" hover />
-          <q-row :cells="['任务名称004', '完成']" hover />
-        </q-panel>
-        <q-panel :size="600" style="left: auto; right: 0" left>
-          <q-row v-for="n in 4" :key="n" />
-          <q-head :cells="['任务']" />
-          <q-row :cells="['任务步骤01']" hover />
-          <q-row :cells="['任务步骤02']" hover />
-          <q-row :cells="['任务步骤03']" hover />
-          <q-row :cells="['任务步骤04']" hover />
-          <q-row v-for="n in 7" :key="n" />
-          <q-head :cells="['详情']" />
-        </q-panel>
-      </div>
-    -->
   </q-layout>
 </template>
