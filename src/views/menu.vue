@@ -29,9 +29,9 @@ const menus = [
       </q-panel>
       <q-panel :size="600" style="left: 504px" lb>
         <div class="flex-1 relative">
+          <q-scroll :range="[2, 13]" />
           <q-tr>委托人：NPC姓名</q-tr>
           <div class="absolute top-0 right-4 w-8 h-12 bg-red-500/50"></div>
-          <q-scroll :range="[2, 13]" />
           <q-th :data="['任务']" />
           <q-tr :data="['任务步骤-01']" hover />
           <q-tr :data="['任务步骤-02']" hover />
