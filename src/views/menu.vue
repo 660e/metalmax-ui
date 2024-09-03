@@ -13,7 +13,7 @@ const menus = [
   // { label: '选项', value: 'settings' }
 ];
 
-onMounted(() => (active.value = 'garage'));
+onMounted(() => (active.value = 'equip'));
 </script>
 
 <template>
@@ -21,16 +21,17 @@ onMounted(() => (active.value = 'garage'));
     <template v-if="active === 'items'">
       <q-panel :size="41" :icons="Array(6)" lb />
       <q-panel :size="600" lb rb>
-        <q-scroll :range="[2, 15]" />
         <q-tr>人类道具/战车道具</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
-        <q-tr :data="['回复胶囊', 99]" hover />
-        <q-tr :data="['能量胶囊', 99]" hover />
-        <q-tr :data="['碱性车蜡', 99]" hover />
-        <q-tr :data="['传送装置', '1.00t']" hover />
-        <q-tr :data="['医疗装置', '1.00t']" hover />
-        <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
-        <br class="flex-1" />
+        <div class="flex-1 relative">
+          <q-scroll :range="[0, 13]" />
+          <q-tr :data="['回复胶囊', 99]" hover />
+          <q-tr :data="['能量胶囊', 99]" hover />
+          <q-tr :data="['碱性车蜡', 99]" hover />
+          <q-tr :data="['传送装置', '1.00t']" hover />
+          <q-tr :data="['医疗装置', '1.00t']" hover />
+          <q-tr :data="['猛犸象的象牙', '99.99t']" hover />
+        </div>
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
@@ -88,17 +89,18 @@ onMounted(() => (active.value = 'garage'));
         </div>
       </q-panel>
       <q-panel :size="300" lb>
-        <q-scroll :range="[2, 15]" />
         <q-tr>加农炮</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
-        <q-tr :data="['卸下']" hover />
-        <q-tr :data="['激光炮', 1]" hover />
-        <q-tr :data="['等离子暴雨枪', 1]" hover />
-        <q-tr :data="['最终风暴枪', 1]" hover />
-        <q-tr :data="['雷电加农炮', '6.00t']" hover />
-        <q-tr :data="['225mm多头蛇炮', '7.50t']" hover />
-        <q-tr :data="['205mm红牡丹炮', '15.00t']" hover />
-        <br class="flex-1" />
+        <div class="flex-1 relative">
+          <q-scroll :range="[0, 13]" />
+          <q-tr :data="['卸下']" hover />
+          <q-tr :data="['激光炮', 1]" hover />
+          <q-tr :data="['等离子暴雨枪', 1]" hover />
+          <q-tr :data="['最终风暴枪', 1]" hover />
+          <q-tr :data="['雷电加农炮', '6.00t']" hover />
+          <q-tr :data="['225mm多头蛇炮', '7.50t']" hover />
+          <q-tr :data="['205mm红牡丹炮', '15.00t']" hover />
+        </div>
         <q-th :data="['预览']" />
         <br />
         <br />
@@ -162,22 +164,26 @@ onMounted(() => (active.value = 'garage'));
             <q-tr :data="['底盘抗性', '火焰']" />
             <q-tr :data="['最大载重', '255.00t']" />
           </div>
-          <div class="flex-1 relative">
-            <q-scroll :range="[0, 15]" />
+          <div class="flex-1">
             <q-tr :data="['特殊弹仓', '40/99']" />
             <q-th :data="['名称', '持有数']" />
-            <q-tr :data="['火箭弹', 10]" hover />
-            <q-tr :data="['穿甲弹', 10]" hover />
-            <q-tr :data="['冲锋炸药弹', 10]" hover />
-            <q-tr :data="['固体汽油弹', 10]" hover />
+            <div class="relative">
+              <q-scroll :range="[0, 8]" />
+              <q-tr :data="['火箭弹', 10]" hover />
+              <q-tr :data="['穿甲弹', 10]" hover />
+              <q-tr :data="['冲锋炸药弹', 10]" hover />
+              <q-tr :data="['固体汽油弹', 10]" hover />
+            </div>
           </div>
-          <div class="flex-1 relative">
-            <q-scroll :range="[0, 15]" />
+          <div class="flex-1">
             <q-tr :data="['后备箱', '3/16']" />
             <q-th :data="['名称', '重量']" />
-            <q-tr :data="['传送装置', '1.00t']" hover />
-            <q-tr :data="['医疗装置', '1.00t']" hover />
-            <q-tr :data="['猛犸象的象牙', '99.00t']" hover />
+            <div class="relative">
+              <q-scroll :range="[0, 8]" />
+              <q-tr :data="['传送装置', '1.00t']" hover />
+              <q-tr :data="['医疗装置', '1.00t']" hover />
+              <q-tr :data="['猛犸象的象牙', '99.00t']" hover />
+            </div>
           </div>
         </div>
         <q-th :data="['名称', '弹仓', '攻击/属性', '范围/射击', '命中/会心', '防御/状态', '重量']" />
