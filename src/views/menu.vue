@@ -191,7 +191,7 @@ const menus = [
             <q-tr :data="['型号', '梅卡瓦']" />
           </div>
           <div class="flex-1">
-            <q-tr :data="['特殊弹仓', '40/99']" />
+            <q-tr :data="['弹仓', '40/99']" />
             <q-th :data="['名称', '持有数']" />
             <div class="relative">
               <q-scroll :range="[0, 7]" />
@@ -202,7 +202,7 @@ const menus = [
             </div>
           </div>
           <div class="flex-1">
-            <q-tr :data="['后备箱', '3/16']" />
+            <q-tr :data="['货仓', '3/16']" />
             <q-th :data="['名称', '重量']" />
             <div class="relative">
               <q-scroll :range="[0, 7]" />
