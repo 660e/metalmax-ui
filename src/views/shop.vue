@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const active = ref(2);
+const active = ref();
 const menus = [
   { label: '买', value: 1 },
   { label: '卖', value: 2 },

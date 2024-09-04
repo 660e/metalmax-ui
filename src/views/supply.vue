@@ -20,7 +20,7 @@ onMounted(() => (active.value = 'menu'));
           <q-row class="pl-4">补给车辆</q-row>
           <q-head :cells="['部位', '详情', '单价']" />
           <q-row :cells="['全部补给']" hover />
-          <q-row :cells="['红狼', '12345/99999', '0.1/片']" hover />
+          <q-row :cells="['梅卡瓦', '12345/99999', '0.1/片']" hover />
           <q-row :cells="['220mm大地女神炮', '16/99', '20/枚']" hover />
           <q-row :cells="['烈日中子炮', '5/16', '500/枚']" hover />
         </q-panel>

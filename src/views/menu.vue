@@ -96,9 +96,9 @@ const menus = [
         <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
         <br />
         <q-tr style="padding: 0" hover><q-tr :data="['控制装置']" class="w-40" /><q-tr :data="['所罗门2', '', '2.00t']" class="flex-1" /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['芯片1']" class="w-40" /><q-tr :data="['主炮连射']" /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['芯片2']" class="w-40" /><q-tr /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['芯片3']" class="w-40" /><q-tr /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['控制装置']" class="w-40" /><q-tr :data="['达罗斯1000', '', '1.50t']" class="flex-1" /></q-tr>
+        <br />
+        <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['梅卡瓦', '', '15.00t']" class="flex-1" /></q-tr>
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
@@ -190,14 +190,13 @@ const menus = [
             <q-tr>战车名称</q-tr>
             <q-tr :data="['型号', '梅卡瓦']" />
             <q-tr :data="['底盘特性', '会心一击']" />
-            <q-tr :data="['底盘抗性', '火焰']" />
             <q-tr :data="['最大载重', '255.00t']" />
           </div>
           <div class="flex-1">
             <q-tr :data="['特殊弹仓', '40/99']" />
             <q-th :data="['名称', '持有数']" />
             <div class="relative">
-              <q-scroll :range="[0, 8]" />
+              <q-scroll :range="[0, 7]" />
               <q-tr :data="['火箭弹', 10]" hover />
               <q-tr :data="['穿甲弹', 10]" hover />
               <q-tr :data="['冲锋炸药弹', 10]" hover />
@@ -208,24 +207,25 @@ const menus = [
             <q-tr :data="['后备箱', '3/16']" />
             <q-th :data="['名称', '重量']" />
             <div class="relative">
-              <q-scroll :range="[0, 8]" />
+              <q-scroll :range="[0, 7]" />
               <q-tr :data="['传送装置', '1.00t']" hover />
               <q-tr :data="['医疗装置', '1.00t']" hover />
               <q-tr :data="['猛犸象的象牙', '99.00t']" hover />
             </div>
           </div>
         </div>
-        <q-th :data="['名称', '弹仓', '攻击/属性', '范围/射击', '命中/会心', '防御/状态', '重量']" />
+        <q-th :data="['武器', '弹仓', '攻击/属性', '范围/射击', '命中/会心', '防御/状态', '重量']" />
         <q-tr :data="['220mm大地女神炮', '99/99', '2000通常', '1体3次', '255/255', '255/正常', '10.00t']" />
         <q-tr :data="['雷暴机关枪', '∞', '500电气', '范围1次', '255/255', '255/正常', '3.00t']" />
         <q-tr :data="['S龙卷风炮', '8/16', '1000通常', '范围5次', '255/255', '255/正常', '11.00t']" />
         <q-tr />
         <q-tr />
-        <q-th :data="['名称', '载重', '奖励', '特性', '防御/状态', '重量']" />
+        <q-th :data="['引擎', '载重', '奖励', '特性', '防御/状态', '重量']" />
         <q-tr :data="['V100金刚', '100.00t', '0.00t', '双子奖励', '255/正常', '1.00t']" />
         <q-tr />
-        <q-th :data="['名称', '芯片1', '芯片2', '芯片3', '命中/回避', '防御/状态', '重量']" />
+        <q-th :data="['控制装置', '系统1', '系统2', '系统3', '命中/回避', '防御/状态', '重量']" />
         <q-tr :data="['所罗门2', '主炮连射', '', '', '255/255', '255/正常', '2.00t']" />
+        <q-tr :data="['达罗斯1000', '主炮连射', '', '', '255/255', '255/正常', '1.50t']" />
       </q-panel>
     </template>
   </q-layout>
