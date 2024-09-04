@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const active = ref();
+const active = ref(2);
 const menus = [
   { label: '买', value: 1 },
   { label: '卖', value: 2 },
@@ -21,7 +21,7 @@ const menus = [
           <q-scroll :range="[0, 13]" />
           <q-tr :data="['激光炮', 1, 100000]" hover />
           <q-tr :data="['等离子暴雨枪', 1, 100000]" hover />
-          <q-tr :data="['最终风暴枪', 1, 100000]" hover />
+          <q-tr :data="['最终风暴枪', 1, 100000]" hover number />
           <q-tr :data="['雷电加农炮', '6.00t', 100000]" hover />
           <q-tr :data="['225mm多头蛇炮', '7.50t', 100000]" hover />
           <q-tr :data="['205mm红牡丹炮', '15.00t', 100000]" hover />
