@@ -10,7 +10,7 @@ const directives = [
 </script>
 
 <template>
-  <div class="absolute top-1/2 left-1/2 space-y-1 ml-8">
+  <div v-if="!active" class="absolute top-1/2 left-1/2 space-y-1 ml-8">
     <div v-for="(directive, index) in directives" :key="directive.value" :style="{ marginLeft: `${index * 8}px` }" @click="active = directive.value" class="w-40">
       <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
       <q-tr :data="[directive.label]" class="backdrop-blur-sm via-neutral-900/70" hover />
@@ -18,5 +18,5 @@ const directives = [
     </div>
   </div>
 
-  <div class="absolute right-2 bottom-2">Mini Map {{ active }}</div>
+  <div @click="active = ''" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/70">{{ active }}</div>
 </template>
