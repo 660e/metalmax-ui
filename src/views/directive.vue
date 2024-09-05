@@ -4,6 +4,7 @@ import { ref } from 'vue';
 const active = ref();
 const directives = [
   { label: '乘降', value: 'in-out' },
+  { label: '导航', value: 'navigation' },
   { label: '金属探测器', value: 'metal-detector' },
   { label: '热探测器', value: 'thermal-detector' }
 ];
