@@ -17,7 +17,7 @@ const panelClass = computed(() => {
     case 904:
       return 'left-[200px] w-[904px]';
     default:
-      return '';
+      return 'left-0 w-full';
   }
 });
 </script>
