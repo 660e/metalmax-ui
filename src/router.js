@@ -13,6 +13,11 @@ export default createRouter({
           component: () => import('@/views/menu.vue')
         },
         {
+          path: 'directive',
+          name: 'app-directive',
+          component: () => import('@/views/directive.vue')
+        },
+        {
           path: 'shop',
           name: 'app-shop',
           component: () => import('@/views/shop.vue')

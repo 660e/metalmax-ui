@@ -3,8 +3,8 @@
     <q-panel />
     <div class="absolute inset-0 flex flex-col justify-center items-center space-y-4">
       <q-tr v-for="i in 3" :key="i" class="h-auto w-[750px] pr-4 flex-col relative group bg-gradient-to-r via-neutral-900/70" hover>
-        <i class="absolute -top-1 left-40 text-9xl blur-sm text-white/20 group-hover:blur-none">{{ i }}</i>
-        <div class="h-px w-full bg-gradient-to-r via-50% via-white/50"></div>
+        <i class="absolute -top-1 left-44 text-9xl blur-sm text-white/20 group-hover:blur-none">{{ i }}</i>
+        <div class="h-px w-full bg-gradient-to-r via-white/50"></div>
         <div class="w-full p-2 flex">
           <div class="p-2 space-y-2">
             <div>2025-01-01 00:00:00</div>
@@ -19,7 +19,7 @@
             </div>
           </div>
         </div>
-        <div class="h-px w-full bg-gradient-to-r via-50% via-white/50"></div>
+        <div class="h-px w-full bg-gradient-to-r via-white/50"></div>
       </q-tr>
     </div>
   </q-layout>

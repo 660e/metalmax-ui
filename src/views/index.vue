@@ -4,6 +4,7 @@ import { ref } from 'vue';
 const visible = ref(false);
 const routes = [
   { label: '地图菜单', value: 'app-menu' },
+  { label: '地图指令', value: 'app-directive' },
   { label: '装备店/道具店', value: 'app-shop' },
   { label: '旅馆', value: 'app-inn' },
   { label: '猎人办事处', value: 'app-office' },

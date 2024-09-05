@@ -4,7 +4,6 @@ import { ref } from 'vue';
 const active = ref();
 const menus = [
   { label: '冒险指南', value: 'quests' },
-  // { label: '乘降', value: 'in-out' },
   { label: '道具', value: 'items' },
   { label: '装备', value: 'equip' },
   { label: '状态', value: 'status' },

@@ -2,7 +2,7 @@ import './main.css';
 
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router';
+import router from './router.js';
 
 import QIcon from '@/components/icon.vue';
 import QLayout from '@/components/layout.vue';
