@@ -17,5 +17,7 @@ const menus = [
         <q-tr class="pr-4 w-20 justify-center bg-neutral-900/40" hover>否</q-tr>
       </div>
     </div>
+
+    <q-team />
   </q-layout>
 </template>
