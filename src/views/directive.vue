@@ -11,12 +11,11 @@ const directives = [
 </script>
 
 <template>
-  <div v-if="!active" class="absolute top-1/2 left-1/2 space-y-1 ml-8">
-    <div v-for="directive in directives" :key="directive.value" @click="active = directive.value" class="w-40">
-      <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
-      <q-tr :data="[directive.label]" class="backdrop-blur-sm bg-neutral-900/40" hover />
-      <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
-    </div>
+  <div v-if="!active" class="absolute top-1/2 left-1/2 ml-8 w-40 backdrop-blur-sm bg-neutral-900/40">
+    <template v-for="(directive, index) in directives" :key="directive.value">
+      <div v-if="index" class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
+      <q-tr :data="[directive.label]" @click="active = directive.value" hover />
+    </template>
   </div>
 
   <div @click="active = ''" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/70">{{ active }}</div>
