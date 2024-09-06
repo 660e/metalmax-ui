@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const active = ref(1);
+const active = ref();
 const menus = [
   { label: '改造底盘', value: 1 },
   { label: '改造武器', value: 2 },
@@ -26,10 +26,10 @@ const menus = [
         <q-tr :data="['穴-4：特殊装备']" hover />
         <q-tr :data="['穴-5：特殊装备']" hover />
         <q-th :data="['改造']" />
-        <q-tr :data="['型号', '梅卡瓦IV']" hover />
-        <q-tr :data="['防御', 255]" hover />
-        <q-tr :data="['弹仓', 99]" hover />
-        <q-tr :data="['货仓', 16]" hover />
+        <q-tr :data="['型号', '梅卡瓦IV']" :upgrade="[4, 2]" hover />
+        <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
+        <q-tr :data="['弹仓', 99]" :upgrade="[6, 4]" hover />
+        <q-tr :data="['货仓', 16]" :upgrade="[8, 7]" hover />
         <q-th :data="['总结']" />
         <q-tr :data="['重量', '(+100.00t)100.00t']" down />
         <q-tr :data="['费用', 200000]" />
@@ -49,9 +49,9 @@ const menus = [
           <q-tr :data="['220mm大地女神炮', '75%']" hover />
         </div>
         <q-th :data="['改造']" />
-        <q-tr :data="['攻击', 2000]" hover />
-        <q-tr :data="['弹仓', 99]" hover />
-        <q-tr :data="['防御', 255]" hover />
+        <q-tr :data="['攻击', 2000]" :upgrade="[5, 1]" hover />
+        <q-tr :data="['弹仓', 99]" :upgrade="[5, 1]" hover />
+        <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
         <br />
         <q-th :data="['总结']" />
         <q-tr :data="['重量', '(+100.00t)100.00t']" down />
@@ -72,8 +72,8 @@ const menus = [
           <q-tr :data="['V100金刚', '75%']" hover />
         </div>
         <q-th :data="['改造']" />
-        <q-tr :data="['型号', 'V100金刚']" hover />
-        <q-tr :data="['防御', 255]" hover />
+        <q-tr :data="['型号', 'V100金刚']" :upgrade="[5, 1]" hover />
+        <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
         <br />
         <br />
         <q-th :data="['总结']" />
@@ -95,9 +95,9 @@ const menus = [
           <q-tr :data="['所罗门2', '75%']" hover />
         </div>
         <q-th :data="['改造']" />
-        <q-tr :data="['命中', 255]" hover />
-        <q-tr :data="['回避', 255]" hover />
-        <q-tr :data="['防御', 255]" hover />
+        <q-tr :data="['命中', 255]" :upgrade="[5, 1]" hover />
+        <q-tr :data="['回避', 255]" :upgrade="[5, 1]" hover />
+        <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
         <br />
         <q-th :data="['总结']" />
         <q-tr :data="['重量', '(+100.00t)100.00t']" down />
