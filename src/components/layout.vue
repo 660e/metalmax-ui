@@ -18,9 +18,9 @@ const active = defineModel();
       <div
         v-for="menu in menus"
         :key="menu.value"
-        :class="[active === menu.value ? 'w-32 pl-8 bg-neutral-900/70' : 'w-28 pl-4']"
+        :class="{ 'bg-neutral-900/70': active === menu.value }"
         @click="active = menu.value"
-        class="py-2 backdrop-blur-sm border border-l-0 border-neutral-500 bg-neutral-900/40 duration-200 hover:w-32 hover:pl-8 hover:bg-neutral-900/70"
+        class="py-2 pl-4 w-32 backdrop-blur-sm duration-200 border border-l-0 border-neutral-500 bg-neutral-900/40 hover:bg-neutral-900/70"
       >
         {{ menu.label }}
       </div>

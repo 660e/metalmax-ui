@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const active = ref();
+const active = ref(1);
 const menus = [
   { label: '改造底盘', value: 1 },
   { label: '改造武器', value: 2 },

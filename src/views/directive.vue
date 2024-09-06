@@ -11,7 +11,7 @@ const directives = [
 </script>
 
 <template>
-  <div v-if="!active" class="absolute top-1/2 left-1/2 ml-8 w-40 backdrop-blur-sm bg-neutral-900/40">
+  <div v-if="!active" class="absolute top-1/2 left-1/2 ml-8 w-40 backdrop-blur-sm border-y border-neutral-500 bg-neutral-900/40">
     <template v-for="(directive, index) in directives" :key="directive.value">
       <div v-if="index" class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
       <q-tr :data="[directive.label]" @click="active = directive.value" hover />
