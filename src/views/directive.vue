@@ -12,9 +12,9 @@ const directives = [
 
 <template>
   <div v-if="!active" class="absolute top-1/2 left-1/2 space-y-1 ml-8">
-    <div v-for="(directive, index) in directives" :key="directive.value" :style="{ marginLeft: `${index * 8}px` }" @click="active = directive.value" class="w-40">
+    <div v-for="directive in directives" :key="directive.value" @click="active = directive.value" class="w-40">
       <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
-      <q-tr :data="[directive.label]" class="backdrop-blur-sm via-neutral-900/70" hover />
+      <q-tr :data="[directive.label]" class="backdrop-blur-sm bg-neutral-900/40" hover />
       <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
     </div>
   </div>

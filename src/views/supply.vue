@@ -20,9 +20,10 @@ const menus = [
           <q-tr :data="['全部补给']" hover />
           <q-tr :data="['梅卡瓦', '12345/99999', '0.1/片']" hover />
           <q-tr :data="['220mm大地女神炮', '16/99', '20/枚']" hover />
-          <q-tr :data="['S龙卷风炮', '5/16', '1000/枚']" hover number />
+          <q-tr :data="['S龙卷风炮', '5/16', '1000/枚']" hover />
         </div>
       </q-panel>
+      <q-number style="top: 160px; left: 799px" />
     </template>
   </q-layout>
 </template>
