@@ -24,10 +24,10 @@ const panelClass = computed(() => {
 
 <template>
   <div :class="[panelClass, lb ? 'border-l' : '', rb ? 'border-r' : '']" class="absolute top-0 bottom-12 border-neutral-500">
-    <div v-if="size === 41" class="h-full pt-[98px] flex flex-col items-center space-y-1 bg-neutral-900/70">
+    <div v-if="size === 41" class="h-full pt-[98px] flex flex-col items-center space-y-1 bg-neutral-900/80">
       <q-icon v-for="icon in icons" :key="icon" size="large" />
     </div>
-    <div v-else class="h-full flex flex-col pt-16 pb-2 bg-neutral-900/40">
+    <div v-else class="h-full flex flex-col pt-[68px] pb-1 bg-neutral-900/50">
       <slot />
     </div>
   </div>

@@ -7,8 +7,8 @@ const menus = [
   { label: '道具', value: 'items' },
   { label: '装备', value: 'equip' },
   { label: '状态', value: 'status' },
-  { label: '车库', value: 'garage' }
-  // { label: '选项', value: 'settings' }
+  { label: '车库', value: 'garage' },
+  { label: '选项', value: 'settings' }
 ];
 </script>
 
@@ -193,7 +193,7 @@ const menus = [
             <q-tr :data="['弹仓', '40/99']" />
             <q-th :data="['名称', '持有数']" />
             <div class="relative">
-              <q-scroll :range="[0, 7]" />
+              <q-scroll :range="[0, 5]" />
               <q-tr :data="['火箭弹', 10]" hover />
               <q-tr :data="['穿甲弹', 10]" hover />
               <q-tr :data="['冲锋炸药弹', 10]" hover />
@@ -204,7 +204,7 @@ const menus = [
             <q-tr :data="['货仓', '3/16']" />
             <q-th :data="['名称', '重量']" />
             <div class="relative">
-              <q-scroll :range="[0, 7]" />
+              <q-scroll :range="[0, 5]" />
               <q-tr :data="['传送装置', '1.00t']" hover />
               <q-tr :data="['医疗装置', '1.00t']" hover />
               <q-tr :data="['猛犸象的象牙', '99.00t']" hover />
@@ -227,5 +227,7 @@ const menus = [
         <q-tr :data="['梅卡瓦', '会心一击', '255/正常', '15.00t']" />
       </q-panel>
     </template>
+
+    <q-team v-if="!active || active === 'menu'" />
   </q-layout>
 </template>

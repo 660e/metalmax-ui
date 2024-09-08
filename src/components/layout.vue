@@ -18,9 +18,9 @@ const active = defineModel();
       <div
         v-for="menu in menus"
         :key="menu.value"
-        :class="{ 'bg-neutral-900/70': active === menu.value }"
+        :class="{ 'bg-neutral-900/80': active === menu.value }"
         @click="active = menu.value"
-        class="py-2 pl-4 w-32 duration-200 border border-l-0 border-neutral-500 bg-neutral-900/40 hover:bg-neutral-900/70"
+        class="py-2 pl-4 w-32 duration-200 border border-l-0 border-neutral-500 bg-neutral-900/50 hover:bg-neutral-900/80"
       >
         {{ menu.label }}
       </div>
@@ -28,6 +28,6 @@ const active = defineModel();
 
     <slot />
 
-    <div class="absolute bottom-0 left-0 w-full h-12 border-t border-neutral-500 bg-neutral-900/90"></div>
+    <div class="absolute bottom-0 left-0 w-full h-12 border-t border-neutral-500 bg-neutral-900"></div>
   </div>
 </template>

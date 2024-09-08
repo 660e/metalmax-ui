@@ -13,7 +13,7 @@ const scrollStyle = computed(() => {
 </script>
 
 <template>
-  <div :style="scrollStyle" class="absolute right-1 w-0.5 flex flex-col bg-neutral-900/20">
+  <div :style="scrollStyle" class="absolute right-1 w-0.5 flex flex-col bg-neutral-900/30">
     <b class="h-1/2 bg-neutral-500"></b>
   </div>
 </template>

@@ -44,7 +44,7 @@ const menus = [
           </div>
         </div>
       </q-panel>
-      <q-number style="top: 160px; left: 799px" />
+      <q-number style="top: 159px; left: 799px" />
     </template>
   </q-layout>
 </template>

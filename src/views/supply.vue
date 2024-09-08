@@ -23,7 +23,7 @@ const menus = [
           <q-tr :data="['S龙卷风炮', '5/16', '1000/枚']" hover />
         </div>
       </q-panel>
-      <q-number style="top: 160px; left: 799px" />
+      <q-number style="top: 159px; left: 799px" />
     </template>
   </q-layout>
 </template>
