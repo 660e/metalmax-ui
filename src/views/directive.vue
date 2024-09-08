@@ -11,12 +11,12 @@ const directives = [
 </script>
 
 <template>
-  <div class="h-full flex justify-center items-center">
-    <div v-if="!active" class="absolute top-1/2 left-1/2 ml-8 w-40 border-y border-neutral-500 bg-neutral-900/50">
-      <template v-for="(directive, index) in directives" :key="directive.value">
-        <div v-if="index" class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
-        <q-tr :data="[directive.label]" @click="active = directive.value" hover />
-      </template>
+  <div :class="{ 'backdrop-blur-sm': active }" class="h-full flex justify-center items-center">
+    <div v-if="!active" class="absolute top-1/2 left-1/2 ml-8 space-y-0.5">
+      <div v-for="directive in directives" :key="directive.value" @click="active = directive.value" class="w-32 p-0.5 flex items-center border border-neutral-500 bg-neutral-900/80">
+        <q-icon class="mr-2" />
+        <span>{{ directive.label }}</span>
+      </div>
     </div>
 
     <div v-if="active === 'metal-detector'" class="flex space-x-4">
