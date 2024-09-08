@@ -3,7 +3,7 @@ defineOptions({ name: 'q-number' });
 </script>
 
 <template>
-  <div class="absolute w-40 backdrop-blur-sm border-y border-neutral-500 bg-neutral-900/40">
+  <div class="absolute w-40 border-y border-neutral-500 bg-neutral-900/40">
     <div class="h-6 px-2 flex items-center">
       <span>出售数量：</span>
       <span class="flex-1 flex justify-center">1</span>

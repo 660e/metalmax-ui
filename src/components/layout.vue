@@ -6,7 +6,7 @@ const active = defineModel();
 </script>
 
 <template>
-  <div class="h-full relative">
+  <div class="h-full backdrop-blur-sm relative">
     <div @click="active = 'menu'" class="absolute z-20 top-0 left-0 w-[500px] h-12 flex flex-col">
       <div class="flex-1 flex items-center bg-gradient-to-r from-40% from-neutral-900">
         <div class="pl-4 text-xl leading-none">{{ title || menus.find(menu => menu.value === active)?.label || '场景信息' }}</div>
@@ -20,7 +20,7 @@ const active = defineModel();
         :key="menu.value"
         :class="{ 'bg-neutral-900/70': active === menu.value }"
         @click="active = menu.value"
-        class="py-2 pl-4 w-32 backdrop-blur-sm duration-200 border border-l-0 border-neutral-500 bg-neutral-900/40 hover:bg-neutral-900/70"
+        class="py-2 pl-4 w-32 duration-200 border border-l-0 border-neutral-500 bg-neutral-900/40 hover:bg-neutral-900/70"
       >
         {{ menu.label }}
       </div>
@@ -28,6 +28,6 @@ const active = defineModel();
 
     <slot />
 
-    <div class="absolute bottom-0 left-0 backdrop-blur-sm w-full h-12 border-t border-neutral-500 bg-neutral-900/90"></div>
+    <div class="absolute bottom-0 left-0 w-full h-12 border-t border-neutral-500 bg-neutral-900/90"></div>
   </div>
 </template>
