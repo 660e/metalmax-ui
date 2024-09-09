@@ -38,11 +38,11 @@ const menus = [
           <q-tr :data="['任务步骤-04']" hover />
         </div>
         <q-th :data="['说明']" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
       </q-panel>
     </template>
 
@@ -90,13 +90,13 @@ const menus = [
         <q-tr style="padding: 0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr :data="['S龙卷风炮', '8/16', '11.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['特殊装备']" class="w-40" /><q-tr /></q-tr>
-        <br />
+        <div class="h-6"></div>
         <q-tr style="padding: 0" hover><q-tr :data="['主引擎']" class="w-40" /><q-tr :data="['V100金刚', '', '1.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
-        <br />
+        <div class="h-6"></div>
         <q-tr style="padding: 0" hover><q-tr :data="['控制装置']" class="w-40" /><q-tr :data="['所罗门2', '', '2.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['控制装置']" class="w-40" /><q-tr :data="['达罗斯1000', '', '1.50t']" class="flex-1" /></q-tr>
-        <br />
+        <div class="h-6"></div>
         <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['梅卡瓦', '', '15.00t']" class="flex-1" /></q-tr>
         <q-th :data="['说明']" />
         <div class="flex">
@@ -130,11 +130,11 @@ const menus = [
           <q-tr :data="['205mm红牡丹炮', '15.00t']" hover />
         </div>
         <q-th :data="['预览']" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
       </q-panel>
     </template>
 
@@ -143,9 +143,9 @@ const menus = [
       <q-panel :size="600" lb rb>
         <div class="flex">
           <div class="flex-1">
-            <br />
-            <br />
-            <br />
+            <div class="h-6"></div>
+            <div class="h-6"></div>
+            <div class="h-6"></div>
           </div>
           <div class="flex-1">
             <q-tr>角色姓名</q-tr>
@@ -181,11 +181,11 @@ const menus = [
       <q-panel :size="904" lb>
         <div class="flex">
           <div class="flex-1">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <div class="h-6"></div>
+            <div class="h-6"></div>
+            <div class="h-6"></div>
+            <div class="h-6"></div>
+            <div class="h-6"></div>
             <q-tr>战车名称</q-tr>
             <q-tr :data="['型号', '梅卡瓦']" />
           </div>

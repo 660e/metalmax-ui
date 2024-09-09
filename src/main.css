@@ -5,9 +5,3 @@
 body {
   overflow: hidden;
 }
-
-br {
-  content: '';
-  display: block;
-  height: theme('space.6');
-}

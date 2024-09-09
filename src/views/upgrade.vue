@@ -52,7 +52,7 @@ const menus = [
         <q-tr :data="['攻击', 2000]" :upgrade="[5, 1]" hover />
         <q-tr :data="['弹仓', 99]" :upgrade="[5, 1]" hover />
         <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
-        <br />
+        <div class="h-6"></div>
         <q-th :data="['总结']" />
         <q-tr :data="['重量', '(+100.00t)100.00t']" down />
         <q-tr :data="['费用', 200000]" />
@@ -74,8 +74,8 @@ const menus = [
         <q-th :data="['改造']" />
         <q-tr :data="['型号', 'V100金刚']" :upgrade="[5, 1]" hover />
         <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
-        <br />
-        <br />
+        <div class="h-6"></div>
+        <div class="h-6"></div>
         <q-th :data="['总结']" />
         <q-tr :data="['重量', '(+100.00t)100.00t']" down />
         <q-tr :data="['费用', 200000]" />
@@ -98,7 +98,7 @@ const menus = [
         <q-tr :data="['命中', 255]" :upgrade="[5, 1]" hover />
         <q-tr :data="['回避', 255]" :upgrade="[5, 1]" hover />
         <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
-        <br />
+        <div class="h-6"></div>
         <q-th :data="['总结']" />
         <q-tr :data="['重量', '(+100.00t)100.00t']" down />
         <q-tr :data="['费用', 200000]" />

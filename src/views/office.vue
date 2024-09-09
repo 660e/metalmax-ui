@@ -24,11 +24,11 @@ const menus = [
           <q-tr :data="['帕鲁·巴迪斯', 200000]" hover />
         </div>
         <q-th :data="['说明']" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
       </q-panel>
     </template>
 
@@ -58,11 +58,11 @@ const menus = [
           <q-tr :data="['任务名称-004']" hover />
         </div>
         <q-th :data="['说明']" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
+        <div class="h-6"></div>
       </q-panel>
     </template>
   </q-layout>
