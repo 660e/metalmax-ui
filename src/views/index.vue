@@ -36,7 +36,8 @@ const routes = [
       </div>
     </div>
     <div class="relative">
-      <img src="@/assets/bg.png" />
+      <img v-if="$route.name === 'app-battle'" src="@/assets/bg-b.png" />
+      <img v-else src="@/assets/bg-m.png" />
       <div class="absolute inset-0 overflow-hidden">
         <router-view />
       </div>
