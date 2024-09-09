@@ -11,7 +11,8 @@ const routes = [
   { label: '补给店', value: 'app-supply' },
   { label: '修理店', value: 'app-repair' },
   { label: '改造店', value: 'app-upgrade' },
-  { label: '记录中心', value: 'app-save' }
+  { label: '记录中心', value: 'app-save' },
+  { label: '战斗场景', value: 'app-battle' }
 ];
 </script>
 

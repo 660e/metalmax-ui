@@ -51,6 +51,11 @@ export default createRouter({
           path: 'save',
           name: 'app-save',
           component: () => import('@/views/save.vue')
+        },
+        {
+          path: 'battle',
+          name: 'app-battle',
+          component: () => import('@/views/battle.vue')
         }
       ]
     }
