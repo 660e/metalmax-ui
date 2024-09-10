@@ -19,7 +19,7 @@ defineOptions({ name: 'q-team' });
         <div class="h-16 w-8 bg-red-500"></div>
         <div class="flex-1 flex flex-col">
           <div class="flex-1 flex flex-col pl-2">
-            <div class="flex-1 flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
+            <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
             <div class="flex-1 flex items-center">
               <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/50"></div>
               <div class="flex-1 flex h-2 border-y border-neutral-900/50"><b class="bg-green-700 w-1/2"></b></div>
@@ -29,7 +29,7 @@ defineOptions({ name: 'q-team' });
           <div class="flex-1 flex pl-2">
             <div class="h-8 w-8 bg-red-500"></div>
             <div class="flex-1 flex flex-col pl-2">
-              <div class="flex-1 flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">SP</span><span>10000/99999</span></div>
+              <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">SP</span><span>10000/99999</span></div>
               <div class="flex-1 flex items-center">
                 <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/50"></div>
                 <div class="flex-1 flex h-2 border-y border-neutral-900/50"><b class="bg-yellow-700 w-1/2"></b></div>
