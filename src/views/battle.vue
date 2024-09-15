@@ -6,7 +6,13 @@ const data = [
   {
     label: '战斗',
     value: 1,
-    children: [{ label: '220mm大地女神炮', value: 11, side: '' }, { label: '雷暴机关枪', value: 12, side: '' }, { label: 'S龙卷风炮', value: 13, side: '' }, {}, {}]
+    children: [
+      { label: '220mm大地女神炮', value: 11, side: '50/99', icon: 'icon' },
+      { label: '雷暴机关枪', value: 12, side: '', icon: 'icon' },
+      { label: 'S龙卷风炮', value: 13, side: '8/16', icon: 'icon' },
+      {},
+      {}
+    ]
   },
   { label: '技能', value: 2 },
   { label: '道具', value: 3 },
