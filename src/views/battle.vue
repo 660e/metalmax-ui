@@ -12,14 +12,24 @@ const data = [
     ]
   },
   { label: '技能', value: 2 },
-  { label: '道具', value: 3 },
+  {
+    label: '道具',
+    value: 3,
+    children: [
+      { label: '回复胶囊', value: 31, side: 'x99', icon: 'icon' },
+      { label: '能量胶囊', value: 32, side: 'x99', icon: 'icon' },
+      { label: '碱性车蜡', value: 33, side: 'x99', icon: 'icon' },
+      {},
+      {}
+    ]
+  },
   { label: '防御', value: 4 },
   { label: '脱逃', value: 5 }
 ];
 </script>
 
 <template>
-  <div class="absolute top-0 right-0 flex backdrop-blur-sm bg-neutral-900/50">
+  <div class="absolute top-0 right-0 flex bg-neutral-900/50">
     <template v-for="(actor, index) in ['猎人', '机械师', '士兵', '波奇']" :key="index">
       <div v-if="index" class="w-px bg-gradient-to-b from-white/50"></div>
       <div :class="{ 'bg-gradient-to-b': index === 1 }" class="w-36 p-2 space-y-1 from-neutral-900/50">
@@ -33,6 +43,11 @@ const data = [
         <div v-if="index !== 3" class="flex-1 flex h-2 border border-neutral-900/50"><b class="bg-yellow-700 w-1/2"></b></div>
       </div>
     </template>
+  </div>
+
+  <div class="absolute bottom-0 left-0 w-full h-12 flex bg-neutral-900/50">
+    <div class="flex-1"></div>
+    <div class="flex-1 pr-4 flex items-center justify-end">Lorem ipsum dolor sit amet.</div>
   </div>
 
   <q-list :data="data" class="top-1/2 left-2/3" />
