@@ -2,6 +2,23 @@
 import { ref } from 'vue';
 
 const active = ref();
+const data = [
+  {
+    label: '战斗',
+    value: 1,
+    children: [
+      { label: '220mm大地女神炮', value: 11, side: '' },
+      { label: '雷暴机关枪', value: 12, side: '' },
+      { label: 'S龙卷风炮', value: 13, side: '' },
+      {},
+      {}
+    ]
+  },
+  { label: '技能', value: 2 },
+  { label: '道具', value: 3 },
+  { label: '防御', value: 4 },
+  { label: '脱逃', value: 5 }
+];
 </script>
 
 <template>
@@ -11,7 +28,9 @@ const active = ref();
       <div :class="{ 'bg-gradient-to-b': index === 1 }" @click="active = ''" class="w-36 p-2 space-y-1 from-neutral-900/50">
         <div class="flex justify-between items-center">
           <span>{{ actor }}</span>
-          <span class="flex space-x-0.5"><b v-for="n in 5" :key="n" :class="{ 'box-shadow': n < 3 }" class="h-1 w-1 rounded-full bg-neutral-500"></b></span>
+          <span class="flex space-x-0.5"
+            ><b v-for="n in 5" :key="n" :class="{ 'box-shadow': n < 3 }" class="h-1 w-1 rounded-full bg-neutral-500"></b
+          ></span>
         </div>
         <div class="h-px bg-gradient-to-r from-white/50"></div>
         <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
@@ -21,25 +40,7 @@ const active = ref();
     </template>
   </div>
 
-  <div class="absolute top-1/2 left-2/3">
-    <div :class="{ 'opacity-50': active }" class="w-32">
-      <template v-for="(directive, index) in ['战斗', '技能', '道具', '防御', '脱逃']" :key="index">
-        <div v-if="index" class="h-px bg-neutral-500"></div>
-        <div @click="active = directive" class="h-6 pl-4 flex items-center backdrop-blur-sm duration-200 bg-neutral-900/70 hover:pl-2">{{ directive }}</div>
-      </template>
-    </div>
-    <div v-if="active === '战斗'" class="absolute top-2 left-2 w-60">
-      <template v-for="(item, index) in ['220mm大地女神炮', '雷暴机关枪', 'S龙卷风炮', '', '']" :key="index">
-        <div v-if="index" class="h-px bg-neutral-500"></div>
-        <div class="h-6 px-4 flex justify-between items-center backdrop-blur-sm duration-200 bg-neutral-900/70 hover:pl-2">
-          <span>{{ item }}</span>
-          <span v-if="item">50/99</span>
-        </div>
-      </template>
-    </div>
-  </div>
-
-  <q-list />
+  <q-list :data="data" class="top-1/2 left-2/3" />
 </template>
 
 <style scoped>
