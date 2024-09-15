@@ -25,19 +25,21 @@ const data = [
 
   <div v-if="active === 3" :class="{ 'backdrop-blur-sm': active }" @click="active = 0" class="h-full flex justify-center items-center">
     <div class="flex space-x-4">
-      <div class="w-72 py-4 border border-neutral-500 bg-neutral-900/50">
-        <div class="text-center pb-1">木箱</div>
+      <div class="w-72 flex flex-col pb-1 border border-neutral-500 bg-neutral-900/50">
+        <div class="flex-1"></div>
+        <div class="text-center">木箱</div>
         <q-th :data="['名称', '数量/重量']" />
         <q-tr :data="['220mm大地女神炮', '10.00t']" hover />
         <q-tr :data="['雷暴机关枪', '10.00t']" hover />
+        <div class="h-6"></div>
+        <div class="h-6"></div>
       </div>
-      <div class="w-72 border border-neutral-500 bg-neutral-900/50">
-        <div class="p-1 space-y-1 border border-neutral-500">
-          <q-tr v-for="tank in ['Merkava', 'Leopard', 'Abrams', '']" :key="tank" class="h-auto pl-0" hover>
-            <q-icon size="large" />
-            <div>{{ tank }}</div>
-          </q-tr>
-        </div>
+      <div class="w-72 p-1 space-y-1 border border-neutral-500 bg-neutral-900/50">
+        <q-tr v-for="n in 4" :key="n" class="h-auto space-x-2" style="padding-left: 0" hover>
+          <q-icon size="large" />
+          <div class="flex-1">10/16</div>
+          <div class="pr-1">(-100.00t)255.00t 剩余</div>
+        </q-tr>
       </div>
     </div>
   </div>
