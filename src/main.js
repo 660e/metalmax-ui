@@ -4,19 +4,12 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router.js';
 
-import QIcon from '@/components/icon.vue';
-import QLayout from '@/components/layout.vue';
-import QNumber from '@/components/number.vue';
-import QPanel from '@/components/panel.vue';
-import QScroll from '@/components/scroll.vue';
-import QTeam from '@/components/team.vue';
-import QTh from '@/components/th.vue';
-import QTr from '@/components/tr.vue';
-
 const app = createApp(App);
+const components = import.meta.glob('@/components/*.vue');
 
-[QIcon, QLayout, QNumber, QPanel, QScroll, QTeam, QTh, QTr].forEach(component => {
-  app.component(component.name, component);
+Object.values(components).forEach(async module => {
+  const component = await module();
+  app.component(component.default.name, component.default);
 });
 
 app.use(router);
