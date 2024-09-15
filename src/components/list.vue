@@ -4,7 +4,7 @@ import { ref } from 'vue';
 defineOptions({ name: 'q-list' });
 defineProps({ data: Array });
 
-const emit = defineEmits({ active: Number });
+const emit = defineEmits({ active: value => typeof value === 'number' });
 const active = ref(0);
 const select = value => {
   active.value = value === active.value ? 0 : value;
