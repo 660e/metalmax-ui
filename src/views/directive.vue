@@ -1,33 +1,46 @@
 <script setup>
 import { ref } from 'vue';
 
-const active = ref();
+const active = ref(0);
+const data = [
+  { label: '导航', value: 1 },
+  {
+    label: '乘降',
+    value: 2,
+    children: [
+      { label: '全员上车', value: 21 },
+      { label: '全员下车', value: 22 },
+      { label: '猎人', value: 23, side: 'Merkava', icon: 'icon' },
+      { label: '机械师', value: 24, side: 'Leopard', icon: 'icon' },
+      { label: '士兵', value: 25, side: 'Abrams', icon: 'icon' }
+    ]
+  },
+  { label: '金属探测器', value: 3 },
+  { label: '热探测器', value: 4 }
+];
 </script>
 
 <template>
-  <div :class="{ 'backdrop-blur-sm': active }" class="h-full flex justify-center items-center">
-    <div v-if="!active" class="absolute top-1/2 left-1/2 ml-8">
-      <template v-for="(directive, index) in ['乘降', '导航', '金属探测器', '热探测器']" :key="index">
-        <div v-if="index" class="h-px bg-neutral-500"></div>
-        <div @click="active = directive" class="w-32 h-6 pl-0.5 flex items-center backdrop-blur-sm bg-neutral-900/70">
-          <q-icon class="mr-2" />
-          <span>{{ directive }}</span>
-        </div>
-      </template>
-    </div>
+  <q-list v-if="active !== 3" :data="data" @active="value => (active = value)" class="top-1/2 left-1/2 ml-8" />
 
-    <div v-if="active === '金属探测器'" class="flex space-x-4">
-      <div class="w-80 py-4 border border-neutral-500 bg-neutral-900/50">
+  <div v-if="active === 3" :class="{ 'backdrop-blur-sm': active }" @click="active = 0" class="h-full flex justify-center items-center">
+    <div class="flex space-x-4">
+      <div class="w-72 py-4 border border-neutral-500 bg-neutral-900/50">
         <div class="text-center pb-1">木箱</div>
         <q-th :data="['名称', '数量/重量']" />
         <q-tr :data="['220mm大地女神炮', '10.00t']" hover />
         <q-tr :data="['雷暴机关枪', '10.00t']" hover />
       </div>
-      <div class="p-1 space-y-1 border border-neutral-500 bg-neutral-900/50">
-        <q-icon v-for="n in 5" :key="n" size="large" />
+      <div class="w-72 border border-neutral-500 bg-neutral-900/50">
+        <div class="p-1 space-y-1 border border-neutral-500">
+          <q-tr v-for="tank in ['Merkava', 'Leopard', 'Abrams', '']" :key="tank" class="h-auto pl-0" hover>
+            <q-icon size="large" />
+            <div>{{ tank }}</div>
+          </q-tr>
+        </div>
       </div>
     </div>
-
-    <div @click="active = ''" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/80">{{ active }}</div>
   </div>
+
+  <div v-if="active === 0" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/80"></div>
 </template>

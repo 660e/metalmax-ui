@@ -97,7 +97,7 @@ const menus = [
         <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['所罗门2', '', '2.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['达罗斯1000', '', '1.50t']" class="flex-1" /></q-tr>
         <div class="h-6"></div>
-        <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['梅卡瓦', '', '15.00t']" class="flex-1" /></q-tr>
+        <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['Merkava', '', '15.00t']" class="flex-1" /></q-tr>
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
@@ -187,7 +187,7 @@ const menus = [
             <div class="h-6"></div>
             <div class="h-6"></div>
             <q-tr>战车名称</q-tr>
-            <q-tr :data="['型号', '梅卡瓦']" />
+            <q-tr :data="['型号', 'Merkava']" />
           </div>
           <div class="flex-1">
             <q-tr :data="['弹仓', '40/99']" />
@@ -224,7 +224,7 @@ const menus = [
         <q-tr :data="['所罗门2', '主炮连射', '', '', '255/255', '255/正常', '2.00t']" />
         <q-tr :data="['达罗斯1000', '主炮连射', '', '', '255/255', '255/正常', '1.50t']" />
         <q-th :data="['底盘', '特性', '防御/状态', '重量']" />
-        <q-tr :data="['梅卡瓦', '会心一击', '255/正常', '15.00t']" />
+        <q-tr :data="['Merkava', '会心一击', '255/正常', '15.00t']" />
       </q-panel>
     </template>
 

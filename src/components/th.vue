@@ -5,7 +5,7 @@ defineProps({ data: Array, width: Array });
 
 <template>
   <div class="h-6 py-1 flex text-xs leading-none text-neutral-400">
-    <span
+    <div
       v-for="(e, i) in data"
       :key="i"
       :style="{ width: i ? `${width ? width[i - 1] : 100}px` : '' }"
@@ -13,6 +13,6 @@ defineProps({ data: Array, width: Array });
       class="h-full flex items-center bg-neutral-900/50"
     >
       {{ e }}
-    </span>
+    </div>
   </div>
 </template>

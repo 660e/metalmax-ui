@@ -26,7 +26,7 @@ const menus = [
         <q-tr :data="['穴-4：S-E']" hover />
         <q-tr :data="['穴-5：S-E']" hover />
         <q-th :data="['改造']" />
-        <q-tr :data="['型号', '梅卡瓦IV']" :upgrade="[4, 2]" hover />
+        <q-tr :data="['型号', 'Merkava IV']" :upgrade="[4, 2]" hover />
         <q-tr :data="['防御', 255]" :upgrade="[5, 1]" hover />
         <q-tr :data="['弹仓', 99]" :upgrade="[6, 4]" hover />
         <q-tr :data="['货仓', 16]" :upgrade="[8, 7]" hover />
