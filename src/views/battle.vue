@@ -6,13 +6,7 @@ const data = [
   {
     label: '战斗',
     value: 1,
-    children: [
-      { label: '220mm大地女神炮', value: 11, side: '' },
-      { label: '雷暴机关枪', value: 12, side: '' },
-      { label: 'S龙卷风炮', value: 13, side: '' },
-      {},
-      {}
-    ]
+    children: [{ label: '220mm大地女神炮', value: 11, side: '' }, { label: '雷暴机关枪', value: 12, side: '' }, { label: 'S龙卷风炮', value: 13, side: '' }, {}, {}]
   },
   { label: '技能', value: 2 },
   { label: '道具', value: 3 },
@@ -28,9 +22,7 @@ const data = [
       <div :class="{ 'bg-gradient-to-b': index === 1 }" @click="active = ''" class="w-36 p-2 space-y-1 from-neutral-900/50">
         <div class="flex justify-between items-center">
           <span>{{ actor }}</span>
-          <span class="flex space-x-0.5"
-            ><b v-for="n in 5" :key="n" :class="{ 'box-shadow': n < 3 }" class="h-1 w-1 rounded-full bg-neutral-500"></b
-          ></span>
+          <span class="flex space-x-0.5"><b v-for="n in 5" :key="n" :class="{ 'box-shadow': n < 3 }" class="h-1 w-1 rounded-full bg-neutral-500"></b></span>
         </div>
         <div class="h-px bg-gradient-to-r from-white/50"></div>
         <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
