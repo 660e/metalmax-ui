@@ -14,13 +14,13 @@ const active = defineModel();
       <b class="h-px bg-gradient-to-r from-40% from-neutral-500"></b>
     </div>
 
-    <div class="absolute top-[98px] left-0 w-32 space-y-1">
+    <div class="absolute top-[98px] left-0 w-[120px] space-y-1">
       <div
         v-for="menu in menus"
         :key="menu.value"
-        :class="{ 'bg-neutral-900/80': active === menu.value }"
+        :class="[active === menu.value ? 'w-32 pl-6 bg-neutral-900/80' : 'pl-4 w-[120px]']"
         @click="active = menu.value"
-        class="py-2 pl-4 w-32 duration-200 border border-l-0 border-neutral-500 bg-neutral-900/50 hover:bg-neutral-900/80"
+        class="py-2 duration-200 border border-l-0 border-neutral-500 bg-neutral-900/50 hover:w-32 hover:pl-6 hover:bg-neutral-900/80"
       >
         {{ menu.label }}
       </div>
