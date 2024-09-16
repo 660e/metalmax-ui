@@ -48,9 +48,18 @@ const data = [
     </template>
   </div>
 
-  <div class="absolute bottom-0 left-0 w-full h-12 flex bg-neutral-900/50">
-    <div class="flex-1"></div>
-    <div class="flex-1 pr-4 flex items-center justify-end">Lorem ipsum dolor sit amet.</div>
+  <div class="absolute left-8 bottom-8 flex items-center">
+    <b class="absolute top-1/2 left-12 -translate-y-1/2 w-full h-2 bg-red-500"></b>
+    <div class="flex items-center space-x-3">
+      <div class="h-12 w-12 rotate-45 bg-red-500"></div>
+      <div v-for="n in 8" :key="n" class="h-8 w-8 rotate-45 flex justify-center items-center bg-blue-500">{{ n }}</div>
+    </div>
+    <div class="w-20"></div>
+    <div class="h-12 w-12 rotate-45 border-l-4 border-b-4 border-white/50"></div>
+    <div class="h-12 w-12 rotate-45 border-l-4 border-b-4 border-white/50 -ml-8"></div>
+    <div class="flex items-center -space-x-1 -ml-8">
+      <div v-for="n in 8" :key="n" class="h-8 w-8 rotate-45 flex justify-center items-center bg-blue-500">{{ n }}</div>
+    </div>
   </div>
 
   <q-list :data="data" class="top-1/2 left-1/2" />
