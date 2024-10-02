@@ -1,5 +1,5 @@
 <script setup>
-defineOptions({ name: "q-tr" });
+defineOptions({ name: 'q-tr' });
 defineProps({ data: Array, hover: Boolean, icon: String, up: Boolean, down: Boolean, upgrade: Array });
 </script>
 

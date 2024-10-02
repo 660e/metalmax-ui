@@ -26,7 +26,7 @@ const routes = [
         v-for="route in routes"
         :key="route.value"
         :class="{ 'text-blue-400': route.value === $route.name }"
-        @click="
+        @click.stop="
           () => {
             $router.push({ name: route.value });
             visible = false;

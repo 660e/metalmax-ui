@@ -7,7 +7,7 @@ const { range } = defineProps({ range: Array });
 const scrollStyle = computed(() => {
   return {
     top: `${range[0] * 24}px`,
-    height: `${(range[1] - range[0]) * 24}px`
+    height: `${(range[1] - range[0]) * 24}px`,
   };
 });
 </script>

@@ -1,23 +1,23 @@
 <script setup>
-import { computed } from "vue";
+import { computed } from 'vue';
 
-defineOptions({ name: "q-panel" });
+defineOptions({ name: 'q-panel' });
 
 const { size } = defineProps({ size: Number, icons: Array, lb: Boolean, rb: Boolean });
 const panelClass = computed(() => {
   switch (size) {
     case 41:
-      return "left-[159px] w-[41px]";
+      return 'left-[159px] w-[41px]';
     case 240:
-      return "left-[864px] w-[240px]";
+      return 'left-[864px] w-[240px]';
     case 300:
-      return "left-[804px] w-[300px]";
+      return 'left-[804px] w-[300px]';
     case 600:
-      return "left-[200px] w-[600px]";
+      return 'left-[200px] w-[600px]';
     case 904:
-      return "left-[200px] w-[904px]";
+      return 'left-[200px] w-[904px]';
     default:
-      return "left-0 w-full";
+      return 'left-0 w-full';
   }
 });
 </script>

@@ -1,5 +1,5 @@
 <script setup>
-defineOptions({ name: "q-layout" });
+defineOptions({ name: 'q-layout' });
 defineProps({ menus: Array, title: String });
 
 const active = defineModel();
@@ -9,7 +9,7 @@ const active = defineModel();
   <div class="h-full backdrop-blur-sm relative">
     <div @click="active = 'menu'" class="absolute z-20 top-0 left-0 w-[500px] h-12 flex flex-col">
       <div class="flex-1 flex items-center bg-gradient-to-r from-40% from-neutral-900">
-        <div class="pl-4 text-xl leading-none">{{ title || menus.find((menu) => menu.value === active)?.label || "场景信息" }}</div>
+        <div class="pl-4 text-xl leading-none">{{ title || menus.find((menu) => menu.value === active)?.label || '场景信息' }}</div>
       </div>
       <b class="h-px bg-gradient-to-r from-40% from-neutral-500"></b>
     </div>
