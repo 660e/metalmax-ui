@@ -35,7 +35,10 @@ const m = [
       </div>
     </div>
     <div @click.stop class="relative">
-      <img src="@/assets/mmr/map.png" />
+      <img src="./assets/map.png" />
+      <div class="absolute inset-0 overflow-hidden">
+        <router-view />
+      </div>
     </div>
   </div>
 </template>
