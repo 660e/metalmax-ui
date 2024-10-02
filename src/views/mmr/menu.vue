@@ -84,7 +84,7 @@ const menus = [
       <q-panel :size="41" :icons="Array(7)" lb />
       <q-panel :size="600" lb rb>
         <q-tr>角色名称</q-tr>
-        <q-th :data="['装备部位', '弹仓', '重量']" />
+        <q-th :data="['武器', '弹仓', '重量']" />
         <q-tr style="padding: 0" hover>
           <q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '16/32', '10.00t']" class="flex-1" />
         </q-tr>
@@ -92,13 +92,13 @@ const menus = [
         <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr :data="['S龙卷风炮', '8/16', '11.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
-        <div class="h-6"></div>
+        <q-th :data="['引擎', '重量']" />
         <q-tr style="padding: 0" hover><q-tr :data="['主引擎']" class="w-40" /><q-tr :data="['V100金刚', '', '1.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
-        <div class="h-6"></div>
+        <q-th :data="['C装置', '重量']" />
         <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['所罗门2', '', '2.00t']" class="flex-1" /></q-tr>
         <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['达罗斯1000', '', '1.50t']" class="flex-1" /></q-tr>
-        <div class="h-6"></div>
+        <q-th :data="['底盘', '重量']" />
         <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['Merkava', '', '15.00t']" class="flex-1" /></q-tr>
         <q-th :data="['说明']" />
         <div class="flex">
