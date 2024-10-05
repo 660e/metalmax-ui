@@ -20,29 +20,28 @@ const menus = [
         <q-th :data="['名称']" />
         <div class="flex-1 relative">
           <q-scroll :range="[0, 19]" />
-          <q-tr :data="['任务名称-001']" hover />
-          <q-tr :data="['任务名称-002']" hover />
-          <q-tr :data="['任务名称-003']" hover />
-          <q-tr :data="['任务名称-004']" hover />
+          <q-tr :data="['废墟中的机械回忆']" hover />
+          <q-tr :data="['追踪失落的战车']" hover />
+          <q-tr :data="['寻找神秘的火药师']" hover />
+          <q-tr :data="['海底遗迹的宝藏']" hover />
         </div>
       </q-panel>
       <q-panel :size="600" style="left: 504px" lb>
         <div class="flex-1 relative">
           <q-scroll :range="[2, 15]" />
-          <q-tr>委托人：NPC姓名</q-tr>
+          <q-tr>委托人：阿尔文</q-tr>
           <div class="absolute -top-4 right-4 w-8 h-16 bg-red-500"></div>
           <q-th :data="['任务']" />
-          <q-tr :data="['任务步骤-01']" hover />
-          <q-tr :data="['任务步骤-02']" hover />
-          <q-tr :data="['任务步骤-03']" hover />
-          <q-tr :data="['任务步骤-04']" hover />
+          <q-tr :data="['与阿尔文对话，了解背景故事']" hover />
+          <q-tr :data="['前往废弃工厂寻找线索']" hover />
+          <q-tr :data="['击败工厂守卫，获取钥匙']" hover />
+          <q-tr :data="['解锁秘密房间，寻找机械部件']" hover />
+          <q-tr :data="['返回阿尔文处，交付物品并获得奖励']" hover />
         </div>
         <q-th :data="['说明']" />
-        <div class="h-6"></div>
-        <div class="h-6"></div>
-        <div class="h-6"></div>
-        <div class="h-6"></div>
-        <div class="h-6"></div>
+        <div class="h-[120px] px-4 leading-6">
+          离开阿尔文后，前往东北角的废弃工厂。留意沿途的敌人和陷阱，确保装备充足。到达后，寻找破损窗户或侧门进入工厂。仔细搜索房间，寻找与阿尔文相关的线索，如日志或旧机器，同时注意隐藏的敌人。
+        </div>
       </q-panel>
     </template>
 
