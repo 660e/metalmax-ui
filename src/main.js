@@ -6,7 +6,7 @@ import router from './router';
 
 const app = createApp(App);
 
-const QComponents = import.meta.glob('@/views/mmr/components/*.vue');
+const QComponents = import.meta.glob('@/components/*.vue');
 Object.values(QComponents).forEach(async (module) => {
   const component = await module();
   app.component(component.default.name, component.default);

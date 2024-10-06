@@ -38,8 +38,8 @@ const routes = [
       </div>
     </div>
     <div @click.stop class="relative">
-      <img v-if="$route.name === 'mmr-battle'" src="./assets/battle.png" />
-      <img v-else src="./assets/map.png" />
+      <img v-if="$route.name === 'mmr-battle'" src="@/assets/battle.png" />
+      <img v-else src="@/assets/map.png" />
       <div class="absolute inset-0 overflow-hidden">
         <router-view />
       </div>
