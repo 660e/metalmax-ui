@@ -11,7 +11,20 @@ const data = [
       {},
     ],
   },
-  { label: '技能', value: 2 },
+  {
+    label: '技能',
+    value: 2,
+    children: [
+      { label: '瞬狙', value: 21, expend: 1 },
+      { label: '战车修复', value: 22, expend: 2 },
+      { label: '沙漠伏击', value: 23, expend: 3 },
+      { label: '钢铁意志', value: 23, expend: 4 },
+      {},
+      {},
+      {},
+      {},
+    ],
+  },
   {
     label: '道具',
     value: 3,

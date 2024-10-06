@@ -32,7 +32,10 @@ const select = (value) => {
             <div class="clip h-6 px-4 flex items-center space-x-2 backdrop-blur-sm duration-200 bg-neutral-900/70 hover:bg-neutral-900">
               <div>{{ e.label }}</div>
               <div class="flex-1"></div>
-              <div>{{ e.side }}</div>
+              <div v-if="e.side">{{ e.side }}</div>
+              <div v-if="e.expend" class="flex space-x-0.5">
+                <b v-for="n in e.expend" :key="n" class="h-1 w-1 rounded-full bg-orange-400 shadow-orange-400"></b>
+              </div>
               <q-icon v-if="e.icon" />
             </div>
             <img src="../assets/cursor.png" class="absolute top-1/2 -left-4 -translate-y-1/2 hidden group-hover:block" />
