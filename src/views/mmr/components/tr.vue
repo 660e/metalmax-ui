@@ -4,7 +4,7 @@ defineProps({ data: Array, hover: Boolean, icon: String, up: Boolean, down: Bool
 </script>
 
 <template>
-  <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="h-6 pl-4 flex items-center relative hover:to-white/30">
+  <div :class="{ 'bg-gradient-to-r from-white/0': hover }" class="group h-6 pl-4 flex items-center relative hover:to-white/30">
     <slot v-if="$slots.default" />
     <template v-else>
       <q-icon v-if="icon !== ''" class="mr-2" />
@@ -28,5 +28,6 @@ defineProps({ data: Array, hover: Boolean, icon: String, up: Boolean, down: Bool
         </div>
       </div>
     </template>
+    <img v-if="hover" src="../assets/cursor.png" class="absolute top-1/2 left-0 -translate-y-1/2 hidden group-hover:block" />
   </div>
 </template>
