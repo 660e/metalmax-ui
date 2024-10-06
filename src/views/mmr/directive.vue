@@ -35,11 +35,11 @@ const data = [
         <div class="h-6"></div>
       </div>
       <div class="w-72 p-1 space-y-1 border border-neutral-500 bg-neutral-900/50">
-        <q-tr v-for="n in 4" :key="n" class="h-auto space-x-2" style="padding-left: 0" hover>
+        <div v-for="n in 4" :key="n" class="flex items-center space-x-2 duration-200 hover:bg-white/30">
           <q-icon size="large" />
           <div class="flex-1">10/16</div>
           <div class="pr-1">(-100.00t)255.00t 剩余</div>
-        </q-tr>
+        </div>
       </div>
     </div>
   </div>
