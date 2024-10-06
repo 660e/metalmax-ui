@@ -10,6 +10,7 @@ const menus = [
   { label: '车库', value: 'garage' },
   { label: '选项', value: 'settings' },
 ];
+const isActor = ref(true);
 </script>
 
 <template>
@@ -20,27 +21,26 @@ const menus = [
         <q-th :data="['名称']" />
         <div class="flex-1 relative">
           <q-scroll :range="[0, 19]" />
-          <q-tr :data="['废墟中的机械回忆']" hover />
-          <q-tr :data="['追踪失落的战车']" hover />
-          <q-tr :data="['寻找神秘的火药师']" hover />
-          <q-tr :data="['海底遗迹的宝藏']" hover />
+          <q-tr :data="['追捕沙漠逃亡者']" hover />
+          <q-tr :data="['修复废弃战车']" hover />
+          <q-tr :data="['夺回失落数据芯片']" hover />
+          <q-tr :data="['寻找远古火箭炮']" hover />
         </div>
       </q-panel>
       <q-panel :size="600" style="left: 504px" lb>
         <div class="flex-1 relative">
           <q-scroll :range="[2, 15]" />
-          <q-tr>委托人：阿尔文</q-tr>
+          <q-tr>委托人：杰克</q-tr>
           <div class="absolute -top-4 right-4 w-8 h-16 bg-red-500"></div>
           <q-th :data="['任务']" />
-          <q-tr :data="['与阿尔文对话，了解背景故事']" hover />
-          <q-tr :data="['前往废弃工厂寻找线索']" hover />
-          <q-tr :data="['击败工厂守卫，获取钥匙']" hover />
-          <q-tr :data="['解锁秘密房间，寻找机械部件']" hover />
-          <q-tr :data="['返回阿尔文处，交付物品并获得奖励']" hover />
+          <q-tr :data="['与废土酒馆的赏金猎人交谈，获得数据芯片的下落']" hover />
+          <q-tr :data="['前往废弃研究所，探索内部寻找失落的芯片']" hover />
+          <q-tr :data="['击败研究所守护的自动防卫系统，进入核心区域']" hover />
+          <q-tr :data="['从实验室的主机中取出数据芯片并安全带回']" hover />
         </div>
         <q-th :data="['说明']" />
         <div class="h-[120px] px-4 leading-6">
-          离开阿尔文后，前往东北角的废弃工厂。留意沿途的敌人和陷阱，确保装备充足。到达后，寻找破损窗户或侧门进入工厂。仔细搜索房间，寻找与阿尔文相关的线索，如日志或旧机器，同时注意隐藏的敌人。
+          赏金猎人杰克得知废弃研究所有一枚关键数据芯片。他无法独自行动，决定出售情报。他会提供芯片位置和入口信息，条件是你帮他提取部分机密数据。
         </div>
       </q-panel>
     </template>
@@ -80,25 +80,48 @@ const menus = [
     </template>
 
     <template v-if="active === 'equip'">
-      <q-panel :size="41" :icons="Array(7)" lb />
+      <q-panel :size="41" :icons="Array(7)" @click="isActor = !isActor" lb />
       <q-panel :size="600" lb rb>
-        <q-tr>角色名称</q-tr>
-        <q-th :data="['武器', '弹仓', '重量']" />
-        <q-tr style="padding: 0" hover>
-          <q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '16/32', '10.00t']" class="flex-1" />
-        </q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['雷暴机关枪', '∞', '3.00t']" class="flex-1" /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr :data="['S龙卷风炮', '8/16', '11.00t']" class="flex-1" /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
-        <q-th :data="['引擎', '重量']" />
-        <q-tr style="padding: 0" hover><q-tr :data="['主引擎']" class="w-40" /><q-tr :data="['V100金刚', '', '1.00t']" class="flex-1" /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
-        <q-th :data="['C装置', '重量']" />
-        <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['所罗门2', '', '2.00t']" class="flex-1" /></q-tr>
-        <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['达罗斯1000', '', '1.50t']" class="flex-1" /></q-tr>
-        <q-th :data="['底盘', '重量']" />
-        <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['Merkava', '', '15.00t']" class="flex-1" /></q-tr>
+        <template v-if="isActor">
+          <q-tr>角色名称</q-tr>
+          <q-th :data="['装备部位']" />
+          <q-tr style="padding: 0" hover> <q-tr :data="['主武器']" class="w-40" /><q-tr :data="['激光炮']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover> <q-tr :data="['副武器']" class="w-40" /><q-tr :data="['乌兹冲锋手枪']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover> <q-tr :data="['近战武器']" class="w-40" /><q-tr :data="['光束剑']" class="flex-1" /></q-tr>
+          <div class="h-6"></div>
+          <q-tr style="padding: 0" hover> <q-tr :data="['头盔']" class="w-40" /><q-tr :data="['机动部队头盔']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover> <q-tr :data="['服装']" class="w-40" /><q-tr :data="['聚酰胺耐热服']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover> <q-tr :data="['手套']" class="w-40" /><q-tr :data="['神枪手护腕']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover> <q-tr :data="['鞋子']" class="w-40" /><q-tr :data="['陆军作战靴']" class="flex-1" /></q-tr>
+          <div class="h-6"></div>
+          <q-tr style="padding: 0" hover> <q-tr :data="['护甲']" class="w-40" /><q-tr :data="['全能护甲']" class="flex-1" /></q-tr>
+          <q-th :data="['抗性']" />
+          <div class="flex-1 flex justify-center items-center space-x-8">
+            <div v-for="n in 6" :key="n" class="flex items-center space-x-2">
+              <q-icon />
+              <div>255</div>
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <q-tr>坦克名称</q-tr>
+          <q-th :data="['装备部位', '弹仓', '重量']" />
+          <q-tr style="padding: 0" hover>
+            <q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '16/32', '10.00t']" class="flex-1" />
+          </q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['雷暴机关枪', '∞', '3.00t']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr :data="['S龙卷风炮', '8/16', '11.00t']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
+          <div class="h-6"></div>
+          <q-tr style="padding: 0" hover><q-tr :data="['主引擎']" class="w-40" /><q-tr :data="['V100金刚', '1.00t']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
+          <div class="h-6"></div>
+          <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['所罗门2', '2.00t']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['达罗斯1000', '1.50t']" class="flex-1" /></q-tr>
+          <div class="h-6"></div>
+          <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['Merkava', '15.00t']" class="flex-1" /></q-tr>
+        </template>
         <q-th :data="['说明']" />
         <div class="flex">
           <div class="flex-1">
@@ -170,10 +193,11 @@ const menus = [
             <q-tr :data="['速度', 255]" />
           </div>
         </div>
-        <q-th :data="['特性']" />
-        <q-tr :data="['猎人之眼', '战斗中可以看到敌人的弱点']" />
-        <q-tr :data="['医护能力', '使用回复类物品时，效果提升50%']" />
-        <q-tr :data="['迎击能力', '可以使用手中的武器拦截敌人的炮弹']" />
+        <q-th :data="['技能']" />
+        <q-tr :data="['瞬狙', '精准瞄准敌人弱点，提升单次攻击的暴击率']" />
+        <q-tr :data="['战车修复', '快速修理战车部件，恢复部分耐久度并提升防御力']" />
+        <q-tr :data="['沙漠伏击', '在沙地隐匿身形，增加先发攻击的成功率']" />
+        <q-tr :data="['钢铁意志', '激发战斗意志，提升自身防御力并减少伤害持续时间']" />
       </q-panel>
     </template>
 
