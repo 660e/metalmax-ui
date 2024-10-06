@@ -61,7 +61,7 @@ const data = [
     </template>
   </div>
 
-  <div class="absolute left-8 bottom-8 flex items-center">
+  <div class="absolute left-5 bottom-5 flex items-center">
     <b class="absolute top-1/2 left-12 -translate-y-1/2 w-full h-2 bg-red-500"></b>
     <div class="flex items-center space-x-3">
       <div class="h-12 w-12 rotate-45 bg-red-500"></div>
@@ -72,6 +72,16 @@ const data = [
     <div class="h-12 w-12 rotate-45 border-l-4 border-b-4 border-white/50 -ml-8"></div>
     <div class="flex items-center -space-x-1 -ml-8">
       <div v-for="n in 8" :key="n" class="h-8 w-8 rotate-45 flex justify-center items-center bg-blue-500">{{ n }}</div>
+    </div>
+  </div>
+
+  <div class="absolute right-4 bottom-20">
+    <div v-for="n in 4" :key="n" :class="[n % 2 ? 'bg-red-500/60' : 'bg-red-500/30']" class="h-20 w-40 flex justify-center items-center">{{ n }}</div>
+  </div>
+
+  <div class="absolute top-4 left-4 grid grid-cols-5">
+    <div v-for="n in 30" :key="n" :class="[n % 2 ? 'bg-blue-500/60' : 'bg-blue-500/30']" class="h-20 w-20 flex justify-center items-center">
+      {{ n }}
     </div>
   </div>
 
