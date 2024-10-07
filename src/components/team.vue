@@ -1,5 +1,7 @@
 <script setup>
 defineOptions({ name: 'q-team' });
+
+const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.png`, import.meta.url);
 </script>
 
 <template>
@@ -16,7 +18,7 @@ defineOptions({ name: 'q-team' });
       </div>
       <div class="h-0.5 flex bg-white/30"><b class="w-1/2 bg-cyan-500"></b></div>
       <div class="flex">
-        <div class="h-16 w-8 bg-red-500"></div>
+        <img :src="url('a', index)" />
         <div class="flex-1 flex flex-col">
           <div class="flex-1 flex flex-col pl-2">
             <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
