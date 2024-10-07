@@ -17,10 +17,10 @@ const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.p
         <div>Lv.255</div>
       </div>
       <div class="h-0.5 flex bg-white/30"><b class="w-1/2 bg-cyan-500"></b></div>
-      <div class="flex">
+      <div class="flex space-x-2">
         <img :src="url('a', index)" />
         <div class="flex-1 flex flex-col">
-          <div class="flex-1 flex flex-col pl-2">
+          <div class="flex-1 flex flex-col">
             <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
             <div class="flex-1 flex items-center">
               <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/50"></div>
@@ -28,9 +28,11 @@ const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.p
               <div class="w-px h-full bg-gradient-to-b from-white/0 via-white/50"></div>
             </div>
           </div>
-          <div class="flex-1 flex pl-2">
-            <div class="h-8 w-8 bg-red-500"></div>
-            <div class="flex-1 flex flex-col pl-2">
+          <div class="flex-1 flex space-x-2">
+            <div class="h-8 flex justify-center items-center">
+              <img :src="url('t', index)" />
+            </div>
+            <div class="flex-1 flex flex-col">
               <div class="flex justify-between items-center">
                 <span class="text-neutral-400 text-xs leading-none">SP</span><span>10000/99999</span>
               </div>
