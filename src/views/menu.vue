@@ -31,7 +31,7 @@ const isActor = ref(true);
         <div class="flex-1 relative">
           <q-scroll :range="[2, 15]" />
           <q-tr>委托人：杰克</q-tr>
-          <div class="absolute -top-4 right-4 w-8 h-16 bg-red-500"></div>
+          <img src="@/assets/characters/n1.png" class="absolute -top-5 right-4" />
           <q-th :data="['任务']" />
           <q-tr :data="['与废土酒馆的赏金猎人交谈，获得数据芯片的下落']" hover />
           <q-tr :data="['前往废弃研究所，探索内部寻找失落的芯片']" hover />
