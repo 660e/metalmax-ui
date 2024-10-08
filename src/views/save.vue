@@ -1,3 +1,7 @@
+<script setup>
+const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.png`, import.meta.url);
+</script>
+
 <template>
   <q-layout title="记录中心">
     <q-panel />
@@ -17,10 +21,12 @@
           </div>
           <div class="flex-1 space-y-2">
             <div class="flex justify-end space-x-2">
-              <div v-for="n in 4" :key="n" class="w-8 h-16 bg-red-500"></div>
+              <img v-for="n in 4" :key="n" :src="url('a', n - 1)" />
             </div>
             <div class="flex justify-end space-x-2">
-              <q-icon v-for="n in 12" :key="n" size="large" />
+              <div v-for="n in 12" :key="n" class="h-8 flex justify-center items-center">
+                <img :src="url('t', (n - 1) % 4)" />
+              </div>
             </div>
           </div>
         </div>
