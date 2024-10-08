@@ -11,7 +11,7 @@ const menus = [
 <template>
   <q-layout v-model="active" :menus="menus" title="补给店">
     <template v-if="active === 1">
-      <q-panel :size="41" :icons="Array(5)" lb />
+      <q-panel :size="41" :icons="['', 't1', 't2', 't3', 't4']" lb />
       <q-panel :size="600" lb rb>
         <q-tr>补给</q-tr>
         <q-th :data="['部位', '详情', '单价']" :width="[150, 100]" />
