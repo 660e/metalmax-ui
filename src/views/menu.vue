@@ -154,11 +154,9 @@ const isActor = ref(true);
           <q-tr :data="['205mm红牡丹炮', '15.00t']" hover />
         </div>
         <q-th :data="['预览']" />
-        <div class="h-6"></div>
-        <div class="h-6"></div>
-        <div class="h-6"></div>
-        <div class="h-6"></div>
-        <div class="h-6"></div>
+        <div class="h-[120px] flex justify-center items-center">
+          <img src="@/assets/battles/t1.png" />
+        </div>
       </q-panel>
     </template>
 
@@ -166,10 +164,8 @@ const isActor = ref(true);
       <q-panel :size="41" :icons="['a1', 'a2', 'a3', 'a4']" lb />
       <q-panel :size="600" lb rb>
         <div class="flex">
-          <div class="flex-1">
-            <div class="h-6"></div>
-            <div class="h-6"></div>
-            <div class="h-6"></div>
+          <div class="flex-1 flex justify-center items-center">
+            <img src="@/assets/characters/a1.png" />
           </div>
           <div class="flex-1">
             <q-tr>角色姓名</q-tr>
@@ -206,11 +202,9 @@ const isActor = ref(true);
       <q-panel :size="904" lb>
         <div class="flex">
           <div class="flex-1">
-            <div class="h-6"></div>
-            <div class="h-6"></div>
-            <div class="h-6"></div>
-            <div class="h-6"></div>
-            <div class="h-6"></div>
+            <div class="h-[120px] flex justify-center items-center">
+              <img src="@/assets/battles/t1.png" />
+            </div>
             <q-tr>战车名称</q-tr>
             <q-tr :data="['型号', 'Merkava']" />
           </div>
