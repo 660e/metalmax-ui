@@ -46,7 +46,7 @@ const isActor = ref(true);
     </template>
 
     <template v-if="active === 'items'">
-      <q-panel :size="41" :icons="Array(6)" lb />
+      <q-panel :size="41" :icons="['a1', 'a2', 'a3', 'a4', '', '']" lb />
       <q-panel :size="600" lb rb>
         <q-tr>人类道具/战车道具</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
