@@ -46,7 +46,7 @@ const isActor = ref(true);
     </template>
 
     <template v-if="active === 'items'">
-      <q-panel :size="41" :icons="['a1', 'a2', 'a3', 'a4', '', '']" lb />
+      <q-panel :size="41" :icons="['', '', 't1', 't2', 't3', 't4']" lb />
       <q-panel :size="600" lb rb>
         <q-tr>人类道具/战车道具</q-tr>
         <q-th :data="['名称', '持有数/重量']" />
@@ -80,7 +80,7 @@ const isActor = ref(true);
     </template>
 
     <template v-if="active === 'equip'">
-      <q-panel :size="41" :icons="Array(7)" @click="isActor = !isActor" lb />
+      <q-panel :size="41" :icons="['a1', 'a2', 'a3', 'a4', 't1', 't2', 't3', 't4']" @click="isActor = !isActor" lb />
       <q-panel :size="600" lb rb>
         <template v-if="isActor">
           <q-tr>角色名称</q-tr>
@@ -163,7 +163,7 @@ const isActor = ref(true);
     </template>
 
     <template v-if="active === 'status'">
-      <q-panel :size="41" :icons="Array(4)" lb />
+      <q-panel :size="41" :icons="['a1', 'a2', 'a3', 'a4']" lb />
       <q-panel :size="600" lb rb>
         <div class="flex">
           <div class="flex-1">
@@ -202,7 +202,7 @@ const isActor = ref(true);
     </template>
 
     <template v-if="active === 'garage'">
-      <q-panel :size="41" :icons="Array(12)" lb />
+      <q-panel :size="41" :icons="['t1', 't2', 't3', 't4', 't1', 't2', 't3', 't4', 't1', 't2', 't3', 't4']" lb />
       <q-panel :size="904" lb>
         <div class="flex">
           <div class="flex-1">
