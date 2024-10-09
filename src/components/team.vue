@@ -18,7 +18,9 @@ const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.p
       </div>
       <div class="h-0.5 flex bg-white/30"><b class="w-1/2 bg-cyan-500"></b></div>
       <div class="flex space-x-2">
-        <img :src="url('a', index)" />
+        <div class="w-8 h-16 flex justify-center items-center">
+          <img :src="url('a', index)" class="absolute" />
+        </div>
         <div class="flex-1 flex flex-col">
           <div class="flex-1 flex flex-col">
             <div class="flex justify-between items-center"><span class="text-neutral-400 text-xs leading-none">HP</span><span>10000/99999</span></div>
