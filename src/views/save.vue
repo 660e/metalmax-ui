@@ -20,11 +20,13 @@ const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.p
             <div class="pl-4 text-lg leading-none">罪恶郊野</div>
           </div>
           <div class="pl-24 flex-1">
-            <div class="flex">
-              <img v-for="n in 4" :key="n" :src="url('a', n - 1)" />
+            <div class="flex space-x-2">
+              <div v-for="n in 4" :key="n" class="w-8 h-16 flex justify-center items-center">
+                <img :src="url('a', n - 1)" class="absolute" />
+              </div>
             </div>
-            <div class="flex">
-              <div v-for="n in 12" :key="n" class="h-8 w-10 flex justify-center items-center">
+            <div class="flex space-x-2">
+              <div v-for="n in 12" :key="n" class="h-8 w-8 flex justify-center items-center">
                 <img :src="url('t', (n - 1) % 4)" />
               </div>
             </div>
