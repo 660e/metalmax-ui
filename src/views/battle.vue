@@ -42,6 +42,8 @@ const data = [
   { label: '防御', value: 4 },
   { label: '脱逃', value: 5 },
 ];
+
+const url = (type, index) => new URL(`../assets/battles/${type}${index + 1}.png`, import.meta.url);
 </script>
 
 <template>
@@ -75,12 +77,20 @@ const data = [
     </div>
   </div>
 
-  <div class="absolute right-4 bottom-20">
-    <div v-for="n in 4" :key="n" :class="[n % 2 ? 'bg-red-500/60' : 'bg-red-500/30']" class="h-20 w-40 flex justify-center items-center">{{ n }}</div>
+  <div class="absolute right-24 bottom-24">
+    <div v-for="n in 4" :key="n" :class="[n % 2 ? 'bg-red-500/30' : 'bg-red-500/15']" class="h-20 w-40 flex justify-center items-center">
+      <img :src="url('t', n - 1)" />
+    </div>
   </div>
 
-  <div class="absolute top-4 left-4 grid grid-cols-5">
-    <div v-for="n in 30" :key="n" :class="[n % 2 ? 'bg-blue-500/60' : 'bg-blue-500/30']" class="h-20 w-20 flex justify-center items-center">
+  <div class="absolute right-0 bottom-24">
+    <div v-for="n in 4" :key="n" class="h-20 w-40 flex justify-end items-start">
+      <img :src="url('a', n - 1)" />
+    </div>
+  </div>
+
+  <div class="absolute top-0 left-0 grid grid-cols-5">
+    <div v-for="n in 25" :key="n" :class="[n % 2 ? 'bg-blue-500/30' : 'bg-blue-500/15']" class="h-[100px] w-[100px] flex justify-center items-center">
       {{ n }}
     </div>
   </div>
