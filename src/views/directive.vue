@@ -13,7 +13,7 @@ const data = [
       { label: '猎人', value: 23, side: 'Merkava', icon: 'icon' },
       { label: '机械师', value: 24, side: 'Leopard', icon: 'icon' },
       { label: '士兵', value: 25, side: 'Abrams', icon: 'icon' },
-      { label: '-', value: 26, side: 'Type', icon: 'icon' },
+      { label: '', value: 26, side: 'Type', icon: 'icon' },
     ],
   },
   { label: '金属探测器', value: 3 },

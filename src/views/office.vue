@@ -30,6 +30,11 @@ const menus = [
         <div class="h-6"></div>
         <div class="h-6"></div>
       </q-panel>
+      <q-panel :size="300" lb>
+        <div class="pb-16 flex-1 flex justify-center items-center">
+          <span class="text-2xl leading-none">WANTED</span>
+        </div>
+      </q-panel>
     </template>
 
     <template v-if="active === 2">

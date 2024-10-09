@@ -18,7 +18,9 @@ const menus = [
     <q-panel v-if="active === 1" :size="600" lb rb>
       <q-tr>改造底盘</q-tr>
       <q-th :data="['外观']" />
-      <div class="flex-1"></div>
+      <div class="flex-1 flex justify-center items-center">
+        <img src="@/assets/battles/t1.png" />
+      </div>
       <q-th :data="['穴']" />
       <q-tr :data="['穴-1：加农炮']" hover />
       <q-tr :data="['穴-2：机枪']" hover />
