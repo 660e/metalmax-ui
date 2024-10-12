@@ -100,7 +100,7 @@ const url = (type, index) => new URL(`../assets/battles/${type}${index + 1}.png`
 
 <style scoped>
 .full {
-  background-color: theme('colors.orange.400');
-  box-shadow: 0 0 5px theme('colors.orange.400');
+  background-color: theme('colors.yellow.500');
+  box-shadow: 0 0 5px theme('colors.yellow.500');
 }
 </style>

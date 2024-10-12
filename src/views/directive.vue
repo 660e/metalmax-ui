@@ -22,10 +22,17 @@ const data = [
 </script>
 
 <template>
-  <q-list v-if="active !== 3" :data="data" @active="(value) => (active = value)" class="top-1/2 left-1/2 ml-8" />
+  <q-list v-if="[0, 1, 2].includes(active)" :data="data" @active="(value) => (active = value)" class="top-1/2 left-1/2 ml-8" />
 
-  <div v-if="active === 3" :class="{ 'backdrop-blur-sm': active }" @click="active = 0" class="h-full flex justify-center items-center">
-    <div class="flex space-x-4">
+  <div v-if="active === 0" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/80"></div>
+
+  <div
+    v-if="[3, 4].includes(active)"
+    :class="{ 'backdrop-blur-sm bg-neutral-900/50': active }"
+    @click="active = 0"
+    class="h-full flex justify-center items-center"
+  >
+    <div v-if="active === 3" class="flex space-x-4">
       <div class="w-72 flex flex-col pb-1 border border-neutral-500 bg-neutral-900/50">
         <div class="flex-1"></div>
         <div class="text-center">木箱</div>
@@ -43,7 +50,16 @@ const data = [
         </div>
       </div>
     </div>
-  </div>
 
-  <div v-if="active === 0" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/80"></div>
+    <div v-if="active === 4" class="h-2/3 w-1/2 flex flex-col">
+      <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
+      <div class="flex-1 leading-6 space-y-4 p-8">
+        <div class="flex justify-center">-<span class="px-2 text-yellow-500">员工日记</span>-</div>
+        <div>说明：Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequatur?</div>
+        <div>说明：Corrupti quo enim sunt illo tempore <span class="text-yellow-500">eveniet</span> et? Neque, debitis!</div>
+        <div>说明：Aliquam esse animi numquam <span class="text-yellow-500">repellendus</span> id error vel aut! Repudiandae.</div>
+      </div>
+      <div class="h-px bg-gradient-to-r from-white/0 via-white/50"></div>
+    </div>
+  </div>
 </template>

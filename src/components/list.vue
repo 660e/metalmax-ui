@@ -34,7 +34,7 @@ const select = (value) => {
               <div class="flex-1"></div>
               <div v-if="e.side">{{ e.side }}</div>
               <div v-if="e.expend" class="flex space-x-0.5">
-                <b v-for="n in e.expend" :key="n" class="h-1 w-1 rounded-full bg-orange-400 shadow-orange-400"></b>
+                <b v-for="n in e.expend" :key="n" class="h-1 w-1 rounded-full bg-yellow-500 shadow-yellow-500"></b>
               </div>
               <q-icon v-if="e.icon" />
             </div>
