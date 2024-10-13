@@ -9,12 +9,12 @@ const url = (type, index) => new URL(`../assets/characters/${type}${index + 1}.p
       <div
         v-for="i in 3"
         :key="i"
-        class="h-auto px-4 relative bg-gradient-to-r from-neutral-900/0 group text-neutral-400 via-neutral-900/50 hover:via-neutral-900/80 hover:text-neutral-200"
+        class="relative bg-gradient-to-r from-neutral-900/0 group text-neutral-400 via-neutral-900/50 hover:via-neutral-900/80 hover:text-neutral-200"
         hover
       >
-        <i class="absolute -top-1 left-[210px] text-9xl blur-sm text-white/20 group-hover:blur-none">{{ i }}</i>
+        <i class="absolute -top-1 left-[200px] text-9xl blur-sm text-white/20 group-hover:blur-none">{{ i }}</i>
         <div class="h-px w-full bg-gradient-to-r from-white/0 via-white/50"></div>
-        <div class="w-full p-2 flex">
+        <div class="w-full py-2 px-4 flex">
           <div class="p-2 space-y-4">
             <div>2025-01-01 00:00:00</div>
             <div class="pl-4 text-lg leading-none">罪恶郊野</div>

@@ -22,8 +22,8 @@ defineProps({ data: Array, hover: Boolean, icon: String, up: Boolean, down: Bool
         {{ e }}
       </div>
 
-      <div v-if="upgrade?.length" class="absolute inset-0 h-6 flex justify-center items-center">
-        <div class="w-[360px] h-2 flex">
+      <div v-if="upgrade?.length" class="absolute right-[218px] inset-y-0 h-6 flex justify-center items-center">
+        <div class="w-[240px] h-2 flex">
           <b v-for="(n, i) in upgrade[0]" :key="n" :class="[upgrade[1] > i ? 'bg-cyan-500' : 'bg-neutral-900/50']" class="flex-1 ml-px"></b>
         </div>
       </div>

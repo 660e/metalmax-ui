@@ -22,18 +22,36 @@ const data = [
 </script>
 
 <template>
-  <q-list v-if="[0, 1, 2].includes(active)" :data="data" @active="(value) => (active = value)" class="top-1/2 left-1/2 ml-8" />
+  <q-list v-if="[0, 2].includes(active)" :data="data" @active="(value) => (active = value)" class="top-1/2 left-1/2 ml-8" />
 
   <div v-if="active === 0" class="absolute right-2 bottom-2 w-40 h-40 flex justify-center items-center bg-neutral-900/80"></div>
 
   <div
-    v-if="[3, 4].includes(active)"
+    v-if="[1, 3, 4].includes(active)"
     :class="{ 'backdrop-blur-sm bg-neutral-900/50': active }"
     @click="active = 0"
     class="h-full flex justify-center items-center"
   >
+    <div v-if="active === 1">
+      <div class="flex space-x-4">
+        <div class="space-y-2">
+          <div v-for="n in 14" :key="n" class="group relative">
+            <div class="clip h-6 w-40 px-4 flex items-center duration-200 bg-neutral-900/70 hover:bg-neutral-900">地球救济中心</div>
+            <img src="../assets/cursor.png" class="absolute top-1/2 -left-4 -translate-y-1/2 hidden group-hover:block" />
+          </div>
+        </div>
+        <div class="w-[520px] bg-neutral-900"></div>
+        <div class="space-y-2">
+          <div v-for="n in 14" :key="n" class="group relative">
+            <div class="clip h-6 w-40 px-4 flex items-center backdrop-blur-sm duration-200 bg-neutral-900/70 hover:bg-neutral-900">地球救济中心</div>
+            <img src="../assets/cursor.png" class="absolute top-1/2 -left-4 -translate-y-1/2 hidden group-hover:block" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div v-if="active === 3" class="flex space-x-4">
-      <div class="w-72 flex flex-col pb-1 border border-neutral-500 bg-neutral-900/50">
+      <div class="w-72 flex flex-col pb-1 backdrop-blur-sm border border-neutral-500 bg-neutral-900/50">
         <div class="flex-1"></div>
         <div class="text-center">木箱</div>
         <q-th :data="['名称', '数量/重量']" />
@@ -42,7 +60,7 @@ const data = [
         <div class="h-6"></div>
         <div class="h-6"></div>
       </div>
-      <div class="w-72 p-1 space-y-1 border border-neutral-500 bg-neutral-900/50">
+      <div class="w-72 p-1 space-y-1 backdrop-blur-sm border border-neutral-500 bg-neutral-900/50">
         <div v-for="n in 4" :key="n" class="flex items-center space-x-2 duration-200 hover:bg-white/30">
           <q-icon size="large" />
           <div class="flex-1">10/16</div>
@@ -63,3 +81,9 @@ const data = [
     </div>
   </div>
 </template>
+
+<style scoped>
+.clip {
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+</style>

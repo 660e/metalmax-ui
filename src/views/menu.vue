@@ -109,7 +109,7 @@ const isActor = ref(true);
           <q-tr style="padding: 0" hover>
             <q-tr :data="['加农炮']" class="w-40" /><q-tr :data="['220mm大地女神炮', '16/32', '10.00t']" class="flex-1" />
           </q-tr>
-          <q-tr style="padding: 0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['雷暴机关枪', '∞', '3.00t']" class="flex-1" /></q-tr>
+          <q-tr style="padding: 0" hover><q-tr :data="['机枪']" class="w-40" /><q-tr :data="['雷暴机关枪', '-', '3.00t']" class="flex-1" /></q-tr>
           <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr :data="['S龙卷风炮', '8/16', '11.00t']" class="flex-1" /></q-tr>
           <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
           <q-tr style="padding: 0" hover><q-tr :data="['S-E']" class="w-40" /><q-tr /></q-tr>
@@ -118,8 +118,8 @@ const isActor = ref(true);
           <q-tr style="padding: 0" hover><q-tr :data="['副引擎']" class="w-40" /><q-tr /></q-tr>
           <div class="h-6"></div>
           <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['所罗门2', '2.00t']" class="flex-1" /></q-tr>
-          <q-tr style="padding: 0" hover><q-tr :data="['C装置']" class="w-40" /><q-tr :data="['达罗斯1000', '1.50t']" class="flex-1" /></q-tr>
           <div class="h-6"></div>
+          <q-tr style="padding: 0" hover><q-tr :data="['装甲']" class="w-40" /><q-tr :data="['防爆装甲', '50.00t']" class="flex-1" /></q-tr>
           <q-tr style="padding: 0" hover><q-tr :data="['底盘']" class="w-40" /><q-tr :data="['Merkava', '15.00t']" class="flex-1" /></q-tr>
         </template>
         <q-th :data="['说明']" />
@@ -239,10 +239,10 @@ const isActor = ref(true);
         <q-th :data="['引擎', '载重', '奖励', '特性', '防御/状态', '重量']" />
         <q-tr :data="['V100金刚', '100.00t', '0.00t', '双子奖励', '255/正常', '1.00t']" />
         <q-tr />
-        <q-th :data="['C装置', '系统1', '系统2', '系统3', '命中/回避', '防御/状态', '重量']" />
+        <q-th :data="['C装置', '芯片1', '芯片2', '芯片3', '命中/回避', '防御/状态', '重量']" />
         <q-tr :data="['所罗门2', '主炮连射', '', '', '255/255', '255/正常', '2.00t']" />
-        <q-tr :data="['达罗斯1000', '主炮连射', '', '', '255/255', '255/正常', '1.50t']" />
         <q-th :data="['底盘', '特性', '防御/状态', '重量']" />
+        <q-tr :data="['防爆装甲', '会心防御', '-', '50.00t']" />
         <q-tr :data="['Merkava', '会心一击', '255/正常', '15.00t']" />
       </q-panel>
     </template>
